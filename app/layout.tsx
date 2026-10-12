@@ -14,7 +14,7 @@ const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-displ
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans', display: 'swap' })
 
 export const metadata = {
-  metadataBase: new URL(process.env.NEXTAUTH_URL || 'http://localhost:3000'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://criptoworld.org'),
   title: { default: 'CriptoMundo — Información y educación cripto', template: '%s | CriptoMundo' },
   description: 'Plataforma de información, educación y herramientas sobre criptomonedas. Datos de mercado en vivo, noticias reales y artículos educativos.',
   icons: { icon: '/favicon.svg', shortcut: '/favicon.svg' },
@@ -30,9 +30,6 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="es" className="dark" suppressHydrationWarning>
-      <head>
-        <script src="https://apps.abacus.ai/chatllm/appllm-lib.js" />
-      </head>
       <body className={`${spaceGrotesk.variable} ${inter.variable} font-sans antialiased`}>
         <Script
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7428485851163208"
