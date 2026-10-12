@@ -1,60 +1,53 @@
-import { DM_Sans, Plus_Jakarta_Sans, JetBrains_Mono } from 'next/font/google';
-import './globals.css';
-import { ThemeProvider } from '@/components/theme-provider';
-import { Toaster } from '@/components/ui/sonner';
-import { ChunkLoadErrorHandler } from '@/components/chunk-load-error-handler';
+import { Space_Grotesk, Inter } from 'next/font/google'
+import Script from 'next/script'
+import './globals.css'
+import { Toaster } from '@/components/ui/sonner'
+import { ChunkLoadErrorHandler } from '@/components/chunk-load-error-handler'
+import { Providers } from '@/components/providers'
+import { Header } from '@/components/header'
+import { Footer } from '@/components/footer'
+import { GoogleAnalytics } from '@/components/google-analytics'
 
-export const dynamic = 'force-dynamic';
+export const dynamic = 'force-dynamic'
 
-const dmSans = DM_Sans({ subsets: ['latin'], variable: '--font-sans' });
-const jakartaSans = Plus_Jakarta_Sans({ subsets: ['latin'], variable: '--font-display' });
-const jetbrainsMono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-mono' });
+const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-display', display: 'swap' })
+const inter = Inter({ subsets: ['latin'], variable: '--font-sans', display: 'swap' })
 
 export const metadata = {
   metadataBase: new URL(process.env.NEXTAUTH_URL || 'http://localhost:3000'),
-  title: {
-    default: 'CoinLens — Your Lens into the Crypto Market',
-    template: '%s | CoinLens',
-  },
-  description: 'Real-time crypto prices, market data, verified news, and educational resources.',
-  icons: {
-    icon: '/favicon.svg',
-    shortcut: '/favicon.svg',
-  },
+  title: { default: 'CriptoMundo — Información y educación cripto', template: '%s | CriptoMundo' },
+  description: 'Plataforma de información, educación y herramientas sobre criptomonedas. Datos de mercado en vivo, noticias reales y artículos educativos.',
+  icons: { icon: '/favicon.svg', shortcut: '/favicon.svg' },
   openGraph: {
-    type: 'website',
-    siteName: 'CoinLens',
+    title: 'CriptoMundo — Información y educación cripto',
+    description: 'Datos de mercado en vivo, noticias reales y artículos educativos sobre criptomonedas.',
     images: [{ url: '/og-image.png', width: 1200, height: 630 }],
+    locale: 'es_ES',
+    type: 'website',
   },
-  twitter: {
-    card: 'summary_large_image',
-  },
-};
+}
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="es" className="dark" suppressHydrationWarning>
       <head>
         <script src="https://apps.abacus.ai/chatllm/appllm-lib.js" />
       </head>
-      <body
-        className={`${dmSans.variable} ${jakartaSans.variable} ${jetbrainsMono.variable} font-sans`}
-      >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
+      <body className={`${spaceGrotesk.variable} ${inter.variable} font-sans antialiased`}>
+        <Script
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7428485851163208"
+          strategy="afterInteractive"
+          crossOrigin="anonymous"
+        />
+        <GoogleAnalytics />
+        <Providers>
+          <Header />
+          <main className="min-h-screen">{children}</main>
+          <Footer />
           <Toaster />
           <ChunkLoadErrorHandler />
-        </ThemeProvider>
+        </Providers>
       </body>
     </html>
-  );
+  )
 }

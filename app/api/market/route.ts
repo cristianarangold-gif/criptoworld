@@ -1,11 +1,13 @@
-export const dynamic = 'force-dynamic';
+export const dynamic = 'force-dynamic'
+import { NextRequest, NextResponse } from 'next/server'
+import { getMarketData } from '@/lib/coingecko'
 
-import { NextResponse } from 'next/server';
-import { getMarketCoins } from '@/lib/api/market-data';
-
-export async function GET(request: Request) {
-  const { searchParams } = new URL(request.url);
-  const limit = Math.min(parseInt(searchParams.get('limit') ?? '50', 10) || 50, 250);
-  const { data, source } = await getMarketCoins(limit);
-  return NextResponse.json({ data, source, timestamp: new Date().toISOString() });
+export async function GET(req: NextRequest) {
+  try {
+    const currency = req.nextUrl.searchParams.get('currency') || 'usd'
+    const data = await getMarketData(currency)
+    return NextResponse.json(data)
+  } catch {
+    return NextResponse.json([], { status: 500 })
+  }
 }
