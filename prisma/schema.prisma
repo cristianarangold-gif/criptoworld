@@ -1,7 +1,5 @@
 generator client {
     provider = "prisma-client-js"
-    binaryTargets = ["native", "linux-musl-arm64-openssl-3.0.x"]
-    output = "/home/ubuntu/coinlens/nextjs_space/node_modules/.prisma/client"
 }
 
 datasource db {
@@ -9,102 +7,95 @@ datasource db {
     url      = env("DATABASE_URL")
 }
 
-// ─── News ───────────────────────────────────────────────
-
-model NewsCategory {
-  id        Int      @id @default(autoincrement())
-  slug      String   @unique
-  nameEn    String   @map("name_en")
-  nameEs    String   @map("name_es")
-  createdAt DateTime @default(now()) @map("created_at")
-  updatedAt DateTime @updatedAt @map("updated_at")
-
-  articles NewsArticle[]
-
-  @@map("news_categories")
+model User {
+  id             String    @id @default(cuid())
+  name           String?
+  email          String    @unique
+  emailVerified  DateTime?
+  hashedPassword String?
+  image          String?
+  accounts       Account[]
+  sessions       Session[]
+  positions      PortfolioPosition[]
+  academyProgress AcademyProgress[]
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
 }
 
-enum ArticleStatus {
-  DRAFT
-  PUBLISHED
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String?
+  access_token      String?
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String?
+  session_state     String?
+  user              User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  @@unique([provider, providerAccountId])
 }
 
-model NewsArticle {
-  id                  Int           @id @default(autoincrement())
-  slug                String        @unique
-  title               String
-  excerpt             String?
-  content             String?
-  image               String?
-  sourceName          String?       @map("source_name")
-  sourceUrl           String?       @map("source_url")
-  originalUrl         String?       @unique @map("original_url")
-  originalPublishedAt DateTime?     @map("original_published_at")
-  author              String?
-  categoryId          Int?          @map("category_id")
-  category            NewsCategory? @relation(fields: [categoryId], references: [id], onDelete: SetNull)
-  status              ArticleStatus @default(DRAFT)
-  featured            Boolean       @default(false)
-  readTimeMinutes     Int?          @map("read_time_minutes")
-  isEditorial         Boolean       @default(false) @map("is_editorial")
-  locale              String        @default("en")
-  createdAt           DateTime      @default(now()) @map("created_at")
-  updatedAt           DateTime      @updatedAt @map("updated_at")
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
 
-  @@index([status, createdAt(sort: Desc)])
-  @@index([categoryId])
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+  @@unique([identifier, token])
+}
+
+model PortfolioPosition {
+  id          String   @id @default(cuid())
+  userId      String
+  coinId      String
+  coinName    String
+  coinSymbol  String
+  amount      Float
+  buyPrice    Float
+  investedUsd Float
+  buyDate     DateTime
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([userId])
+}
+
+model AcademyProgress {
+  id          String   @id @default(cuid())
+  userId      String
+  lessonSlug  String
+  completed   Boolean  @default(false)
+  viewedAt    DateTime @default(now())
+  completedAt DateTime?
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, lessonSlug])
+  @@index([userId])
+}
+
+model Article {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  title       String
+  description String
+  content     String
+  category    String
+  imageUrl    String?
+  readTime    Int      @default(5)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([category])
   @@index([slug])
-  @@index([featured])
-  @@map("news_articles")
 }
-
-// ─── Crypto Catalogue / Snapshot Cache ──────────────────
-
-model Cryptocurrency {
-  id                 Int      @id @default(autoincrement())
-  coinGeckoId        String   @unique @map("coingecko_id")
-  symbol             String
-  name               String
-  slug               String   @unique
-  image              String?
-  currentPrice       Float?   @map("current_price")
-  marketCap          Float?   @map("market_cap")
-  marketCapRank      Int?     @map("market_cap_rank")
-  totalVolume        Float?   @map("total_volume")
-  priceChange24h     Float?   @map("price_change_24h")
-  priceChangePct24h  Float?   @map("price_change_pct_24h")
-  priceChangePct1h   Float?   @map("price_change_pct_1h")
-  priceChangePct7d   Float?   @map("price_change_pct_7d")
-  circulatingSupply  Float?   @map("circulating_supply")
-  maxSupply          Float?   @map("max_supply")
-  ath                Float?
-  atl                Float?
-  sparkline7d        String?  @map("sparkline_7d")
-  lastUpdated        DateTime @default(now()) @map("last_updated")
-  createdAt          DateTime @default(now()) @map("created_at")
-  updatedAt          DateTime @updatedAt @map("updated_at")
-
-  @@index([symbol])
-  @@index([marketCapRank])
-  @@map("cryptocurrencies")
-}
-
-// ─── Newsletter ─────────────────────────────────────────
-
-model NewsletterSubscriber {
-  id        Int      @id @default(autoincrement())
-  email     String   @unique
-  locale    String   @default("en")
-  createdAt DateTime @default(now()) @map("created_at")
-
-  @@map("newsletter_subscribers")
-}
-
-// ─── Future tables (M5/M6 — schema stubs for reference) ─
-// Users, profiles, portfolio_assets, transactions,
-// watchlists, price_alerts, academy_articles, sessions,
-// verification_tokens will be added in their respective
-// milestones following the same conventions:
-//   - created_at / updated_at on every table
-//   - indexes on slug, category, date, user_id
-//   - FKs with appropriate ON DELETE

@@ -1,7 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
-  <rect width="256" height="256" fill="#0A1628"/>
-  <circle cx="128" cy="128" r="88" fill="none" stroke="#00D4AA" stroke-width="8"/>
-  <circle cx="128" cy="128" r="64" fill="#00D4AA" opacity="0.15"/>
-  <path d="M128 80 L128 176 M96 96 L160 96 M96 160 L160 160" stroke="#00D4AA" stroke-width="6" stroke-linecap="round"/>
-  <circle cx="128" cy="128" r="52" fill="none" stroke="#00D4AA" stroke-width="4" opacity="0.4"/>
+  <rect width="256" height="256" fill="#070B14"/>
+  <circle cx="128" cy="128" r="90" fill="none" stroke="#F7931A" stroke-width="2" opacity="0.3"/>
+  <circle cx="128" cy="128" r="75" fill="none" stroke="#1a2332" stroke-width="1.5"/>
+  <path d="M 128 53 Q 100 70 85 95" fill="none" stroke="#2a3a52" stroke-width="2"/>
+  <path d="M 128 53 Q 156 70 171 95" fill="none" stroke="#2a3a52" stroke-width="2"/>
+  <path d="M 70 128 Q 85 128 100 128 L 156 128 Q 171 128 186 128" fill="none" stroke="#2a3a52" stroke-width="2"/>
+  <path d="M 85 161 Q 100 186 128 203" fill="none" stroke="#2a3a52" stroke-width="2"/>
+  <path d="M 171 161 Q 156 186 128 203" fill="none" stroke="#2a3a52" stroke-width="2"/>
+  <path d="M 128 53 L 128 203" fill="none" stroke="#2a3a52" stroke-width="2"/>
+  <path d="M 75 80 Q 60 90 60 110 Q 60 140 75 160" fill="none" stroke="#F7931A" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="75" cy="75" r="2" fill="#F7931A"/>
+  <circle cx="65" cy="95" r="1.5" fill="#F7931A" opacity="0.6"/>
+  <circle cx="60" cy="120" r="2" fill="#F7931A"/>
+  <circle cx="65" cy="145" r="1.5" fill="#F7931A" opacity="0.6"/>
+  <circle cx="75" cy="165" r="2" fill="#F7931A"/>
+  <line x1="75" y1="75" x2="65" y2="95" stroke="#F7931A" stroke-width="1" opacity="0.4"/>
+  <line x1="65" y1="95" x2="60" y2="120" stroke="#F7931A" stroke-width="1" opacity="0.4"/>
+  <line x1="60" y1="120" x2="65" y2="145" stroke="#F7931A" stroke-width="1" opacity="0.4"/>
+  <line x1="65" y1="145" x2="75" y2="165" stroke="#F7931A" stroke-width="1" opacity="0.4"/>
+  <circle cx="128" cy="128" r="95" fill="none" stroke="#F7931A" stroke-width="1" opacity="0.15"/>
 </svg>

@@ -4,106 +4,100 @@
 
 @layer base {
   :root {
-    /* CoinLens Light Theme */
-    --background: 220 20% 97%;
-    --foreground: 220 30% 10%;
-    --card: 0 0% 100%;
-    --card-foreground: 220 30% 10%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 220 30% 10%;
-    --primary: 165 100% 38%;
-    --primary-foreground: 220 30% 5%;
-    --secondary: 220 15% 92%;
-    --secondary-foreground: 220 20% 25%;
-    --muted: 220 15% 94%;
-    --muted-foreground: 220 10% 43%;
-    --accent: 220 15% 92%;
-    --accent-foreground: 220 20% 25%;
-    --destructive: 0 72% 51%;
-    --destructive-foreground: 0 0% 100%;
-    --success: 142 71% 45%;
-    --success-foreground: 0 0% 100%;
-    --warning: 38 92% 50%;
-    --warning-foreground: 0 0% 100%;
-    --border: 220 13% 88%;
-    --input: 220 13% 88%;
-    --ring: 165 100% 38%;
+    --background: 222 48% 5%;
+    --foreground: 210 20% 95%;
+    --card: 218 42% 9%;
+    --card-foreground: 210 20% 95%;
+    --popover: 218 42% 9%;
+    --popover-foreground: 210 20% 95%;
+    --primary: 33 93% 54%;
+    --primary-foreground: 0 0% 24%;
+    --secondary: 228 76% 65%;
+    --secondary-foreground: 0 0% 10%;
+    --muted: 220 30% 14%;
+    --muted-foreground: 215 15% 55%;
+    --accent: 220 30% 14%;
+    --accent-foreground: 210 20% 95%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 10%;
+    --border: 220 20% 18%;
+    --input: 220 20% 18%;
+    --ring: 33 93% 54%;
     --radius: 0.625rem;
-
-    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.04);
-    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.06), 0 2px 4px -2px rgb(0 0 0 / 0.06);
-    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.08), 0 4px 6px -4px rgb(0 0 0 / 0.08);
-
+    --radius-sm: calc(0.625rem - 4px);
+    --radius-lg: calc(0.625rem + 4px);
+    --radius-full: 9999px;
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    --spacing-2xl: 48px;
+    --spacing-3xl: 64px;
+    --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.3);
+    --shadow-md: 0 4px 8px -1px rgb(0 0 0 / 0.4);
+    --shadow-lg: 0 10px 20px -3px rgb(0 0 0 / 0.5);
     --duration-fast: 150ms;
     --duration-normal: 250ms;
     --duration-slow: 350ms;
-  }
-
-  .dark {
-    /* CoinLens Dark Theme — Primary */
-    --background: 222 47% 7%;
-    --foreground: 213 31% 91%;
-    --card: 222 40% 10%;
-    --card-foreground: 213 31% 91%;
-    --popover: 222 40% 10%;
-    --popover-foreground: 213 31% 91%;
-    --primary: 165 100% 42%;
-    --primary-foreground: 222 47% 5%;
-    --secondary: 217 33% 17%;
-    --secondary-foreground: 213 27% 80%;
-    --muted: 217 33% 14%;
-    --muted-foreground: 215 20% 57%;
-    --accent: 217 33% 17%;
-    --accent-foreground: 213 27% 84%;
-    --destructive: 0 72% 51%;
-    --destructive-foreground: 0 0% 100%;
-    --success: 142 71% 45%;
-    --success-foreground: 0 0% 100%;
-    --warning: 38 92% 50%;
-    --warning-foreground: 0 0% 100%;
-    --border: 217 33% 18%;
-    --input: 217 33% 18%;
-    --ring: 165 100% 42%;
-
-    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.2);
-    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.3), 0 2px 4px -2px rgb(0 0 0 / 0.2);
-    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.4), 0 4px 6px -4px rgb(0 0 0 / 0.3);
+    --chart-1: 33 93% 54%;
+    --chart-2: 228 76% 65%;
+    --chart-3: 160 84% 39%;
+    --chart-4: 0 84% 60%;
+    --chart-5: 270 60% 60%;
+    --gain: 160 84% 39%;
+    --loss: 0 84% 60%;
   }
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+  }
   * {
-    @apply border-border;
+    border-color: hsl(var(--border));
   }
   body {
-    @apply bg-background text-foreground antialiased;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "rlig" 1, "calt" 1;
   }
+  ::selection {
+    background-color: hsl(var(--primary) / 0.25);
+    color: hsl(var(--primary));
+  }
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background-color: transparent; }
+  ::-webkit-scrollbar-thumb { background-color: hsl(var(--border)); border-radius: 9999px; }
+  ::-webkit-scrollbar-thumb:hover { background-color: hsl(var(--muted-foreground) / 0.5); }
 }
 
-/* Ticker animation */
-@keyframes ticker-scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-.animate-ticker {
-  animation: ticker-scroll 40s linear infinite;
-}
-.animate-ticker:hover {
-  animation-play-state: paused;
-}
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-::-webkit-scrollbar-thumb {
-  background: hsl(var(--muted-foreground) / 0.3);
-  border-radius: 3px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: hsl(var(--muted-foreground) / 0.5);
+@layer utilities {
+  .scrollbar-none::-webkit-scrollbar { display: none; }
+  .scrollbar-none { -ms-overflow-style: none; scrollbar-width: none; }
+  .hero-gradient {
+    background:
+      radial-gradient(ellipse 60% 50% at 50% -10%, hsl(33 93% 54% / 0.12), transparent),
+      radial-gradient(ellipse 40% 40% at 80% 0%, hsl(228 76% 65% / 0.1), transparent),
+      radial-gradient(ellipse 40% 30% at 20% 10%, hsl(160 84% 39% / 0.06), transparent);
+  }
+  .glass-card {
+    background: hsl(var(--card) / 0.85);
+    backdrop-filter: blur(12px);
+    border: 1px solid hsl(var(--border) / 0.5);
+  }
+  .glow-orange {
+    box-shadow: 0 0 20px hsl(33 93% 54% / 0.15), 0 0 60px hsl(33 93% 54% / 0.05);
+  }
+  .glow-violet {
+    box-shadow: 0 0 20px hsl(228 76% 65% / 0.15), 0 0 60px hsl(228 76% 65% / 0.05);
+  }
+  .text-gain { color: hsl(var(--gain)); }
+  .text-loss { color: hsl(var(--loss)); }
+  .bg-gain { background-color: hsl(var(--gain)); }
+  .bg-loss { background-color: hsl(var(--loss)); }
 }

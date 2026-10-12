@@ -3,9 +3,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "prisma generate && next build",
     "start": "next start",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "postinstall": "prisma generate"
   },
   "prisma": {
     "seed": "tsx --require dotenv/config scripts/safe-seed.ts"
@@ -83,6 +84,7 @@
     "dayjs": "1.11.13",
     "dotenv": "16.5.0",
     "embla-carousel-react": "8.3.0",
+    "fast-xml-parser": "^5.11.1",
     "formik": "2.4.5",
     "framer-motion": "12.23.12",
     "gray-matter": "4.0.3",
@@ -120,9 +122,13 @@
     "zustand": "5.0.3"
   },
   "engines": {
-    "node": ">=20.9.0"
+    "node": "22.x"
   },
   "resolutions": {
+    "motion-dom": "12.23.12",
+    "motion-utils": "12.23.6"
+  },
+  "overrides": {
     "motion-dom": "12.23.12",
     "motion-utils": "12.23.6"
   }
