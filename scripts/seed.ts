@@ -374,7 +374,7 @@ async function main() {
     })
   }
 
-  console.log(`Seeded ${ARTICLES.length} articles and test account`)
+  console.log(`Seeded ${ARTICLES.length} articles`)
 }
 
 main()

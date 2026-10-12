@@ -7,6 +7,7 @@ import { BuscarClient } from './buscar-client'
 export const metadata: Metadata = {
   title: 'Buscar — CriptoMundo',
   description: 'Busca lecciones, art\u00edculos, herramientas y m\u00e1s en CriptoMundo.',
+  robots: { index: false, follow: true },
 }
 
 export default async function BuscarPage({ searchParams }: { searchParams: Promise<{ q?: string }> }) {

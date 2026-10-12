@@ -7,6 +7,7 @@ import { Providers } from '@/components/providers'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { GoogleAnalytics } from '@/components/google-analytics'
+import { ConsentDefaults } from '@/components/consent-defaults'
 
 export const dynamic = 'force-dynamic'
 
@@ -31,6 +32,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="es" className="dark" suppressHydrationWarning>
       <body className={`${spaceGrotesk.variable} ${inter.variable} font-sans antialiased`}>
+        <ConsentDefaults />
         <Script
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7428485851163208"
           strategy="afterInteractive"

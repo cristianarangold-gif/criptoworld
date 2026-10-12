@@ -5,15 +5,13 @@ import { motion } from 'framer-motion'
 import { SparklineChart } from '@/components/sparkline-chart'
 import { PriceChange } from '@/components/price-change'
 import { formatUsd, formatCompact } from '@/lib/format'
-import { ArrowRight, BookOpen, ExternalLink, AlertTriangle, Clock } from 'lucide-react'
+import { ArrowRight, BookOpen, AlertTriangle, Clock } from 'lucide-react'
 import type { CoinMarket } from '@/lib/coingecko'
-import type { NewsItem } from '@/lib/rss'
 
 const fadeUp = { hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }
 
-export function HomeClient({ market, news, articles }: {
+export function HomeClient({ market, articles }: {
   market: CoinMarket[]
-  news: NewsItem[]
   articles: any[]
 }) {
   return (
@@ -63,54 +61,6 @@ export function HomeClient({ market, news, articles }: {
           ))}
         </div>
       </motion.section>
-
-      {/* Featured News */}
-      {(news ?? []).length > 0 && (
-        <motion.section
-          className="py-12 border-t border-border/40"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: '-50px' }}
-          transition={{ staggerChildren: 0.08 }}
-        >
-          <div className="flex items-center justify-between mb-6">
-            <h2 className="font-display text-2xl font-bold tracking-tight">Noticias destacadas</h2>
-            <Link href="/noticias" className="text-sm text-primary hover:underline inline-flex items-center gap-1">
-              Todas las noticias <ArrowRight className="h-3.5 w-3.5" />
-            </Link>
-          </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {news.map((item: NewsItem, i: number) => (
-              <motion.a
-                key={item?.link ?? i}
-                href={item?.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                variants={fadeUp}
-                transition={{ duration: 0.4 }}
-                className="glass-card rounded-xl overflow-hidden hover:border-primary/30 transition-all group"
-              >
-                <div className="relative aspect-video bg-muted">
-                  {item?.imageUrl ? (
-                    <Image src={item.imageUrl} alt={item?.title ?? 'Noticia'} fill className="object-cover" unoptimized />
-                  ) : (
-                    <div className="flex items-center justify-center h-full text-muted-foreground">
-                      <span className="text-xs">Sin imagen</span>
-                    </div>
-                  )}
-                </div>
-                <div className="p-4">
-                  <p className="text-sm font-semibold line-clamp-2 group-hover:text-primary transition-colors">{item?.title}</p>
-                  <div className="mt-2 flex items-center gap-2 text-xs text-muted-foreground">
-                    <span>{item?.source}</span>
-                    <ExternalLink className="h-3 w-3" />
-                  </div>
-                </div>
-              </motion.a>
-            ))}
-          </div>
-        </motion.section>
-      )}
 
       {/* Articles */}
       {(articles ?? []).length > 0 && (
