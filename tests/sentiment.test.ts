@@ -1,6 +1,6 @@
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
-import { classifyFearGreed, parseFearGreed, toTickerItems } from '../lib/sentiment'
+import { classifyFearGreed, parseFearGreed, parseGlobal, toTickerItems } from '../lib/sentiment'
 import type { CoinMarket } from '../lib/coingecko'
 
 test('classifyFearGreed usa los rangos del índice', () => {
@@ -35,4 +35,21 @@ test('toTickerItems solo muestra monedas conocidas, en mayúsculas, como mucho 8
 test('toTickerItems omite stablecoins y tokens poco conocidos aunque estén arriba por capitalización', () => {
   const coins = [coin('btc', 60000), coin('usdt', 0.92), coin('figr_heloc', 0.99), coin('usdc', 0.92), coin('eth', 2400)]
   assert.deepEqual(toTickerItems(coins).map(i => i.symbol), ['BTC', 'ETH'])
+})
+
+test('parseGlobal lee dominancia, capitalización en euros y variación 24 h de CoinGecko', () => {
+  const json = {
+    data: {
+      market_cap_percentage: { btc: 57.3, eth: 12.1 },
+      total_market_cap: { usd: 2.8e12, eur: 2.4e12 },
+      market_cap_change_percentage_24h_usd: -1.25,
+    },
+  }
+  assert.deepEqual(parseGlobal(json), { btcDominance: 57.3, totalCapEur: 2.4e12, capChange24h: -1.25 })
+})
+
+test('parseGlobal devuelve null si falta algún dato', () => {
+  assert.equal(parseGlobal(null), null)
+  assert.equal(parseGlobal({ data: { market_cap_percentage: { btc: 57 }, total_market_cap: { usd: 1 } } }), null)
+  assert.equal(parseGlobal({ data: { market_cap_percentage: { btc: 'x' }, total_market_cap: { eur: 1 }, market_cap_change_percentage_24h_usd: 0 } }), null)
 })

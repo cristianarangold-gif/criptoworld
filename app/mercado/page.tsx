@@ -1,6 +1,8 @@
 import { Metadata } from 'next'
 import { getMarketData } from '@/lib/coingecko'
 import { MercadoClient } from '@/components/mercado-client'
+import { MarketPanel } from '@/components/market-panel'
+import { getFearGreed, getGlobalMarket } from '@/lib/sentiment'
 
 export const metadata: Metadata = {
   title: 'Mercado',
@@ -8,6 +10,10 @@ export const metadata: Metadata = {
 }
 
 export default async function MercadoPage() {
-  const market = await getMarketData('usd').catch(() => [])
-  return <MercadoClient initialData={market} />
+  const [market, fearGreed, global] = await Promise.all([
+    getMarketData('usd').catch(() => []),
+    getFearGreed(),
+    getGlobalMarket(),
+  ])
+  return <MercadoClient initialData={market} panel={<MarketPanel fearGreed={fearGreed} global={global} />} />
 }

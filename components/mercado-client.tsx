@@ -11,7 +11,7 @@ import dynamic from 'next/dynamic'
 
 const CoinChart = dynamic(() => import('@/components/coin-chart').then(m => m.CoinChart), { ssr: false, loading: () => <div className="h-64 bg-muted/20 rounded-lg animate-pulse" /> })
 
-export function MercadoClient({ initialData }: { initialData: CoinMarket[] }) {
+export function MercadoClient({ initialData, panel }: { initialData: CoinMarket[]; panel?: React.ReactNode }) {
   const [data, setData] = useState<CoinMarket[]>(initialData ?? [])
   const [search, setSearch] = useState('')
   const [currency, setCurrency] = useState('usd')
@@ -72,6 +72,8 @@ export function MercadoClient({ initialData }: { initialData: CoinMarket[] }) {
         <h1 className="font-display text-3xl font-bold tracking-tight">Mercado de criptomonedas</h1>
         <p className="mt-2 text-muted-foreground">Precios en vivo de las principales criptomonedas. Datos actualizados cada 60 segundos.</p>
       </div>
+
+      {panel}
 
       {/* Controls */}
       <div className="flex flex-col sm:flex-row gap-3 mb-6">

@@ -7,6 +7,7 @@ import { formatDate } from '@/lib/guides'
 import { Markdown } from '@/components/markdown'
 import { Calculator } from '@/components/calculators'
 import { SITE } from '@/lib/site'
+import { HISTORY, getHistory } from '@/lib/historical'
 
 export function generateStaticParams() {
   return getAllTools().map(t => ({ slug: t.slug }))
@@ -27,6 +28,11 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
   const { slug } = await params
   const tool = getTool(slug)
   if (!tool) notFound()
+  const label = tool.calculator === 'estafa' ? 'Test' : tool.calculator === 'historico' ? 'Simulador' : 'Calculadora'
+  const extra =
+    tool.calculator === 'historico'
+      ? Object.entries(HISTORY.monedas).map(([id, c]) => ({ id, nombre: c.nombre, points: getHistory(id) }))
+      : undefined
   const others = getAllTools().filter(t => t.slug !== slug).slice(0, 4)
 
   const jsonLd = {
@@ -59,12 +65,12 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
         <Link href="/sobre-nosotros" className="text-foreground hover:text-primary">{SITE.owner}</Link>
       </p>
 
-      <section className="glass-card rounded-xl p-6 my-8" aria-label="Calculadora">
+      <section className="glass-card rounded-xl p-6 my-8" aria-label={label}>
         <h2 className="font-display text-lg font-bold mb-4 flex items-center gap-2">
           <CalcIcon className="h-5 w-5 text-primary" />
-          Calculadora
+          {label}
         </h2>
-        <Calculator id={tool.calculator} />
+        <Calculator id={tool.calculator} extra={extra} />
       </section>
 
       <Markdown source={tool.body} />

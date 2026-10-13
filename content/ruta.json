@@ -19,7 +19,8 @@
       { "tipo": "leccion", "slug": "wallet" },
       { "tipo": "leccion", "slug": "seed-phrase" },
       { "tipo": "guia", "slug": "seguridad-cripto" },
-      { "tipo": "guia", "slug": "estafas-cripto" }
+      { "tipo": "guia", "slug": "estafas-cripto" },
+      { "tipo": "herramienta", "slug": "test-estafa" }
     ]
   },
   {
@@ -38,6 +39,7 @@
     "pasos": [
       { "tipo": "guia", "slug": "gestion-del-riesgo" },
       { "tipo": "guia", "slug": "estrategia-dca" },
+      { "tipo": "herramienta", "slug": "simulador-historico" },
       { "tipo": "leccion", "slug": "defi" },
       { "tipo": "leccion", "slug": "staking" },
       { "tipo": "guia", "slug": "analisis-proyectos-cripto" }

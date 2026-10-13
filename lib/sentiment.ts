@@ -28,6 +28,27 @@ export async function getFearGreed(): Promise<{ value: number; label: string } |
   }
 }
 
+export type GlobalMarket = { btcDominance: number; totalCapEur: number; capChange24h: number }
+
+export function parseGlobal(json: unknown): GlobalMarket | null {
+  const d = (json as { data?: Record<string, any> } | null)?.data
+  const btcDominance = d?.market_cap_percentage?.btc
+  const totalCapEur = d?.total_market_cap?.eur
+  const capChange24h = d?.market_cap_change_percentage_24h_usd
+  if (![btcDominance, totalCapEur, capChange24h].every(v => typeof v === 'number' && Number.isFinite(v))) return null
+  return { btcDominance, totalCapEur, capChange24h }
+}
+
+export async function getGlobalMarket(): Promise<GlobalMarket | null> {
+  try {
+    const res = await fetch('https://api.coingecko.com/api/v3/global', { next: { revalidate: 600 } })
+    if (!res.ok) return null
+    return parseGlobal(await res.json())
+  } catch {
+    return null
+  }
+}
+
 // Solo monedas conocidas: el ranking por capitalización incluye stablecoins y tokens de activos reales
 // que valen siempre ~1 € y no aportan nada en la cinta. Se mantiene el orden por capitalización.
 const TICKER_SYMBOLS = new Set(['btc', 'eth', 'xrp', 'bnb', 'sol', 'trx', 'doge', 'ada', 'link', 'avax', 'dot', 'ltc', 'xlm', 'bch', 'ton', 'sui'])
