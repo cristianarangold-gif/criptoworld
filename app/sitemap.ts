@@ -1,4 +1,5 @@
 import { getAllGuides } from '@/lib/guides'
+import { getAllTools } from '@/lib/tools'
 import { MetadataRoute } from 'next'
 import { getAllLessons } from '@/lib/academia-data'
 import { SITE } from '@/lib/site'
@@ -35,5 +36,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.7,
   }))
 
-  return [...staticPages, ...articlePages, ...lessonPages]
+  const toolPages = getAllTools().map(t => ({
+    url: `${baseUrl}/herramientas/${t.slug}`,
+    lastModified: new Date(`${t.updated}T12:00:00Z`),
+    changeFrequency: 'yearly' as const,
+    priority: 0.6,
+  }))
+
+  return [...staticPages, ...articlePages, ...lessonPages, ...toolPages]
 }

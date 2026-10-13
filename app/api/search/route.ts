@@ -2,21 +2,9 @@ export const dynamic = 'force-dynamic'
 
 import { NextRequest, NextResponse } from 'next/server'
 import { getAllGuides } from '@/lib/guides'
+import { getAllTools } from '@/lib/tools'
 import { getAllLessons } from '@/lib/academia-data'
 
-const TOOLS = [
-  { title: 'Calculadora de inversión', slug: 'inversion', type: 'herramienta' },
-  { title: 'Simulador DCA', slug: 'dca', type: 'herramienta' },
-  { title: 'Calculadora de staking', slug: 'staking', type: 'herramienta' },
-  { title: 'Rentabilidad', slug: 'rentabilidad', type: 'herramienta' },
-  { title: 'Comisiones', slug: 'comisiones', type: 'herramienta' },
-  { title: 'Conversor EUR/USD', slug: 'conversor', type: 'herramienta' },
-  { title: 'Market Cap', slug: 'marketcap', type: 'herramienta' },
-  { title: 'BTC \u2194 Satoshis', slug: 'btc-sat', type: 'herramienta' },
-  { title: 'ETH \u2194 Gwei', slug: 'eth-gwei', type: 'herramienta' },
-  { title: 'Cambio porcentual', slug: 'porcentaje', type: 'herramienta' },
-  { title: 'Inter\u00e9s compuesto', slug: 'interes', type: 'herramienta' },
-]
 
 const PAGES = [
   { title: 'Mercado en vivo', href: '/mercado', desc: 'Precios de las principales criptomonedas en tiempo real' },
@@ -58,9 +46,9 @@ export async function GET(req: NextRequest) {
   })
 
   // Search tools
-  TOOLS.forEach(t => {
-    if (t.title.toLowerCase().includes(q)) {
-      results.push({ type: 'herramienta', title: t.title, href: `/herramientas?t=${t.slug}` })
+  getAllTools().forEach(t => {
+    if (t.title.toLowerCase().includes(q) || t.short.toLowerCase().includes(q)) {
+      results.push({ type: 'herramienta', title: t.title, href: `/herramientas/${t.slug}`, desc: t.short.slice(0, 100) })
     }
   })
 

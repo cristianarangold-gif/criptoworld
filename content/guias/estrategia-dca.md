@@ -32,7 +32,7 @@ Supongamos que inviertes 100 € al mes durante seis meses en una criptomoneda c
 
 Has invertido 600 € y tienes 16,05 unidades, con un **precio medio de unos 37,4 €**. Aunque en junio el precio ha vuelto exactamente a los 50 € de enero, tu inversión vale 16,05 × 50 € ≈ **802 €**.
 
-Si hubieras invertido los 600 € de golpe en enero, tendrías 12 unidades, que en junio valdrían 600 €. El DCA ha salido mejor **porque el precio bajó por el camino**. Puedes hacer tus propias simulaciones con el [simulador de DCA](/herramientas).
+Si hubieras invertido los 600 € de golpe en enero, tendrías 12 unidades, que en junio valdrían 600 €. El DCA ha salido mejor **porque el precio bajó por el camino**. Puedes hacer tus propias simulaciones con el [simulador de DCA](/herramientas/simulador-dca).
 
 ## Por qué compras más barato de media
 
