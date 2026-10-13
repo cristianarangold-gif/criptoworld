@@ -22,18 +22,17 @@ test('parseFearGreed devuelve null ante respuestas inválidas', () => {
   assert.equal(parseFearGreed({ data: [{ value: 'abc' }] }), null)
 })
 
-const coin = (i: number, price: number | null): CoinMarket =>
-  ({ id: `c${i}`, symbol: `c${i}`, name: `C${i}`, image: '', current_price: price as number, market_cap: 0, market_cap_rank: i, total_volume: 0, price_change_percentage_24h: 1.5 })
+const coin = (symbol: string, price: number | null): CoinMarket =>
+  ({ id: symbol, symbol, name: symbol, image: '', current_price: price as number, market_cap: 0, market_cap_rank: 0, total_volume: 0, price_change_percentage_24h: 1.5 })
 
-test('toTickerItems devuelve 8 monedas en mayúsculas y omite las que no tienen precio', () => {
-  const coins = [coin(1, null), ...Array.from({ length: 9 }, (_, i) => coin(i + 2, 100 + i))]
-  const items = toTickerItems(coins)
+test('toTickerItems solo muestra monedas conocidas, en mayúsculas, como mucho 8 y con precio', () => {
+  const syms = ['btc', 'eth', 'xrp', 'bnb', 'sol', 'trx', 'doge', 'ada', 'link', 'avax']
+  const items = toTickerItems([coin('btc', null), ...syms.slice(1).map((s, i) => coin(s, 100 + i))])
   assert.equal(items.length, 8)
-  assert.equal(items[0].symbol, 'C2')
-  assert.deepEqual(items[0], { symbol: 'C2', price: 100, change: 1.5 })
+  assert.deepEqual(items[0], { symbol: 'ETH', price: 100, change: 1.5 })
 })
 
-test('toTickerItems omite las stablecoins, que no aportan información en la cinta', () => {
-  const coins = [coin(1, 60000), { ...coin(2, 0.92), symbol: 'usdt' }, { ...coin(3, 0.92), symbol: 'usdc' }, coin(4, 2400)]
-  assert.deepEqual(toTickerItems(coins).map(i => i.symbol), ['C1', 'C4'])
+test('toTickerItems omite stablecoins y tokens poco conocidos aunque estén arriba por capitalización', () => {
+  const coins = [coin('btc', 60000), coin('usdt', 0.92), coin('figr_heloc', 0.99), coin('usdc', 0.92), coin('eth', 2400)]
+  assert.deepEqual(toTickerItems(coins).map(i => i.symbol), ['BTC', 'ETH'])
 })

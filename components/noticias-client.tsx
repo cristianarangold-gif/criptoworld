@@ -1,12 +1,10 @@
 'use client'
 import { useState } from 'react'
 import Image from 'next/image'
-import { motion } from 'framer-motion'
 import { ExternalLink, Filter, Newspaper, Clock } from 'lucide-react'
 import type { NewsItem } from '@/lib/rss'
 
 const CATEGORIES = ['Todas', 'Bitcoin', 'Ethereum', 'ETF y Mercados', 'Regulación', 'Blockchain', 'Economía', 'Actualidad']
-const fadeUp = { hidden: { opacity: 1, y: 8 }, visible: { opacity: 1, y: 0 } }
 
 function timeAgo(dateStr: string): string {
   try {
@@ -57,20 +55,13 @@ export function NoticiasClient({ initialNews }: { initialNews: NewsItem[] }) {
           <p className="text-sm text-muted-foreground mt-1">Las fuentes podrían no estar disponibles temporalmente.</p>
         </div>
       ) : (
-        <motion.div
-          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4"
-          initial="hidden"
-          animate="visible"
-          transition={{ staggerChildren: 0.04 }}
-        >
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {filtered.map((item: NewsItem, i: number) => (
-            <motion.a
+            <a
               key={item?.link ?? i}
               href={item?.link}
               target="_blank"
               rel="noopener noreferrer"
-              variants={fadeUp}
-              transition={{ duration: 0.35 }}
               className="rounded-xl overflow-hidden bg-card border border-border/50 hover:border-primary/30 transition-all group flex flex-col"
             >
               <div className="relative aspect-video bg-muted/50">
@@ -103,9 +94,9 @@ export function NoticiasClient({ initialNews }: { initialNews: NewsItem[] }) {
                   </span>
                 </div>
               </div>
-            </motion.a>
+            </a>
           ))}
-        </motion.div>
+        </div>
       )}
     </div>
   )

@@ -28,14 +28,15 @@ export async function getFearGreed(): Promise<{ value: number; label: string } |
   }
 }
 
-// Las stablecoins valen siempre ~1 dólar: en la cinta solo ocuparían sitio.
-const STABLECOINS = new Set(['usdt', 'usdc', 'dai', 'usde', 'usds', 'fdusd', 'pyusd', 'tusd', 'eurc', 'busd'])
+// Solo monedas conocidas: el ranking por capitalización incluye stablecoins y tokens de activos reales
+// que valen siempre ~1 € y no aportan nada en la cinta. Se mantiene el orden por capitalización.
+const TICKER_SYMBOLS = new Set(['btc', 'eth', 'xrp', 'bnb', 'sol', 'trx', 'doge', 'ada', 'link', 'avax', 'dot', 'ltc', 'xlm', 'bch', 'ton', 'sui'])
 
 export type TickerItem = { symbol: string; price: number; change: number }
 
 export function toTickerItems(coins: CoinMarket[], n = 8): TickerItem[] {
   return coins
-    .filter(c => Number.isFinite(c?.current_price) && c.current_price > 0 && !STABLECOINS.has(c.symbol?.toLowerCase()))
+    .filter(c => Number.isFinite(c?.current_price) && c.current_price > 0 && TICKER_SYMBOLS.has(c.symbol?.toLowerCase()))
     .slice(0, n)
     .map(c => ({ symbol: c.symbol.toUpperCase(), price: c.current_price, change: c.price_change_percentage_24h ?? 0 }))
 }
