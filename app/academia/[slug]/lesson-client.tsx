@@ -8,6 +8,7 @@ import { cn } from '@/lib/utils'
 import { Markdown } from '@/components/markdown'
 import { SITE } from '@/lib/site'
 import { ReadingProgress } from '@/components/reading-progress'
+import { slugify } from '@/lib/slug'
 
 type LessonData = {
   slug: string
@@ -190,7 +191,7 @@ export function LessonClient({ lesson, nav, levelLabel, levelColor, levelBg }: {
             <div className="px-5 pb-5 space-y-2">
               {Object.entries(lesson.glossary).map(([term, def]) => (
                 <div key={term} className="text-sm">
-                  <span className="font-medium text-primary">{term}:</span>{' '}
+                  <Link href={`/glosario#${slugify(term)}`} className="font-medium text-primary hover:underline">{term}</Link>:{' '}
                   <span className="text-muted-foreground">{def}</span>
                 </div>
               ))}

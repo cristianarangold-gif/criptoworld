@@ -3,6 +3,7 @@ export const dynamic = 'force-dynamic'
 import { NextRequest, NextResponse } from 'next/server'
 import { getAllGuides } from '@/lib/guides'
 import { getAllTools } from '@/lib/tools'
+import { getGlossary } from '@/lib/glossary'
 import { getAllLessons } from '@/lib/academia-data'
 
 
@@ -49,6 +50,13 @@ export async function GET(req: NextRequest) {
   getAllTools().forEach(t => {
     if (t.title.toLowerCase().includes(q) || t.short.toLowerCase().includes(q)) {
       results.push({ type: 'herramienta', title: t.title, href: `/herramientas/${t.slug}`, desc: t.short.slice(0, 100) })
+    }
+  })
+
+  // Search glossary
+  getGlossary().forEach(t => {
+    if (t.term.toLowerCase().includes(q)) {
+      results.push({ type: 'glosario', title: t.term, href: `/glosario#${t.slug}`, desc: t.definition.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').slice(0, 100) })
     }
   })
 
