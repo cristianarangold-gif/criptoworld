@@ -2,6 +2,8 @@
 
 import { useState } from 'react'
 import { cn } from '@/lib/utils'
+import { backtest, type PricePoint } from '@/lib/backtest'
+import { ValueChart, monthLabel } from '@/components/value-chart'
 import { SCAM_QUESTIONS, scoreScam, type ScamLevel } from '@/lib/scam-test'
 
 // Calculadoras de /herramientas. Todo se calcula en el navegador; nada se envía al servidor.
@@ -459,7 +461,79 @@ function Estafa() {
   )
 }
 
-export const CALCULATORS: Record<string, () => React.JSX.Element> = {
+// ── Simulador histórico ────────────────────────────────────────────────────
+export type HistoryProp = { id: string; nombre: string; points: PricePoint[] }[]
+
+const selectCls = 'w-full rounded-lg bg-muted/50 border border-border/50 px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-primary/50'
+
+function Select({ label, value, onChange, options }: {
+  label: string; value: string; onChange: (v: string) => void; options: { value: string; label: string }[]
+}) {
+  return (
+    <label className="block">
+      <span className="block text-sm text-muted-foreground mb-1">{label}</span>
+      <select value={value} onChange={e => onChange(e.target.value)} className={selectCls}>
+        {options.map(o => <option key={o.value} value={o.value}>{o.label}</option>)}
+      </select>
+    </label>
+  )
+}
+
+function Historico({ extra }: { extra?: unknown }) {
+  const coins = (extra as HistoryProp | undefined) ?? []
+  const [id, setId] = useState('btc')
+  const [mode, setMode] = useState<'lump' | 'dca'>('lump')
+  const [amount, setAmount] = useState('1000')
+  const coin = coins.find(c => c.id === id) ?? coins[0]
+  const months = coin?.points.map(p => p.month) ?? []
+  const last = months[months.length - 1] ?? ''
+  const [from, setFrom] = useState('2021-01')
+  const [to, setTo] = useState(last)
+  if (!coin) return null
+
+  // Al cambiar de moneda, los meses fuera de su historia se ajustan a su primer o último mes.
+  const f = months.includes(from) ? from : from < months[0] ? months[0] : last
+  const t = months.includes(to) ? to : to < months[0] ? months[0] : last
+  const A = num(amount)
+  const r = A > 0 ? backtest(coin.points, { mode, amount: A, from: f, to: t }) : { error: 'Introduce un importe mayor que 0' }
+  const monthOpts = months.map(m => ({ value: m, label: monthLabel(m) }))
+
+  return (
+    <div>
+      <Grid>
+        <Select label="Moneda" value={coin.id} onChange={setId} options={coins.map(c => ({ value: c.id, label: c.nombre }))} />
+        <Select label="Cómo inviertes" value={mode} onChange={v => setMode(v as 'lump' | 'dca')} options={[
+          { value: 'lump', label: 'Todo de golpe al inicio' },
+          { value: 'dca', label: 'Una cantidad cada mes (DCA)' },
+        ]} />
+        <Field label={mode === 'dca' ? 'Importe cada mes' : 'Importe'} value={amount} onChange={setAmount} suffix="€" />
+        <div className="grid grid-cols-2 gap-3">
+          <Select label="Desde" value={f} onChange={setFrom} options={monthOpts} />
+          <Select label="Hasta" value={t} onChange={setTo} options={monthOpts} />
+        </div>
+      </Grid>
+      {'error' in r ? (
+        <p className="mt-5 rounded-lg border border-amber-500/50 bg-amber-500/10 p-3 text-sm" role="alert">{r.error}</p>
+      ) : (
+        <>
+          <Results>
+            <Row label="Total aportado" value={eur(r.invested)} />
+            <Row label={`Valor en ${monthLabel(t)}`} value={eur(r.value)} highlight />
+            <Row label="Ganancia o pérdida" value={signedEur(r.profit)} />
+            <Row label="Rentabilidad" value={pct(r.roi)} />
+            <Row label="Peor caída desde un máximo" value={r.maxDrawdown.pct < 0 ? `${pct(r.maxDrawdown.pct)} (${signedEur(r.maxDrawdown.eur)})` : 'Ninguna'} />
+          </Results>
+          <ValueChart
+            series={r.series}
+            label={`Evolución de ${eur(r.invested)} aportados en ${coin.nombre} entre ${monthLabel(f)} y ${monthLabel(t)}: valor final ${eur(r.value)}, rentabilidad ${pct(r.roi)}.`}
+          />
+        </>
+      )}
+    </div>
+  )
+}
+
+export const CALCULATORS: Record<string, (props: { extra?: unknown }) => React.JSX.Element | null> = {
   rentabilidad: Rentabilidad,
   dca: Dca,
   staking: Staking,
@@ -470,9 +544,10 @@ export const CALCULATORS: Record<string, () => React.JSX.Element> = {
   'interes-compuesto': InteresCompuesto,
   impuestos: Impuestos,
   estafa: Estafa,
+  historico: Historico,
 }
 
-export function Calculator({ id }: { id: string }) {
+export function Calculator({ id, extra }: { id: string; extra?: unknown }) {
   const C = CALCULATORS[id]
-  return C ? <C /> : null
+  return C ? <C extra={extra} /> : null
 }

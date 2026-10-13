@@ -39,6 +39,7 @@
     "pasos": [
       { "tipo": "guia", "slug": "gestion-del-riesgo" },
       { "tipo": "guia", "slug": "estrategia-dca" },
+      { "tipo": "herramienta", "slug": "simulador-historico" },
       { "tipo": "leccion", "slug": "defi" },
       { "tipo": "leccion", "slug": "staking" },
       { "tipo": "guia", "slug": "analisis-proyectos-cripto" }

@@ -25,7 +25,7 @@ test('la ruta real tiene 4 etapas válidas y los pasos del diseño', () => {
   assert.ok(flat.includes('guia:declarar-criptomonedas-hacienda'))
   assert.ok(flat.includes('herramienta:calculadora-impuestos-criptomonedas'))
   assert.ok(flat.includes('herramienta:test-estafa'))
-  assert.ok(!flat.some(f => f.includes('simulador-historico')))
+  assert.ok(flat.includes('herramienta:simulador-historico'))
 })
 
 test('resolveStep da título, enlace y minutos', () => {

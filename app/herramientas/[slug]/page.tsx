@@ -7,6 +7,7 @@ import { formatDate } from '@/lib/guides'
 import { Markdown } from '@/components/markdown'
 import { Calculator } from '@/components/calculators'
 import { SITE } from '@/lib/site'
+import { HISTORY, getHistory } from '@/lib/historical'
 
 export function generateStaticParams() {
   return getAllTools().map(t => ({ slug: t.slug }))
@@ -27,7 +28,11 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
   const { slug } = await params
   const tool = getTool(slug)
   if (!tool) notFound()
-  const label = tool.calculator === 'estafa' ? 'Test' : 'Calculadora'
+  const label = tool.calculator === 'estafa' ? 'Test' : tool.calculator === 'historico' ? 'Simulador' : 'Calculadora'
+  const extra =
+    tool.calculator === 'historico'
+      ? Object.entries(HISTORY.monedas).map(([id, c]) => ({ id, nombre: c.nombre, points: getHistory(id) }))
+      : undefined
   const others = getAllTools().filter(t => t.slug !== slug).slice(0, 4)
 
   const jsonLd = {
@@ -65,7 +70,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
           <CalcIcon className="h-5 w-5 text-primary" />
           {label}
         </h2>
-        <Calculator id={tool.calculator} />
+        <Calculator id={tool.calculator} extra={extra} />
       </section>
 
       <Markdown source={tool.body} />
