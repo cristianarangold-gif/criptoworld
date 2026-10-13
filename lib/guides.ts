@@ -30,6 +30,9 @@ export const GUIDE_CATEGORIES = ['Fiscalidad y normativa', 'Seguridad', 'Inverti
 const DIR = path.join(process.cwd(), 'content', 'guias')
 let cache: Guide[] | null = null
 
+// gray-matter convierte las fechas YAML en Date: las normalizamos a AAAA-MM-DD.
+const isoDate = (v: unknown) => (v instanceof Date ? v.toISOString().slice(0, 10) : String(v))
+
 function load(): Guide[] {
   if (cache) return cache
   cache = fs
@@ -45,8 +48,8 @@ function load(): Guide[] {
         summary: data.summary,
         category: data.category,
         order: data.order ?? 99,
-        published: String(data.published),
-        updated: String(data.updated ?? data.published),
+        published: isoDate(data.published),
+        updated: isoDate(data.updated ?? data.published),
         readTime: Math.max(1, Math.round(words / 220)),
         sources: data.sources ?? [],
         related: data.related ?? [],
