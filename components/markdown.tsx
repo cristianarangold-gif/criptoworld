@@ -3,7 +3,7 @@ import type { ReactNode } from 'react'
 
 // Renderizador Markdown mínimo y seguro (sin HTML crudo) para guías y lecciones.
 // Soporta: ## / ###, párrafos, listas (- y 1.), tablas, citas (>) como recuadro,
-// **negrita**, `código` y [enlaces](url).
+// **negrita**, *cursiva*, `código` y [enlaces](url).
 
 export function slugifyHeading(text: string): string {
   return text
@@ -23,7 +23,7 @@ export function headings(md: string): { id: string; text: string }[] {
 
 function inline(text: string, keyBase: string): ReactNode[] {
   const out: ReactNode[] = []
-  const re = /(\*\*[^*]+\*\*|`[^`]+`|\[[^\]]+\]\([^)]+\))/g
+  const re = /(\*\*[^*]+\*\*|\*[^*\s][^*]*\*|`[^`]+`|\[[^\]]+\]\([^)]+\))/g
   let last = 0
   let m: RegExpExecArray | null
   let i = 0
@@ -32,7 +32,9 @@ function inline(text: string, keyBase: string): ReactNode[] {
     const tok = m[0]
     const key = `${keyBase}-${i++}`
     if (tok.startsWith('**')) {
-      out.push(<strong key={key} className="text-foreground font-semibold">{tok.slice(2, -2)}</strong>)
+      out.push(<strong key={key} className="text-foreground font-semibold">{inline(tok.slice(2, -2), key)}</strong>)
+    } else if (tok.startsWith('*')) {
+      out.push(<em key={key}>{inline(tok.slice(1, -1), key)}</em>)
     } else if (tok.startsWith('`')) {
       out.push(<code key={key} className="rounded bg-muted px-1 py-0.5 text-[0.9em]">{tok.slice(1, -1)}</code>)
     } else {
