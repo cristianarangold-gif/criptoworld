@@ -69,7 +69,7 @@ Las ganancias por vender o permutar criptomonedas se integran en la **base impon
 | De 200.000 a 300.000 € | 27 % |
 | Más de 300.000 € | 30 % |
 
-Los tipos se aplican **por tramos**, no al total. Con una ganancia de 10.000 €, los primeros 6.000 € tributan al 19 % (1.140 €) y los 4.000 € restantes al 21 % (840 €): en total, **1.980 €**, un 19,8 % efectivo.
+Los tipos se aplican **por tramos**, no al total. Con una ganancia de 10.000 €, los primeros 6.000 € tributan al 19 % (1.140 €) y los 4.000 € restantes al 21 % (840 €): en total, **1.980 €**, un 19,8 % efectivo. Puedes hacer tu propio cálculo con la [calculadora del IRPF de las ganancias con criptomonedas](/herramientas/calculadora-impuestos-criptomonedas).
 
 Ten en cuenta que esta base suma todas tus rentas del ahorro del año. Si además tienes intereses de una cuenta remunerada o has vendido un fondo con plusvalías, todo cuenta para el tramo.
 

@@ -25,7 +25,7 @@ La comisión que pagas es:
 
 > **comisión = gas consumido × precio por unidad de gas**
 
-El precio por unidad se expresa en **gwei**, una fracción minúscula de ETH (1 gwei = 0,000000001 ETH).
+El precio por unidad se expresa en **gwei**, una fracción minúscula de ETH (1 gwei = 0,000000001 ETH). Puedes pasarlo a euros con la [calculadora de gas](/herramientas/calculadora-gas-ethereum).
 
 ## Cómo se forma el precio: EIP-1559
 
