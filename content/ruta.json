@@ -1,0 +1,46 @@
+[
+  {
+    "titulo": "Fundamentos",
+    "descripcion": "Qué son las criptomonedas, cómo funciona una blockchain y qué diferencia a Bitcoin, Ethereum, las stablecoins y el resto.",
+    "pasos": [
+      { "tipo": "leccion", "slug": "bitcoin" },
+      { "tipo": "leccion", "slug": "blockchain" },
+      { "tipo": "leccion", "slug": "ethereum" },
+      { "tipo": "leccion", "slug": "stablecoin" },
+      { "tipo": "leccion", "slug": "altcoin" }
+    ]
+  },
+  {
+    "titulo": "Comprar y guardar con seguridad",
+    "descripcion": "Dónde se compra legalmente en España, cómo se guardan las criptomonedas y cómo evitar las estafas más habituales.",
+    "pasos": [
+      { "tipo": "leccion", "slug": "exchange" },
+      { "tipo": "guia", "slug": "exchange-autorizado-cnmv" },
+      { "tipo": "leccion", "slug": "wallet" },
+      { "tipo": "leccion", "slug": "seed-phrase" },
+      { "tipo": "guia", "slug": "seguridad-cripto" },
+      { "tipo": "guia", "slug": "estafas-cripto" }
+    ]
+  },
+  {
+    "titulo": "Hacienda y normativa",
+    "descripcion": "Qué cambia con MiCA, cómo se declaran las ganancias en la Renta y cuándo hay que presentar el modelo 721.",
+    "pasos": [
+      { "tipo": "guia", "slug": "mica-regulacion-cripto-espana" },
+      { "tipo": "guia", "slug": "declarar-criptomonedas-hacienda" },
+      { "tipo": "guia", "slug": "modelo-721-criptomonedas" },
+      { "tipo": "herramienta", "slug": "calculadora-impuestos-criptomonedas" }
+    ]
+  },
+  {
+    "titulo": "Ir más allá",
+    "descripcion": "Cómo gestionar el riesgo, invertir de forma periódica y entender DeFi y el staking antes de meter dinero en ellos.",
+    "pasos": [
+      { "tipo": "guia", "slug": "gestion-del-riesgo" },
+      { "tipo": "guia", "slug": "estrategia-dca" },
+      { "tipo": "leccion", "slug": "defi" },
+      { "tipo": "leccion", "slug": "staking" },
+      { "tipo": "guia", "slug": "analisis-proyectos-cripto" }
+    ]
+  }
+]
