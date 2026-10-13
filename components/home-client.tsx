@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { SparklineChart } from '@/components/sparkline-chart'
 import { PriceChange } from '@/components/price-change'
 import { formatEur } from '@/lib/format'
-import { ArrowRight, BookOpen, AlertTriangle, Clock } from 'lucide-react'
+import { ArrowRight, BookOpen, Clock } from 'lucide-react'
 import type { CoinMarket } from '@/lib/coingecko'
 
 
@@ -87,17 +87,6 @@ export function HomeClient({ market, articles }: {
         </section>
       )}
 
-      {/* Disclaimer */}
-      <section className="py-8 border-t border-border/40">
-        <div className="rounded-lg border border-primary/20 bg-primary/5 p-4">
-          <div className="flex items-start gap-3">
-            <AlertTriangle className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-            <p className="text-xs text-muted-foreground leading-relaxed">
-              <strong className="text-foreground">Aviso:</strong> CriptoMundo es una plataforma informativa y educativa. La información mostrada no constituye asesoramiento financiero ni recomendación de inversión. Las criptomonedas son activos volátiles y de alto riesgo.
-            </p>
-          </div>
-        </div>
-      </section>
     </div>
   )
 }
