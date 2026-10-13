@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { cn } from '@/lib/utils'
+import { SCAM_QUESTIONS, scoreScam, type ScamLevel } from '@/lib/scam-test'
 
 // Calculadoras de /herramientas. Todo se calcula en el navegador; nada se envía al servidor.
 // Los importes van en euros y aceptan coma o punto como separador decimal.
@@ -370,6 +371,94 @@ function Impuestos() {
   )
 }
 
+// ── Test «¿Es una estafa?» ─────────────────────────────────────────────────
+const SCAM_RESULT: Record<ScamLevel, { title: string; text: string; cls: string }> = {
+  grave: {
+    title: 'Señales graves',
+    text: 'Lo que describes encaja con una estafa. No envíes más dinero, no instales nada y no compartas ninguna clave.',
+    cls: 'border-red-500/50 bg-red-500/10',
+  },
+  precaucion: {
+    title: 'Precaución',
+    text: 'Hay señales de alarma. Antes de seguir, comprueba la entidad en la CNMV y no tomes ninguna decisión con prisa.',
+    cls: 'border-amber-500/50 bg-amber-500/10',
+  },
+  'sin-senales': {
+    title: 'Sin señales claras',
+    text: 'No has marcado señales típicas de estafa, pero eso no garantiza que la oferta sea legítima. Comprueba siempre la entidad en la CNMV.',
+    cls: 'border-emerald-500/50 bg-emerald-500/10',
+  },
+}
+
+function Estafa() {
+  const [answers, setAnswers] = useState<Record<string, boolean>>({})
+  const answered = Object.keys(answers).length
+  const yes = Object.keys(answers).filter(k => answers[k])
+  const r = scoreScam(yes)
+  const res = SCAM_RESULT[r.level]
+  const set = (id: string, v: boolean) => setAnswers(a => ({ ...a, [id]: v }))
+  return (
+    <div>
+      <ol className="space-y-3">
+        {SCAM_QUESTIONS.map((q, i) => (
+          <li key={q.id} className="rounded-lg border border-border/40 p-3">
+            <fieldset>
+              <legend className="text-sm text-foreground">
+                {i + 1}. {q.pregunta}
+              </legend>
+              <div className="mt-2 flex gap-2">
+                {([true, false] as const).map(v => (
+                  <button
+                    key={String(v)}
+                    type="button"
+                    onClick={() => set(q.id, v)}
+                    aria-pressed={answers[q.id] === v}
+                    className={cn(
+                      'rounded-lg border px-4 py-1.5 text-sm transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary',
+                      answers[q.id] === v
+                        ? v
+                          ? 'border-red-500/60 bg-red-500/15 text-foreground'
+                          : 'border-emerald-500/60 bg-emerald-500/15 text-foreground'
+                        : 'border-border/60 hover:bg-muted/50'
+                    )}
+                  >
+                    {v ? 'Sí' : 'No'}
+                  </button>
+                ))}
+              </div>
+            </fieldset>
+          </li>
+        ))}
+      </ol>
+      <div className={cn('mt-5 rounded-lg border p-4', answered ? res.cls : 'border-border/40')} aria-live="polite">
+        {answered === 0 ? (
+          <p className="text-sm text-muted-foreground">Responde a las preguntas y aquí verás el resultado. Tus respuestas no salen de tu navegador.</p>
+        ) : (
+          <>
+            <p className="font-display font-bold text-foreground">{res.title}</p>
+            <p className="mt-1 text-sm text-muted-foreground">
+              {answered < SCAM_QUESTIONS.length && `Llevas ${answered} de ${SCAM_QUESTIONS.length} respuestas. `}
+              {res.text}
+            </p>
+            {r.signals.length > 0 && (
+              <ul className="mt-3 list-disc space-y-1 pl-5 text-sm">
+                {r.signals.map(s => <li key={s}>{s}</li>)}
+              </ul>
+            )}
+            <p className="mt-3 text-sm font-medium text-foreground">Qué hacer ahora</p>
+            <ul className="mt-1 list-disc space-y-1 pl-5 text-sm text-muted-foreground">
+              <li>Busca la entidad en las <a className="text-primary underline underline-offset-2" href="https://www.cnmv.es/Portal/BusquedaAdvertencias.aspx?lang=es" target="_blank" rel="noopener noreferrer">advertencias de la CNMV</a>.</li>
+              <li>Repasa los casos típicos en la <a className="text-primary underline underline-offset-2" href="/aprende/estafas-cripto">guía de estafas cripto</a>.</li>
+              <li>Si ya has enviado dinero, <a className="text-primary underline underline-offset-2" href="https://www.policia.es/_es/denuncias.php" target="_blank" rel="noopener noreferrer">denuncia</a> cuanto antes y guarda todas las pruebas.</li>
+              <li>Pide ayuda gratuita llamando al <strong className="text-foreground">017</strong>, la línea de ciberseguridad de INCIBE.</li>
+            </ul>
+          </>
+        )}
+      </div>
+    </div>
+  )
+}
+
 export const CALCULATORS: Record<string, () => React.JSX.Element> = {
   rentabilidad: Rentabilidad,
   dca: Dca,
@@ -380,6 +469,7 @@ export const CALCULATORS: Record<string, () => React.JSX.Element> = {
   gas: Gas,
   'interes-compuesto': InteresCompuesto,
   impuestos: Impuestos,
+  estafa: Estafa,
 }
 
 export function Calculator({ id }: { id: string }) {

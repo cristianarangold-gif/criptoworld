@@ -19,7 +19,8 @@
       { "tipo": "leccion", "slug": "wallet" },
       { "tipo": "leccion", "slug": "seed-phrase" },
       { "tipo": "guia", "slug": "seguridad-cripto" },
-      { "tipo": "guia", "slug": "estafas-cripto" }
+      { "tipo": "guia", "slug": "estafas-cripto" },
+      { "tipo": "herramienta", "slug": "test-estafa" }
     ]
   },
   {
