@@ -7,7 +7,7 @@ import { HomeClient } from '@/components/home-client'
 import { HeroChart } from '@/components/hero-chart'
 import { CountUp } from '@/components/count-up'
 import { PriceTicker } from '@/components/price-ticker'
-import { BookOpen, Calculator } from 'lucide-react'
+import { Compass, Calculator } from 'lucide-react'
 
 export default async function HomePage() {
   const [market, fearGreed] = await Promise.all([
@@ -35,11 +35,11 @@ export default async function HomePage() {
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Link
-                href="/aprende"
+                href="/empieza-aqui"
                 className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground hover:bg-primary/90 transition-colors"
               >
-                <BookOpen className="h-4 w-4" />
-                Guías prácticas
+                <Compass className="h-4 w-4" />
+                Empieza aquí
               </Link>
               <Link
                 href="/herramientas"
