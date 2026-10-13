@@ -18,10 +18,12 @@ export function Footer() {
           <div className="grid grid-cols-2 gap-8 text-sm sm:grid-cols-3">
             <nav aria-label="Contenido" className="flex flex-col gap-2">
               <span className="font-semibold text-foreground">Contenido</span>
+              <Link href="/empieza-aqui" className="text-muted-foreground hover:text-foreground transition-colors">Empieza aquí</Link>
               <Link href="/aprende" className="text-muted-foreground hover:text-foreground transition-colors">Guías</Link>
               <Link href="/academia" className="text-muted-foreground hover:text-foreground transition-colors">Academia</Link>
               <Link href="/herramientas" className="text-muted-foreground hover:text-foreground transition-colors">Herramientas</Link>
               <Link href="/mercado" className="text-muted-foreground hover:text-foreground transition-colors">Mercado</Link>
+              <Link href="/glosario" className="text-muted-foreground hover:text-foreground transition-colors">Glosario</Link>
               <Link href="/noticias" className="text-muted-foreground hover:text-foreground transition-colors">Noticias</Link>
             </nav>
             <nav aria-label="Sobre CriptoMundo" className="flex flex-col gap-2">

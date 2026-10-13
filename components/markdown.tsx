@@ -1,18 +1,12 @@
 import Link from 'next/link'
 import type { ReactNode } from 'react'
+import { slugify } from '@/lib/slug'
 
 // Renderizador Markdown mínimo y seguro (sin HTML crudo) para guías y lecciones.
 // Soporta: ## / ###, párrafos, listas (- y 1.), tablas, citas (>) como recuadro,
 // **negrita**, *cursiva*, `código` y [enlaces](url).
 
-export function slugifyHeading(text: string): string {
-  return text
-    .toLowerCase()
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-|-$/g, '')
-}
+export const slugifyHeading = slugify
 
 export function headings(md: string): { id: string; text: string }[] {
   return md

@@ -8,6 +8,9 @@ import { cn } from '@/lib/utils'
 import { Markdown } from '@/components/markdown'
 import { SITE } from '@/lib/site'
 import { ReadingProgress } from '@/components/reading-progress'
+import { slugify } from '@/lib/slug'
+import { LessonQuiz } from '@/components/lesson-quiz'
+import type { QuizQuestion } from '@/lib/quiz'
 
 type LessonData = {
   slug: string
@@ -24,6 +27,7 @@ type LessonData = {
   glossary: Record<string, string>
   updated?: string
   sources?: { title: string; url: string }[]
+  quiz?: QuizQuestion[]
 }
 
 type NavData = { prev: { slug: string; title: string } | null; next: { slug: string; title: string } | null }
@@ -190,7 +194,7 @@ export function LessonClient({ lesson, nav, levelLabel, levelColor, levelBg }: {
             <div className="px-5 pb-5 space-y-2">
               {Object.entries(lesson.glossary).map(([term, def]) => (
                 <div key={term} className="text-sm">
-                  <span className="font-medium text-primary">{term}:</span>{' '}
+                  <Link href={`/glosario#${slugify(term)}`} className="font-medium text-primary hover:underline">{term}</Link>:{' '}
                   <span className="text-muted-foreground">{def}</span>
                 </div>
               ))}
@@ -207,6 +211,11 @@ export function LessonClient({ lesson, nav, levelLabel, levelColor, levelBg }: {
             <span key={c} className="inline-flex rounded-full bg-muted px-3 py-0.5 text-xs text-muted-foreground">{c}</span>
           ))}
         </div>
+      )}
+
+      {/* Quiz */}
+      {lesson.quiz && lesson.quiz.length > 0 && (
+        <LessonQuiz slug={lesson.slug} quiz={lesson.quiz} onPassed={() => setCompleted(true)} />
       )}
 
       {/* Sources */}

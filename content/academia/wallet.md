@@ -12,6 +12,11 @@ sources:
     url: "https://bitcoin.org/es/elige-tu-monedero"
   - title: "Bitcoin.org: Asegura tu monedero"
     url: "https://bitcoin.org/es/asegure-su-monedero"
+quiz:
+  - {"pregunta": "¿Dónde están realmente tus criptomonedas?", "opciones": ["Dentro de la wallet", "En la blockchain", "En el servidor del fabricante"], "correcta": 1, "explicacion": "La wallet guarda las claves que permiten moverlas; las criptomonedas están registradas en la blockchain."}
+  - {"pregunta": "En una wallet custodiada (tu cuenta en un exchange), ¿quién guarda las claves?", "opciones": ["Tú", "Nadie", "La plataforma"], "correcta": 2, "explicacion": "Por eso, si la plataforma quiebra o bloquea tu cuenta, puedes perder el acceso a tus fondos."}
+  - {"pregunta": "¿Qué caracteriza a una wallet fría?", "opciones": ["Solo funciona con poco saldo", "La gestiona un banco", "Guarda las claves sin conexión a internet"], "correcta": 2, "explicacion": "Las wallets de hardware firman dentro del dispositivo: la clave privada nunca sale de él."}
+  - {"pregunta": "¿Qué puedes compartir sin riesgo para recibir fondos?", "opciones": ["La frase semilla", "La clave privada", "Tu dirección"], "correcta": 2, "explicacion": "La dirección sirve para recibir; la clave privada y la frase semilla dan control total y nunca se comparten."}
 ---
 ## Las criptomonedas no están "dentro" de la wallet
 

@@ -4,16 +4,17 @@ import { usePathname } from 'next/navigation'
 import { useSession, signOut } from 'next-auth/react'
 import { useState } from 'react'
 import { cn } from '@/lib/utils'
-import { TrendingUp, BookOpen, GraduationCap, Calculator, User, Menu, X, LogOut } from 'lucide-react'
+import { TrendingUp, BookOpen, BookMarked, Compass, GraduationCap, Calculator, User, Menu, X, LogOut } from 'lucide-react'
 import { SearchBar } from '@/components/search-bar'
 
-// Menú principal. Empieza aquí y Glosario se añaden junto con sus páginas (PR 2).
-// Noticias está en el pie; «Mi área» es un icono junto al buscador.
+// Menú principal. Noticias está en el pie; «Mi área» es un icono junto al buscador.
 const NAV = [
+  { href: '/empieza-aqui', label: 'Empieza aquí', icon: Compass },
   { href: '/academia', label: 'Academia', icon: GraduationCap },
   { href: '/aprende', label: 'Guías', icon: BookOpen },
   { href: '/herramientas', label: 'Herramientas', icon: Calculator },
   { href: '/mercado', label: 'Mercado', icon: TrendingUp },
+  { href: '/glosario', label: 'Glosario', icon: BookMarked },
 ]
 
 export function Header() {
@@ -31,7 +32,7 @@ export function Header() {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-1">
+        <nav className="hidden lg:flex items-center gap-1">
           {NAV.map((item) => {
             const Icon = item.icon
             const active = pathname === item.href || (item.href !== '/' && pathname?.startsWith?.(item.href))
@@ -40,20 +41,20 @@ export function Header() {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  'flex items-center gap-1.5 rounded-lg px-3 py-2 text-sm font-medium transition-colors',
+                  'flex items-center gap-1.5 whitespace-nowrap rounded-lg px-2.5 xl:px-3 py-2 text-sm font-medium transition-colors',
                   active
                     ? 'bg-primary/10 text-primary'
                     : 'text-muted-foreground hover:bg-muted hover:text-foreground'
                 )}
               >
-                <Icon className="h-4 w-4" />
+                <Icon className="hidden xl:block h-4 w-4" />
                 {item.label}
               </Link>
             )
           })}
         </nav>
 
-        <div className="hidden md:flex items-center gap-2">
+        <div className="hidden lg:flex items-center gap-2">
           <SearchBar />
           <Link
             href="/area-personal"
@@ -85,14 +86,14 @@ export function Header() {
         </div>
 
         {/* Mobile toggle */}
-        <button onClick={() => setOpen(!open)} className="md:hidden p-2 text-muted-foreground" aria-label={open ? 'Cerrar menú' : 'Abrir menú'} aria-expanded={open}>
+        <button onClick={() => setOpen(!open)} className="lg:hidden p-2 text-muted-foreground" aria-label={open ? 'Cerrar menú' : 'Abrir menú'} aria-expanded={open}>
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
       </div>
 
       {/* Mobile menu */}
       {open && (
-        <div className="md:hidden border-t border-border/40 bg-background/95 backdrop-blur-xl px-4 py-4 space-y-1">
+        <div className="lg:hidden border-t border-border/40 bg-background/95 backdrop-blur-xl px-4 py-4 space-y-1">
           {NAV.map((item) => {
             const Icon = item.icon
             const active = pathname === item.href || (item.href !== '/' && pathname?.startsWith?.(item.href))

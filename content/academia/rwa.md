@@ -27,6 +27,11 @@ sources:
     url: "https://www.cnmv.es/Portal/BusquedaAdvertencias.aspx?lang=es"
   - title: "ESMA: ¿Está regulada la entidad? (registros europeos)"
     url: "https://www.esma.europa.eu/investor-corner/is-the-firm-regulated"
+quiz:
+  - {"pregunta": "¿Qué es un RWA?", "opciones": ["Una criptomoneda sin respaldo", "Un token que representa un activo del mundo real, como un bono o el oro", "Un tipo de wallet"], "correcta": 1, "explicacion": "Detrás hay un activo, un custodio, un emisor y un marco legal."}
+  - {"pregunta": "¿Puede la blockchain garantizar que el activo que respalda un token existe?", "opciones": ["No; eso depende del emisor y del custodio", "Sí, siempre", "Solo si el token es caro"], "correcta": 0, "explicacion": "Si el lingote no está en la cámara, el token no vale nada."}
+  - {"pregunta": "¿Qué normativa suele aplicarse a un token que representa participaciones de un fondo o bonos?", "opciones": ["Ninguna", "Solo MiCA", "La normativa de valores (MiFID II), no MiCA"], "correcta": 2, "explicacion": "Por eso muchos están restringidos por país o tipo de inversor."}
+  - {"pregunta": "Una web te ofrece «inmuebles tokenizados» con rentabilidad fija y no pregunta nada. ¿Qué haces primero?", "opciones": ["Invertir poco para probar", "Comprobar la entidad en la CNMV y en sus advertencias", "Pedir más rentabilidad"], "correcta": 1, "explicacion": "La etiqueta RWA también la usan estafas."}
 ---
 ## Qué son los RWA
 

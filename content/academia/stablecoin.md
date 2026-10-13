@@ -17,6 +17,11 @@ sources:
     url: "https://ethereum.org/es/stablecoins/"
   - title: "CNMV: Nueva regulación de criptoactivos, Reglamento MiCA"
     url: "https://www.cnmv.es/portal/mica/regulacion-criptoactivos"
+quiz:
+  - {"pregunta": "¿Qué intenta hacer una stablecoin?", "opciones": ["Subir de precio más que Bitcoin", "Mantener un valor estable, normalmente vinculado al dólar o al euro", "Pagar intereses fijos"], "correcta": 1, "explicacion": "Su objetivo es la estabilidad, por ejemplo 1 USDC = 1 dólar."}
+  - {"pregunta": "¿Qué tipo de stablecoin ha dado peores resultados históricamente?", "opciones": ["Las algorítmicas", "Las respaldadas por reservas en dinero", "Las respaldadas por otras criptomonedas"], "correcta": 0, "explicacion": "UST perdió su paridad en mayo de 2022 y arrastró al colapso a LUNA."}
+  - {"pregunta": "Bajo MiCA, ¿quién puede emitir una ficha de dinero electrónico como USDC o EURC?", "opciones": ["Cualquier empresa tecnológica", "Una DAO", "Un banco o una entidad de dinero electrónico autorizada"], "correcta": 2, "explicacion": "MiCA exige autorización, reservas y derecho de canje por el valor nominal."}
+  - {"pregunta": "¿Cambiar bitcoin por una stablecoin tributa en España?", "opciones": ["No, porque no pasas a euros", "Sí, es una permuta", "Solo si superas 50.000 €"], "correcta": 1, "explicacion": "Hacienda trata el cambio de una cripto por otra como una venta, así que la ganancia tributa."}
 ---
 ## Por qué existen
 

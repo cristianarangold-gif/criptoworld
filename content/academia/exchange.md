@@ -18,6 +18,11 @@ sources:
     url: "https://www.cnmv.es/portal/mica/regulacion-criptoactivos"
   - title: "ethereum.org: Exchanges descentralizados (DEX)"
     url: "https://ethereum.org/es/defi/"
+quiz:
+  - {"pregunta": "Desde el 1 de julio de 2026, ¿quién puede ofrecer servicios con criptoactivos en España?", "opciones": ["Entidades autorizadas por la CNMV o por otro supervisor de la UE", "Cualquier empresa inscrita en el Banco de España", "Cualquier plataforma con muchas descargas"], "correcta": 0, "explicacion": "Con el fin del periodo transitorio de MiCA, solo operan legalmente los proveedores autorizados."}
+  - {"pregunta": "¿Qué es el diferencial (spread)?", "opciones": ["La diferencia entre el precio al que te venden y al que te compran", "La comisión de retirada", "Un impuesto"], "correcta": 0, "explicacion": "Muchas apps que anuncian «sin comisiones» cobran a través de un diferencial más amplio."}
+  - {"pregunta": "¿Qué diferencia principal hay entre un exchange centralizado y uno descentralizado?", "opciones": ["En el descentralizado tú conservas tus claves", "El centralizado no permite euros", "El descentralizado siempre es más barato"], "correcta": 0, "explicacion": "En un DEX operas desde tu propia wallet con contratos inteligentes; en un CEX la empresa custodia tus fondos."}
+  - {"pregunta": "¿Por qué conviene descargar el historial de operaciones del exchange?", "opciones": ["Para recuperar la contraseña", "Para la declaración de la Renta", "Para que la plataforma te devuelva comisiones"], "correcta": 1, "explicacion": "Vender o cambiar criptos tributa, y necesitas tus fechas y precios de compra y venta."}
 ---
 ## Para qué sirve un exchange
 

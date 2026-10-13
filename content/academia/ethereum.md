@@ -14,6 +14,11 @@ sources:
     url: "https://ethereum.org/es/developers/docs/gas/"
   - title: "ethereum.org: Staking"
     url: "https://ethereum.org/es/staking/"
+quiz:
+  - {"pregunta": "¿Qué permite Ethereum que no era el objetivo original de Bitcoin?", "opciones": ["Ejecutar contratos inteligentes", "Minar con el móvil", "Transferencias anónimas"], "correcta": 0, "explicacion": "Ethereum es una blockchain en la que cualquiera puede ejecutar programas: los contratos inteligentes."}
+  - {"pregunta": "¿Qué cambió con La Fusión (The Merge) en 2022?", "opciones": ["Ethereum pasó de la minería a la prueba de participación", "Se dividió en dos redes", "Se eliminaron las comisiones"], "correcta": 0, "explicacion": "El cambio redujo el consumo energético de la red en torno a un 99,95 %."}
+  - {"pregunta": "¿Es siempre deflacionario ETH?", "opciones": ["Sí, siempre", "Nunca", "Depende de la actividad: con poca actividad su oferta puede crecer"], "correcta": 2, "explicacion": "La quema de comisiones puede superar la emisión cuando hay mucha actividad, pero desde 2024 ha habido periodos de crecimiento de la oferta."}
+  - {"pregunta": "¿Cómo tributan en España las recompensas de staking de ETH, según el criterio de Hacienda?", "opciones": ["No tributan", "Como rendimientos del capital mobiliario", "Como premios de lotería"], "correcta": 1, "explicacion": "Se integran en la base del ahorro, valoradas en euros cuando las recibes."}
 ---
 ## Más que una moneda
 

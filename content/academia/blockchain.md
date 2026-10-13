@@ -7,6 +7,11 @@ sources:
     url: "https://ethereum.org/es/developers/docs/consensus-mechanisms/"
   - title: "Satoshi Nakamoto: Bitcoin, a Peer-to-Peer Electronic Cash System (white paper, 2008)"
     url: "https://bitcoin.org/bitcoin.pdf"
+quiz:
+  - {"pregunta": "¿Qué contiene cada bloque, además de transacciones?", "opciones": ["El hash del bloque anterior", "La contraseña de los usuarios", "Una copia de todas las wallets"], "correcta": 0, "explicacion": "Incluir el hash del bloque anterior encadena los bloques: modificar uno obligaría a recalcular todos los siguientes."}
+  - {"pregunta": "¿Qué garantiza una blockchain?", "opciones": ["Que los datos son verdaderos", "Que los datos no se han modificado después de escribirlos", "Que las operaciones son privadas"], "correcta": 1, "explicacion": "Una blockchain no comprueba si un dato es cierto; solo hace muy difícil cambiarlo una vez registrado."}
+  - {"pregunta": "En la prueba de participación, ¿qué arriesga un validador que hace trampa?", "opciones": ["Parte de las criptomonedas que ha bloqueado", "La electricidad gastada", "Nada"], "correcta": 0, "explicacion": "Es el slashing: el validador pierde parte de su garantía si actúa de forma deshonesta."}
+  - {"pregunta": "¿Cuándo tiene más sentido usar una blockchain?", "opciones": ["Cuando varias partes que no confían entre sí comparten un registro", "Siempre que haya que guardar datos", "Cuando se necesita la máxima velocidad"], "correcta": 0, "explicacion": "Si una base de datos normal gestionada por una empresa funcionaría igual, la blockchain probablemente sobra."}
 ---
 ## Una analogía para empezar
 

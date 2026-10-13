@@ -15,6 +15,11 @@ sources:
     url: "https://ethereum.org/es/developers/docs/data-and-analytics/block-explorers/"
   - title: "ethereum.org: Datos y análisis"
     url: "https://ethereum.org/es/developers/docs/data-and-analytics/"
+quiz:
+  - {"pregunta": "¿Qué herramienta básica permite ver cualquier transacción pública?", "opciones": ["Un gestor de contraseñas", "Un explorador de bloques", "Un VPN"], "correcta": 1, "explicacion": "Muestra transacciones, saldos, contratos y mayores poseedores de un token."}
+  - {"pregunta": "¿Predicen el precio las métricas on-chain?", "opciones": ["Sí, con exactitud", "No; dan contexto, pero no predicen el precio", "Solo en Bitcoin"], "correcta": 1, "explicacion": "Han funcionado en algunos ciclos y fallado en otros."}
+  - {"pregunta": "¿Por qué una dirección no equivale a una persona?", "opciones": ["Porque las direcciones son secretas", "Porque cambian cada día", "Porque un exchange usa miles de direcciones y una persona puede tener muchas"], "correcta": 2, "explicacion": "Las etiquetas de las plataformas de análisis son estimaciones."}
+  - {"pregunta": "¿Qué uso del análisis on-chain es más fiable?", "opciones": ["Adivinar el precio de mañana", "Saber la identidad de cualquiera", "Comprobar hechos, como el reparto de tokens o los movimientos del equipo"], "correcta": 2, "explicacion": "Úsalo para verificar, no como una bola de cristal."}
 ---
 ## Qué es
 

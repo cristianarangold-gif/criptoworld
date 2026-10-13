@@ -20,6 +20,11 @@ sources:
     url: "https://bitcoin.org/es/debes-saber"
   - title: "CNMV: riesgos de los criptoactivos y Reglamento MiCA"
     url: "https://www.cnmv.es/portal/mica/regulacion-criptoactivos"
+quiz:
+  - {"pregunta": "¿Cuántos bitcoins existirán como máximo?", "opciones": ["21 millones", "100 millones", "No hay límite"], "correcta": 0, "explicacion": "Las reglas de Bitcoin fijan una oferta máxima de 21 millones; los nuevos solo se crean como recompensa a los mineros."}
+  - {"pregunta": "¿Qué ocurre en un halving?", "opciones": ["Se duplica el número de bitcoins", "Se reduce a la mitad la recompensa de los mineros", "Se divide cada bitcoin en dos"], "correcta": 1, "explicacion": "Cada 210.000 bloques (unos cuatro años) la recompensa por bloque se reduce a la mitad; en 2024 pasó a 3,125 BTC."}
+  - {"pregunta": "¿Por qué se dice que Bitcoin es seudónimo y no anónimo?", "opciones": ["Porque las transacciones son privadas", "Porque solo la policía puede verlas", "Porque las transacciones son públicas aunque no muestren nombres"], "correcta": 2, "explicacion": "Cualquiera puede ver qué dirección envía a cuál; lo que no aparece es la identidad, que puede llegar a relacionarse con una persona."}
+  - {"pregunta": "¿Cuántos satoshis tiene un bitcoin?", "opciones": ["100.000.000", "1.000", "1.000.000"], "correcta": 0, "explicacion": "Un bitcoin se divide en 100 millones de satoshis, así que puedes comprar la fracción que quieras."}
 ---
 ## Cómo funciona Bitcoin
 

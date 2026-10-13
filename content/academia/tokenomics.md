@@ -7,6 +7,11 @@ sources:
     url: "https://ethereum.org/es/developers/docs/standards/tokens/erc-20/"
   - title: "Satoshi Nakamoto: Bitcoin, a Peer-to-Peer Electronic Cash System (white paper, 2008)"
     url: "https://bitcoin.org/bitcoin.pdf"
+quiz:
+  - {"pregunta": "¿Cómo se calcula la capitalización de mercado?", "opciones": ["Precio × tokens en circulación", "Precio × oferta máxima", "Volumen diario × 365"], "correcta": 0, "explicacion": "La valoración totalmente diluida, en cambio, usa la oferta máxima."}
+  - {"pregunta": "Si solo circula el 10 % de la oferta y el resto se irá liberando, ¿qué riesgo hay?", "opciones": ["Ninguno", "Mucha presión vendedora futura", "Que el token desaparezca"], "correcta": 1, "explicacion": "Para mantener el precio, la demanda tendría que crecer en la misma proporción."}
+  - {"pregunta": "¿Qué es un calendario de vesting?", "opciones": ["Un plan de pagos de comisiones", "La fecha de lanzamiento", "El ritmo al que se desbloquean los tokens de equipo e inversores"], "correcta": 2, "explicacion": "Los grandes desbloqueos suelen coincidir con caídas de precio."}
+  - {"pregunta": "¿Genera demanda por sí solo un token que solo sirve para votar?", "opciones": ["Sí, siempre", "No necesariamente", "Solo en mercados alcistas"], "correcta": 1, "explicacion": "Un derecho de voto sin usos ni ingresos depende sobre todo de la especulación."}
 ---
 ## Qué es la tokenomics
 

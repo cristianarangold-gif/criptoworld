@@ -15,6 +15,11 @@ sources:
     url: "https://ethereum.org/es/zero-knowledge-proofs/"
   - title: "L2BEAT: análisis de riesgos de las redes de capa 2"
     url: "https://l2beat.com/scaling/summary"
+quiz:
+  - {"pregunta": "¿Qué publica un ZK-rollup con cada lote?", "opciones": ["Una prueba criptográfica de que es correcto", "Una promesa del equipo", "Un plazo de 7 días"], "correcta": 0, "explicacion": "Ethereum verifica la prueba y, si es válida, el resultado queda aceptado."}
+  - {"pregunta": "¿Son privadas las transacciones en la mayoría de ZK-rollups?", "opciones": ["Sí, siempre", "No: usan las pruebas para escalar, y los datos suelen ser públicos", "Solo las grandes"], "correcta": 1, "explicacion": "«ZK» no significa automáticamente privado."}
+  - {"pregunta": "¿Qué ventaja tienen frente a los optimistic rollups al retirar a Ethereum?", "opciones": ["Ninguna", "Comisiones nulas", "No hay que esperar un plazo de impugnación"], "correcta": 2, "explicacion": "En cuanto se verifica la prueba, el resultado es definitivo."}
+  - {"pregunta": "¿Qué diferencia a los STARK de algunos SNARK?", "opciones": ["Son más pequeños", "No necesitan una ceremonia inicial de confianza (trusted setup)", "Son más antiguos"], "correcta": 1, "explicacion": "A cambio, sus pruebas son de mayor tamaño."}
 ---
 ## Pruebas de conocimiento cero, en una frase
 

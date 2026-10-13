@@ -1,6 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
+import type { QuizQuestion } from '@/lib/quiz'
 
 export interface LessonSource {
   title: string
@@ -23,6 +24,7 @@ export interface AcademyLesson {
   // Solo en lecciones revisadas (content/academia/<slug>.md)
   updated?: string
   sources?: LessonSource[]
+  quiz?: QuizQuestion[]
 }
 
 const LESSONS: AcademyLesson[] = [
@@ -222,7 +224,7 @@ Ventaja: máxima seguridad para almacenamiento a largo plazo. Inconveniente: men
     ],
     glossary: {
       'Clave privada': 'Código secreto que otorga acceso total a tus criptomonedas',
-      'Clave pública': 'Dirección que puedes compartir para recibir fondos',
+      'Clave pública': 'Clave derivada de la privada; de ella se calcula la dirección que compartes para recibir fondos',
       'Hot wallet': 'Monedero conectado a Internet',
       'Cold wallet': 'Monedero sin conexión a Internet',
       'Hardware wallet': 'Dispositivo físico que almacena claves privadas offline'
@@ -757,7 +759,7 @@ Ethereum introdujo un nuevo modelo de comisiones:
     advantages: ['Protege la red contra spam y ataques de denegación de servicio', 'EIP-1559 quema ETH, contribuyendo a la deflación', 'Incentiva a los validadores a mantener la red', 'Las Layer 2 han reducido drásticamente el coste para usuarios'],
     risks: ['Costes impredecibles en momentos de alta congestión', 'Una transacción puede fallar y aun así consumir gas', 'Gas elevado puede hacer inviables operaciones pequeñas en Ethereum L1', 'Configurar gas demasiado bajo puede dejar la transacción pendiente indefinidamente'],
     commonMistakes: ['No comprobar el precio del gas antes de firmar una transacción', 'Hacer múltiples transacciones pequeñas en mainnet en vez de usar L2', 'Establecer un gas limit demasiado bajo y que la transacción falle', 'No considerar el gas como coste real al calcular la rentabilidad de una operación DeFi'],
-    glossary: { 'Gwei': 'Unidad de gas (1 Gwei = 0.000000001 ETH)', 'Base fee': 'Tarifa base que se quema en cada bloque (EIP-1559)', 'Priority fee': 'Propina al validador para priorizar la transacción', 'Gas limit': 'Máximo de gas que estás dispuesto a pagar por una transacción', 'Gas tracker': 'Herramienta que muestra el precio actual del gas en la red' }
+    glossary: { 'Gwei': 'Fracción de ether (1 gwei = 0,000000001 ETH) con la que se expresa el precio del gas', 'Base fee': 'Tarifa base que se quema en cada bloque (EIP-1559)', 'Priority fee': 'Propina al validador para priorizar la transacción', 'Gas limit': 'Máximo de gas que estás dispuesto a pagar por una transacción', 'Gas tracker': 'Herramienta que muestra el precio actual del gas en la red' }
   },
   {
     slug: 'layer-1',
@@ -1116,7 +1118,7 @@ Vitalik Buterin ha declarado que a largo plazo los ZK-Rollups ofrecerán mejor s
     advantages: ['Seguridad matemática: validez verificada criptográficamente', 'Finalidad más rápida que Optimistic Rollups', 'Potencial de privacidad (no revelan datos de transacciones)', 'Escalabilidad teórica superior a largo plazo'],
     risks: ['Tecnología compleja aún en maduración', 'Compatibilidad EVM no siempre perfecta', 'Centralización de provers (generadores de pruebas)', 'Ecosistemas más pequeños que Optimistic Rollups'],
     commonMistakes: ['Asumir que ZK-Rollups son automáticamente "mejores" que Optimistic', 'Confundir ZK-SNARKs con ZK-STARKs', 'Esperar privacidad total cuando la mayoría de implementaciones son transparentes', 'No verificar el nivel de descentralización del prover'],
-    glossary: { 'ZK-SNARK': 'Succinct Non-interactive Argument of Knowledge', 'ZK-STARK': 'Scalable Transparent Argument of Knowledge', 'Prover': 'Entidad que genera las pruebas criptográficas', 'Verifier': 'Smart contract en L1 que verifica las pruebas', 'Trusted setup': 'Ceremonia inicial requerida por ZK-SNARKs' }
+    glossary: { 'ZK-SNARK': 'Succinct Non-interactive Argument of Knowledge', 'ZK-STARK': 'Scalable Transparent Argument of Knowledge', 'Prover': 'Entidad que genera las pruebas criptográficas', 'Verifier': 'Smart contract en L1 que verifica las pruebas', 'Trusted setup': 'Ceremonia inicial que necesitan algunos sistemas ZK-SNARK' }
   },
   {
     slug: 'account-abstraction',
@@ -1342,6 +1344,7 @@ function lessons(): AcademyLesson[] {
       lesson.detailedExplanation = content.trim()
       lesson.updated = isoDate(data.updated)
       lesson.sources = data.sources ?? []
+      if (data.quiz) lesson.quiz = data.quiz
     }
     const text = [
       lesson.simpleExplanation, lesson.detailedExplanation, ...lesson.practicalExamples,

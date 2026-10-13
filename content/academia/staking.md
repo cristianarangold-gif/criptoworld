@@ -16,6 +16,11 @@ sources:
     url: "https://ethereum.org/es/developers/docs/consensus-mechanisms/pos/"
   - title: "Buscador de consultas vinculantes de la Dirección General de Tributos"
     url: "https://petete.tributos.hacienda.gob.es/consultas/"
+quiz:
+  - {"pregunta": "¿Qué es hacer staking?", "opciones": ["Prestar criptos a un banco", "Bloquear criptomonedas para participar en la seguridad de una red de prueba de participación", "Minar bitcoins"], "correcta": 1, "explicacion": "A cambio se reciben recompensas, que no están garantizadas."}
+  - {"pregunta": "Ganas un 3 % anual en ETH, pero ETH cae un 40 %. ¿Qué pasa con tu dinero en euros?", "opciones": ["Ganas un 3 %", "No cambia", "Pierdes mucho dinero en euros"], "correcta": 2, "explicacion": "La rentabilidad se cobra en el propio token; lo que decide el resultado en euros es su precio."}
+  - {"pregunta": "¿Qué es el slashing?", "opciones": ["Una comisión de retirada", "Un tipo de staking líquido", "La pérdida de parte de la garantía si el validador actúa mal"], "correcta": 2, "explicacion": "Es el mecanismo que castiga a los validadores deshonestos o negligentes."}
+  - {"pregunta": "Te ofrecen «staking» con un 2 % diario garantizado. ¿Qué es lo más probable?", "opciones": ["Una buena oportunidad", "Una estafa que usa el nombre del staking", "Un error de la plataforma"], "correcta": 1, "explicacion": "Las rentabilidades fijas y muy altas son una señal clásica de esquema fraudulento."}
 ---
 ## La idea básica
 
