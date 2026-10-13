@@ -1,7 +1,7 @@
 export const dynamic = 'force-dynamic'
 
 import { NextRequest, NextResponse } from 'next/server'
-import { prisma } from '@/lib/db'
+import { getAllGuides } from '@/lib/guides'
 import { getAllLessons } from '@/lib/academia-data'
 
 const TOOLS = [
@@ -50,22 +50,12 @@ export async function GET(req: NextRequest) {
     }
   })
 
-  // Search articles from DB
-  try {
-    const articles = await prisma.article.findMany({
-      where: {
-        OR: [
-          { title: { contains: q, mode: 'insensitive' } },
-          { description: { contains: q, mode: 'insensitive' } },
-        ],
-      },
-      select: { slug: true, title: true, description: true },
-      take: 5,
-    })
-    articles.forEach(a => {
-      results.push({ type: 'art\u00edculo', title: a.title, href: `/aprende/${a.slug}`, desc: a.description?.slice(0, 100) })
-    })
-  } catch {}
+  // Search guides
+  getAllGuides().forEach(g => {
+    if (g.title.toLowerCase().includes(q) || g.description.toLowerCase().includes(q)) {
+      results.push({ type: 'gu\u00eda', title: g.title, href: `/aprende/${g.slug}`, desc: g.description.slice(0, 100) })
+    }
+  })
 
   // Search tools
   TOOLS.forEach(t => {

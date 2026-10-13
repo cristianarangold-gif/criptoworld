@@ -72,7 +72,7 @@ export function HomeClient({ market, articles }: {
           transition={{ staggerChildren: 0.08 }}
         >
           <div className="flex items-center justify-between mb-6">
-            <h2 className="font-display text-2xl font-bold tracking-tight">Artículos recomendados</h2>
+            <h2 className="font-display text-2xl font-bold tracking-tight">Guías prácticas</h2>
             <Link href="/aprende" className="text-sm text-primary hover:underline inline-flex items-center gap-1">
               Ver todos <ArrowRight className="h-3.5 w-3.5" />
             </Link>

@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { getLessonBySlug, getAllLessons, getLessonNavigation, getLevelLabel, getLevelColor, getLevelBg } from '@/lib/academia-data'
 import { LessonClient } from './lesson-client'
+import { SITE } from '@/lib/site'
 
 export async function generateStaticParams() {
   return getAllLessons().map(l => ({ slug: l.slug }))
@@ -14,7 +15,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `${lesson.title} — Academia Cripto`,
     description: lesson.simpleExplanation,
-    openGraph: { title: lesson.title, description: lesson.simpleExplanation },
+    alternates: { canonical: `/academia/${slug}` },
+    openGraph: { type: 'article', title: lesson.title, description: lesson.simpleExplanation },
   }
 }
 
@@ -32,7 +34,22 @@ export default async function LessonPage({ params }: { params: Promise<{ slug: s
   const levelColor = getLevelColor(lesson.level)
   const levelBg = getLevelBg(lesson.level)
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: lesson.title,
+    description: lesson.simpleExplanation,
+    inLanguage: 'es-ES',
+    mainEntityOfPage: `${SITE.url}/academia/${slug}`,
+    author: { '@type': 'Person', name: SITE.owner, url: `${SITE.url}/sobre-nosotros` },
+    publisher: { '@type': 'Organization', name: SITE.name, url: SITE.url },
+    ...(lesson.updated ? { dateModified: lesson.updated } : {}),
+    ...(lesson.sources?.length ? { citation: lesson.sources.map(s => s.url) } : {}),
+  }
+
   return (
+    <>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
     <LessonClient
       lesson={lesson}
       nav={nav}
@@ -40,5 +57,6 @@ export default async function LessonPage({ params }: { params: Promise<{ slug: s
       levelColor={levelColor}
       levelBg={levelBg}
     />
+    </>
   )
 }

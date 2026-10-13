@@ -3,8 +3,10 @@
 import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { useSession } from 'next-auth/react'
-import { ArrowLeft, ArrowRight, CheckCircle2, Clock, BookOpen, Lightbulb, AlertTriangle, XCircle, BookMarked, ChevronDown, ChevronUp } from 'lucide-react'
+import { ArrowLeft, ArrowRight, CheckCircle2, Clock, BookOpen, Lightbulb, AlertTriangle, XCircle, BookMarked, ChevronDown, ChevronUp, UserRound, CalendarDays, ExternalLink } from 'lucide-react'
 import { cn } from '@/lib/utils'
+import { Markdown } from '@/components/markdown'
+import { SITE } from '@/lib/site'
 
 type LessonData = {
   slug: string
@@ -19,20 +21,11 @@ type LessonData = {
   risks: string[]
   commonMistakes: string[]
   glossary: Record<string, string>
+  updated?: string
+  sources?: { title: string; url: string }[]
 }
 
 type NavData = { prev: { slug: string; title: string } | null; next: { slug: string; title: string } | null }
-
-function renderInline(text: string): React.ReactNode {
-  // Parse **bold** inline markdown
-  const parts = text.split(/(\*\*[^*]+\*\*)/g)
-  return parts.map((part, i) => {
-    if (part.startsWith('**') && part.endsWith('**')) {
-      return <strong key={i} className="font-semibold text-foreground">{part.slice(2, -2)}</strong>
-    }
-    return <span key={i}>{part}</span>
-  })
-}
 
 export function LessonClient({ lesson, nav, levelLabel, levelColor, levelBg }: {
   lesson: LessonData
@@ -92,7 +85,17 @@ export function LessonClient({ lesson, nav, levelLabel, levelColor, levelBg }: {
           {levelLabel}
         </span>
         <h1 className="font-display text-3xl sm:text-4xl font-bold tracking-tight leading-tight">{lesson.title}</h1>
-        <div className="flex items-center gap-4 mt-3 text-sm text-muted-foreground">
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mt-3 text-sm text-muted-foreground">
+          <span className="flex items-center gap-1.5">
+            <UserRound className="h-4 w-4" />
+            Por <Link href="/sobre-nosotros" className="text-foreground hover:text-primary">{SITE.owner}</Link>
+          </span>
+          {lesson.updated && (
+            <span className="flex items-center gap-1.5">
+              <CalendarDays className="h-4 w-4" />
+              Revisada el <time dateTime={lesson.updated}>{new Date(`${lesson.updated}T12:00:00Z`).toLocaleDateString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' })}</time>
+            </span>
+          )}
           <span className="flex items-center gap-1"><Clock className="h-4 w-4" />{lesson.readTime} min lectura</span>
           {completed && <span className="flex items-center gap-1 text-emerald-500"><CheckCircle2 className="h-4 w-4" />Completada</span>}
         </div>
@@ -107,15 +110,9 @@ export function LessonClient({ lesson, nav, levelLabel, levelColor, levelBg }: {
         <p className="text-muted-foreground leading-relaxed">{lesson.simpleExplanation}</p>
       </div>
 
-      {/* Detailed explanation (markdown-like) */}
-      <div className="prose-content mb-8">
-        {lesson.detailedExplanation.split('\n').map((line, i) => {
-          if (line.startsWith('## ')) return <h2 key={i} className="font-display text-xl font-bold mt-8 mb-3">{line.slice(3)}</h2>
-          if (line.startsWith('### ')) return <h3 key={i} className="font-display text-lg font-semibold mt-6 mb-2 text-primary">{line.slice(4)}</h3>
-          if (line.startsWith('- ')) return <li key={i} className="ml-4 text-muted-foreground leading-relaxed list-disc">{renderInline(line.slice(2))}</li>
-          if (line.trim() === '') return <div key={i} className="h-3" />
-          return <p key={i} className="text-muted-foreground leading-relaxed">{renderInline(line)}</p>
-        })}
+      {/* Detailed explanation */}
+      <div className="mb-8">
+        <Markdown source={lesson.detailedExplanation} />
       </div>
 
       {/* Practical examples */}
@@ -208,6 +205,23 @@ export function LessonClient({ lesson, nav, levelLabel, levelColor, levelBg }: {
             <span key={c} className="inline-flex rounded-full bg-muted px-3 py-0.5 text-xs text-muted-foreground">{c}</span>
           ))}
         </div>
+      )}
+
+      {/* Sources */}
+      {(lesson.sources?.length ?? 0) > 0 && (
+        <section className="mb-8 border-t border-border/40 pt-6">
+          <h2 className="font-display text-lg font-bold mb-3">Fuentes</h2>
+          <ul className="space-y-2 text-sm">
+            {lesson.sources!.map(s => (
+              <li key={s.url}>
+                <a href={s.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-start gap-1.5 text-muted-foreground hover:text-primary">
+                  <ExternalLink className="h-3.5 w-3.5 mt-0.5 shrink-0" />
+                  {s.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
       )}
 
       {/* Mark complete button */}

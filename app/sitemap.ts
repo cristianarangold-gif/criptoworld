@@ -1,4 +1,4 @@
-import { prisma } from '@/lib/db'
+import { getAllGuides } from '@/lib/guides'
 import { MetadataRoute } from 'next'
 import { getAllLessons } from '@/lib/academia-data'
 import { SITE } from '@/lib/site'
@@ -8,7 +8,6 @@ export const dynamic = 'force-dynamic'
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = SITE.url
 
-  const articles = await prisma.article.findMany({ select: { slug: true, updatedAt: true } }).catch(() => [])
 
   const staticPages = [
     { url: `${baseUrl}/`, changeFrequency: 'daily' as const, priority: 1 },
@@ -23,9 +22,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${baseUrl}/cookies`, changeFrequency: 'yearly' as const, priority: 0.2 },
   ]
 
-  const articlePages = (articles ?? []).map((a: any) => ({
-    url: `${baseUrl}/aprende/${a.slug}`,
-    lastModified: a.updatedAt,
+  const articlePages = getAllGuides().map(g => ({
+    url: `${baseUrl}/aprende/${g.slug}`,
+    lastModified: new Date(`${g.updated}T12:00:00Z`),
     changeFrequency: 'monthly' as const,
     priority: 0.7,
   }))
