@@ -1,14 +1,12 @@
 'use client'
 import Link from 'next/link'
 import Image from 'next/image'
-import { motion } from 'framer-motion'
 import { SparklineChart } from '@/components/sparkline-chart'
 import { PriceChange } from '@/components/price-change'
-import { formatUsd, formatCompact } from '@/lib/format'
+import { formatEur } from '@/lib/format'
 import { ArrowRight, BookOpen, AlertTriangle, Clock } from 'lucide-react'
 import type { CoinMarket } from '@/lib/coingecko'
 
-const fadeUp = { hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }
 
 export function HomeClient({ market, articles }: {
   market: CoinMarket[]
@@ -17,13 +15,7 @@ export function HomeClient({ market, articles }: {
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       {/* Market summary */}
-      <motion.section
-        className="py-12"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: '-50px' }}
-        transition={{ staggerChildren: 0.05 }}
-      >
+      <section className="py-12">
         <div className="flex items-center justify-between mb-6">
           <h2 className="font-display text-2xl font-bold tracking-tight">Mercado en vivo</h2>
           <Link href="/mercado" className="text-sm text-primary hover:underline inline-flex items-center gap-1">
@@ -32,7 +24,7 @@ export function HomeClient({ market, articles }: {
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
           {(market ?? []).slice(0, 8).map((coin: CoinMarket) => (
-            <motion.div key={coin?.id} variants={fadeUp} transition={{ duration: 0.4 }}>
+            <div key={coin?.id}>
               <Link
                 href={`/mercado?coin=${coin?.id}`}
                 className="block glass-card rounded-xl p-4 hover:border-primary/30 transition-all hover:glow-orange group"
@@ -51,26 +43,20 @@ export function HomeClient({ market, articles }: {
                     <p className="text-xs text-muted-foreground uppercase">{coin?.symbol}</p>
                   </div>
                 </div>
-                <p className="font-mono text-lg font-bold">{formatUsd(coin?.current_price)}</p>
+                <p className="font-mono text-lg font-bold">{formatEur(coin?.current_price)}</p>
                 <div className="flex items-center justify-between mt-2">
                   <PriceChange value={coin?.price_change_percentage_24h} />
                   <SparklineChart data={coin?.sparkline_in_7d?.price ?? []} width={60} height={24} />
                 </div>
               </Link>
-            </motion.div>
+            </div>
           ))}
         </div>
-      </motion.section>
+      </section>
 
       {/* Articles */}
       {(articles ?? []).length > 0 && (
-        <motion.section
-          className="py-12 border-t border-border/40"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: '-50px' }}
-          transition={{ staggerChildren: 0.08 }}
-        >
+        <section className="py-12 border-t border-border/40">
           <div className="flex items-center justify-between mb-6">
             <h2 className="font-display text-2xl font-bold tracking-tight">Guías prácticas</h2>
             <Link href="/aprende" className="text-sm text-primary hover:underline inline-flex items-center gap-1">
@@ -79,7 +65,7 @@ export function HomeClient({ market, articles }: {
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {articles.map((a: any) => (
-              <motion.div key={a?.id} variants={fadeUp} transition={{ duration: 0.4 }}>
+              <div key={a?.id}>
                 <Link
                   href={`/aprende/${a?.slug}`}
                   className="block glass-card rounded-xl p-5 hover:border-primary/30 transition-all group h-full"
@@ -95,10 +81,10 @@ export function HomeClient({ market, articles }: {
                     {a?.readTime ?? 5} min lectura
                   </div>
                 </Link>
-              </motion.div>
+              </div>
             ))}
           </div>
-        </motion.section>
+        </section>
       )}
 
       {/* Disclaimer */}

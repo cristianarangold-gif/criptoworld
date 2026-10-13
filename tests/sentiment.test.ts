@@ -32,3 +32,8 @@ test('toTickerItems devuelve 8 monedas en mayúsculas y omite las que no tienen 
   assert.equal(items[0].symbol, 'C2')
   assert.deepEqual(items[0], { symbol: 'C2', price: 100, change: 1.5 })
 })
+
+test('toTickerItems omite las stablecoins, que no aportan información en la cinta', () => {
+  const coins = [coin(1, 60000), { ...coin(2, 0.92), symbol: 'usdt' }, { ...coin(3, 0.92), symbol: 'usdc' }, coin(4, 2400)]
+  assert.deepEqual(toTickerItems(coins).map(i => i.symbol), ['C1', 'C4'])
+})

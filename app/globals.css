@@ -120,3 +120,22 @@
   .ticker { overflow-x: auto; }
   .ticker-track { animation: none; }
 }
+
+/* Portada: cuadrícula y línea de precio que se dibuja una vez */
+.hero-grid {
+  background-image:
+    linear-gradient(hsl(var(--border) / 0.35) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(var(--border) / 0.35) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(ellipse 80% 70% at 70% 40%, black, transparent);
+}
+.hero-line {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: hero-draw 2.5s ease-out forwards;
+  filter: drop-shadow(0 0 6px hsl(33 93% 54% / 0.6));
+}
+@keyframes hero-draw { to { stroke-dashoffset: 0; } }
+@media (prefers-reduced-motion: reduce) {
+  .hero-line { stroke-dashoffset: 0; animation: none; }
+}

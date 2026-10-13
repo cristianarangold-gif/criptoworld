@@ -28,11 +28,14 @@ export async function getFearGreed(): Promise<{ value: number; label: string } |
   }
 }
 
+// Las stablecoins valen siempre ~1 dólar: en la cinta solo ocuparían sitio.
+const STABLECOINS = new Set(['usdt', 'usdc', 'dai', 'usde', 'usds', 'fdusd', 'pyusd', 'tusd', 'eurc', 'busd'])
+
 export type TickerItem = { symbol: string; price: number; change: number }
 
 export function toTickerItems(coins: CoinMarket[], n = 8): TickerItem[] {
   return coins
-    .filter(c => Number.isFinite(c?.current_price) && c.current_price > 0)
+    .filter(c => Number.isFinite(c?.current_price) && c.current_price > 0 && !STABLECOINS.has(c.symbol?.toLowerCase()))
     .slice(0, n)
     .map(c => ({ symbol: c.symbol.toUpperCase(), price: c.current_price, change: c.price_change_percentage_24h ?? 0 }))
 }
