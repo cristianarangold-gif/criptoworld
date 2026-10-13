@@ -1,3 +1,12 @@
+import fs from 'fs'
+import path from 'path'
+import matter from 'gray-matter'
+
+export interface LessonSource {
+  title: string
+  url: string
+}
+
 export interface AcademyLesson {
   slug: string
   title: string
@@ -11,6 +20,9 @@ export interface AcademyLesson {
   risks: string[]
   commonMistakes: string[]
   glossary: Record<string, string>
+  // Solo en lecciones revisadas (content/academia/<slug>.md)
+  updated?: string
+  sources?: LessonSource[]
 }
 
 const LESSONS: AcademyLesson[] = [
@@ -516,7 +528,7 @@ Cada operación en Ethereum requiere pagar "gas" en ETH. El coste varía según 
     advantages: ['Ecosistema más grande y maduro de aplicaciones descentralizadas', 'Smart contracts que permiten lógica programable', 'Proof of Stake eficiente energéticamente', 'Enorme comunidad de desarrolladores', 'Base de la mayoría de innovación en cripto'],
     risks: ['Gas fees elevados en periodos de alta congestión', 'Competencia de otras blockchains (Solana, Avalanche)', 'Complejidad para usuarios no técnicos', 'Smart contracts pueden contener bugs o vulnerabilidades', 'Volatilidad del precio de ETH'],
     commonMistakes: ['Confundir Ethereum (la plataforma) con Ether/ETH (la criptomoneda)', 'Interactuar con smart contracts sin entender lo que firmas', 'No estimar el coste de gas antes de una transacción', 'Usar la red principal para operaciones pequeñas pudiendo usar Layer 2'],
-    glossary: { 'Smart contract': 'Programa autoejectable almacenado en la blockchain', 'Gas': 'Unidad de medida del coste computacional en Ethereum', 'EVM': 'Ethereum Virtual Machine — entorno de ejecución de smart contracts', 'ERC-20': 'Estándar para crear tokens fungibles en Ethereum', 'The Merge': 'Migración de Ethereum de Proof of Work a Proof of Stake en 2022' }
+    glossary: { 'Smart contract': 'Programa autoejecutable almacenado en la blockchain', 'Gas': 'Unidad de medida del coste computacional en Ethereum', 'EVM': 'Ethereum Virtual Machine — entorno de ejecución de smart contracts', 'ERC-20': 'Estándar para crear tokens fungibles en Ethereum', 'The Merge': 'Migración de Ethereum de Proof of Work a Proof of Stake en 2022' }
   },
   {
     slug: 'altcoin',
@@ -1312,23 +1324,53 @@ Los derivados cripto son instrumentos financieros complejos con alto riesgo de p
   }
 ]
 
+// Las lecciones revisadas viven en content/academia/<slug>.md: su frontmatter (updated, sources
+// y, si hace falta, campos corregidos) y su cuerpo (explicación detallada) sustituyen a los de LESSONS.
+const OVERRIDE_DIR = path.join(process.cwd(), 'content', 'academia')
+const OVERRIDABLE = ['title', 'simpleExplanation', 'practicalExamples', 'advantages', 'risks', 'commonMistakes', 'glossary'] as const
+const isoDate = (v: unknown) => (v instanceof Date ? v.toISOString().slice(0, 10) : String(v))
+let merged: AcademyLesson[] | null = null
+
+function lessons(): AcademyLesson[] {
+  if (merged) return merged
+  merged = LESSONS.map(base => {
+    const lesson: AcademyLesson = { ...base }
+    const file = path.join(OVERRIDE_DIR, `${base.slug}.md`)
+    if (fs.existsSync(file)) {
+      const { data, content } = matter(fs.readFileSync(file, 'utf8'))
+      for (const key of OVERRIDABLE) if (data[key] !== undefined) (lesson as any)[key] = data[key]
+      lesson.detailedExplanation = content.trim()
+      lesson.updated = isoDate(data.updated)
+      lesson.sources = data.sources ?? []
+    }
+    const text = [
+      lesson.simpleExplanation, lesson.detailedExplanation, ...lesson.practicalExamples,
+      ...lesson.advantages, ...lesson.risks, ...lesson.commonMistakes, ...Object.values(lesson.glossary),
+    ].join(' ')
+    lesson.readTime = Math.max(2, Math.round(text.split(/\s+/).length / 220))
+    return lesson
+  })
+  return merged
+}
+
 export function getAllLessons(): AcademyLesson[] {
-  return LESSONS
+  return lessons()
 }
 
 export function getLessonBySlug(slug: string): AcademyLesson | undefined {
-  return LESSONS.find(l => l.slug === slug)
+  return lessons().find(l => l.slug === slug)
 }
 
 export function getLessonsByLevel(level: 1 | 2 | 3): AcademyLesson[] {
-  return LESSONS.filter(l => l.level === level)
+  return lessons().filter(l => l.level === level)
 }
 
 export function getLessonNavigation(slug: string): { prev: AcademyLesson | null; next: AcademyLesson | null } {
-  const idx = LESSONS.findIndex(l => l.slug === slug)
+  const all = lessons()
+  const idx = all.findIndex(l => l.slug === slug)
   return {
-    prev: idx > 0 ? LESSONS[idx - 1] : null,
-    next: idx < LESSONS.length - 1 ? LESSONS[idx + 1] : null,
+    prev: idx > 0 ? all[idx - 1] : null,
+    next: idx < all.length - 1 ? all[idx + 1] : null,
   }
 }
 
