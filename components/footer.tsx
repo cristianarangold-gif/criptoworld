@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { AlertTriangle } from 'lucide-react'
+import { CookieSettingsButton } from '@/components/cookie-settings-button'
 
 export function Footer() {
   return (
@@ -11,15 +12,30 @@ export function Footer() {
               <span className="text-primary">Cripto</span>Mundo
             </span>
             <p className="mt-2 text-sm text-muted-foreground">
-              Plataforma informativa y educativa sobre criptomonedas. Datos de mercado en vivo, noticias reales y contenido original.
+              Guías en español para entender las criptomonedas, sus riesgos y su normativa, con datos de mercado en vivo.
             </p>
           </div>
-          <nav className="flex gap-6 text-sm">
-            <Link href="/mercado" className="text-muted-foreground hover:text-foreground transition-colors">Mercado</Link>
-            <Link href="/noticias" className="text-muted-foreground hover:text-foreground transition-colors">Noticias</Link>
-            <Link href="/aprende" className="text-muted-foreground hover:text-foreground transition-colors">Aprende</Link>
-            <Link href="/aviso-legal" className="text-muted-foreground hover:text-foreground transition-colors">Aviso legal</Link>
-          </nav>
+          <div className="grid grid-cols-2 gap-8 text-sm sm:grid-cols-3">
+            <nav aria-label="Contenido" className="flex flex-col gap-2">
+              <span className="font-semibold text-foreground">Contenido</span>
+              <Link href="/aprende" className="text-muted-foreground hover:text-foreground transition-colors">Aprende</Link>
+              <Link href="/academia" className="text-muted-foreground hover:text-foreground transition-colors">Academia</Link>
+              <Link href="/herramientas" className="text-muted-foreground hover:text-foreground transition-colors">Herramientas</Link>
+              <Link href="/mercado" className="text-muted-foreground hover:text-foreground transition-colors">Mercado</Link>
+            </nav>
+            <nav aria-label="Sobre CriptoMundo" className="flex flex-col gap-2">
+              <span className="font-semibold text-foreground">CriptoMundo</span>
+              <Link href="/sobre-nosotros" className="text-muted-foreground hover:text-foreground transition-colors">Quiénes somos</Link>
+              <Link href="/contacto" className="text-muted-foreground hover:text-foreground transition-colors">Contacto</Link>
+            </nav>
+            <nav aria-label="Legal" className="flex flex-col gap-2">
+              <span className="font-semibold text-foreground">Legal</span>
+              <Link href="/aviso-legal" className="text-muted-foreground hover:text-foreground transition-colors">Aviso legal</Link>
+              <Link href="/privacidad" className="text-muted-foreground hover:text-foreground transition-colors">Privacidad</Link>
+              <Link href="/cookies" className="text-muted-foreground hover:text-foreground transition-colors">Cookies</Link>
+              <CookieSettingsButton className="text-left text-muted-foreground hover:text-foreground transition-colors" />
+            </nav>
+          </div>
         </div>
         <div className="mt-8 rounded-lg border border-primary/20 bg-primary/5 p-4">
           <div className="flex items-start gap-3">
@@ -30,7 +46,7 @@ export function Footer() {
           </div>
         </div>
         <p className="mt-6 text-center text-xs text-muted-foreground">
-          © 2024 CriptoMundo. Contenido educativo e informativo.
+          © {new Date().getFullYear()} CriptoMundo · Cristian Arango. Contenido educativo e informativo.
         </p>
       </div>
     </footer>

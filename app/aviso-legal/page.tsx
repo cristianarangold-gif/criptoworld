@@ -1,9 +1,12 @@
 import { Metadata } from 'next'
+import Link from 'next/link'
 import { AlertTriangle, ShieldAlert } from 'lucide-react'
+import { SITE } from '@/lib/site'
 
 export const metadata: Metadata = {
   title: 'Aviso legal',
-  description: 'Información legal y descargo de responsabilidad de CriptoMundo.',
+  description: 'Datos del titular, condiciones de uso y descargo de responsabilidad de CriptoMundo.',
+  alternates: { canonical: '/aviso-legal' },
 }
 
 export default function AvisoLegalPage() {
@@ -15,6 +18,18 @@ export default function AvisoLegalPage() {
       </div>
 
       <div className="space-y-8 text-sm text-muted-foreground leading-relaxed">
+        <section>
+          <h2 className="font-display text-lg font-bold text-foreground mb-3">Datos del titular</h2>
+          <p className="mb-3">En cumplimiento del artículo 10 de la Ley 34/2002, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE), se informa de los datos del titular de este sitio web:</p>
+          <ul className="list-disc pl-5 space-y-1.5">
+            <li><strong className="text-foreground">Titular:</strong> {SITE.owner}</li>
+            <li><strong className="text-foreground">NIF:</strong> {SITE.ownerId}</li>
+            <li><strong className="text-foreground">País:</strong> {SITE.country}</li>
+            <li><strong className="text-foreground">Email:</strong> <a href={`mailto:${SITE.email}`} className="text-primary underline">{SITE.email}</a></li>
+            <li><strong className="text-foreground">Sitio web:</strong> criptoworld.org («CriptoMundo»)</li>
+          </ul>
+        </section>
+
         <section>
           <h2 className="font-display text-lg font-bold text-foreground mb-3">Naturaleza de la información</h2>
           <p>CriptoMundo es una plataforma con fines exclusivamente informativos y educativos. Toda la información, datos, artículos, análisis, simulaciones y herramientas proporcionados a través de esta plataforma se ofrecen únicamente con propósitos educativos y de información general.</p>
@@ -32,7 +47,7 @@ export default function AvisoLegalPage() {
 
         <section>
           <h2 className="font-display text-lg font-bold text-foreground mb-3">Noticias</h2>
-          <p>Las noticias mostradas proceden de fuentes externas públicas (feeds RSS). CriptoMundo muestra los titulares y enlaces originales sin modificar su contenido. La responsabilidad del contenido noticioso corresponde a sus respectivas fuentes originales.</p>
+          <p>Las noticias mostradas proceden de fuentes externas públicas (feeds RSS). CriptoMundo muestra los titulares, un breve extracto y el enlace a la noticia original, sin modificar su contenido. La responsabilidad del contenido noticioso corresponde a sus respectivas fuentes originales.</p>
         </section>
 
         <section>
@@ -43,6 +58,26 @@ export default function AvisoLegalPage() {
         <section>
           <h2 className="font-display text-lg font-bold text-foreground mb-3">Recomendación</h2>
           <p>Antes de realizar cualquier inversión en criptomonedas u otros activos financieros, consulta con un profesional financiero cualificado. Invierte únicamente capital que estés dispuesto a perder en su totalidad.</p>
+        </section>
+
+        <section>
+          <h2 className="font-display text-lg font-bold text-foreground mb-3">Propiedad intelectual</h2>
+          <p>Los textos, la estructura y el diseño de CriptoMundo pertenecen a su titular, salvo que se indique otra autoría. Puedes citarlos con un enlace a la página original. Los nombres, logotipos y marcas de criptomonedas, exchanges y medios mencionados pertenecen a sus respectivos propietarios y se usan solo con fines informativos.</p>
+        </section>
+
+        <section>
+          <h2 className="font-display text-lg font-bold text-foreground mb-3">Enlaces externos</h2>
+          <p>La web enlaza a sitios de terceros (organismos oficiales, medios y documentación de proyectos). CriptoMundo no controla ni se responsabiliza de su contenido, disponibilidad o políticas de privacidad.</p>
+        </section>
+
+        <section>
+          <h2 className="font-display text-lg font-bold text-foreground mb-3">Privacidad y cookies</h2>
+          <p>El tratamiento de datos personales se explica en la <Link href="/privacidad" className="text-primary underline">Política de privacidad</Link> y el uso de cookies en la <Link href="/cookies" className="text-primary underline">Política de cookies</Link>.</p>
+        </section>
+
+        <section>
+          <h2 className="font-display text-lg font-bold text-foreground mb-3">Legislación aplicable</h2>
+          <p>Este aviso legal se rige por la legislación española. Para cualquier controversia, y salvo que la normativa de consumidores establezca otra cosa, serán competentes los juzgados y tribunales del domicilio del usuario.</p>
         </section>
 
         <div className="rounded-lg border border-primary/20 bg-primary/5 p-5">
