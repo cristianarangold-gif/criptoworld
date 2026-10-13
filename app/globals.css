@@ -101,3 +101,22 @@
   .bg-gain { background-color: hsl(var(--gain)); }
   .bg-loss { background-color: hsl(var(--loss)); }
 }
+/* Cinta de precios de la portada */
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.ticker-track { animation: ticker 40s linear infinite; }
+.ticker:hover .ticker-track { animation-play-state: paused; }
+
+/* Reducir movimiento: sin animaciones ni transiciones, y la cinta se desplaza a mano */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .ticker { overflow-x: auto; }
+  .ticker-track { animation: none; }
+}
