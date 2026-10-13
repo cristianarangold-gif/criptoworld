@@ -33,7 +33,7 @@ export default function HerramientasPage() {
           <Link
             key={t.slug}
             href={`/herramientas/${t.slug}`}
-            className="glass-card rounded-xl p-5 hover:border-primary/30 transition-all group flex flex-col"
+            className="glow-card glass-card rounded-xl p-5 hover:border-primary/30 group flex flex-col"
           >
             <h2 className="text-base font-semibold group-hover:text-primary transition-colors">{t.title}</h2>
             <p className="mt-2 text-sm text-muted-foreground">{t.short}</p>

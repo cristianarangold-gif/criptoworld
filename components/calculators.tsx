@@ -14,7 +14,7 @@ const num = (v: string) => {
 function fmt(n: number, dec = 2) {
   if (!isFinite(n)) return '—'
   // useGrouping 'always': en es-ES, sin esto 1200 no lleva punto de miles y 12000 sí.
-  return n.toLocaleString('es-ES', { minimumFractionDigits: dec, maximumFractionDigits: dec, useGrouping: 'always' } as Intl.NumberFormatOptions)
+  return n.toLocaleString('es-ES', { minimumFractionDigits: dec, maximumFractionDigits: dec, useGrouping: 'always' } as unknown as Intl.NumberFormatOptions)
 }
 const eur = (n: number, dec = 2) => (isFinite(n) ? `${fmt(n, dec)} €` : '—')
 const pct = (n: number, dec = 2) => (isFinite(n) ? `${n > 0 ? '+' : ''}${fmt(n, dec)} %` : '—')

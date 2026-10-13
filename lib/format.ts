@@ -13,3 +13,9 @@ export function formatCompact(value: number | null | undefined): string {
   if (v >= 1e6) return `$${(v / 1e6).toFixed(2)}M`
   return `$${v.toLocaleString('en-US', { maximumFractionDigits: 0 })}`
 }
+
+export function formatEur(value: number | null | undefined): string {
+  if (value === null || value === undefined || !Number.isFinite(value)) return '—'
+  const dec = Math.abs(value) >= 1 ? 2 : 6
+  return `${value.toLocaleString('es-ES', { minimumFractionDigits: dec, maximumFractionDigits: dec, useGrouping: 'always' } as unknown as Intl.NumberFormatOptions)} €`
+}

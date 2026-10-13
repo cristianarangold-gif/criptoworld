@@ -1,11 +1,20 @@
 import Link from 'next/link'
 import { getMarketData } from '@/lib/coingecko'
 import { getAllGuides } from '@/lib/guides'
+import { getSiteStats } from '@/lib/site-stats'
+import { getFearGreed, toTickerItems } from '@/lib/sentiment'
 import { HomeClient } from '@/components/home-client'
-import { BookOpen, TrendingUp } from 'lucide-react'
+import { HeroChart } from '@/components/hero-chart'
+import { CountUp } from '@/components/count-up'
+import { PriceTicker } from '@/components/price-ticker'
+import { BookOpen, Calculator } from 'lucide-react'
 
 export default async function HomePage() {
-  const market = await getMarketData('usd').catch(() => [])
+  const [market, fearGreed] = await Promise.all([
+    getMarketData('eur').catch(() => []),
+    getFearGreed(),
+  ])
+  const stats = getSiteStats()
   const articles = getAllGuides()
     .slice(0, 8)
     .map(g => ({ id: g.slug, slug: g.slug, category: g.category, title: g.title, description: g.description, readTime: g.readTime }))
@@ -14,8 +23,8 @@ export default async function HomePage() {
     <>
       {/* Hero */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 z-0 bg-gradient-to-b from-primary/10 via-background to-background" />
-        <div className="relative z-10 mx-auto max-w-7xl px-4 py-20 sm:py-32 sm:px-6 lg:px-8">
+        <HeroChart />
+        <div className="relative z-10 mx-auto max-w-7xl px-4 py-20 sm:py-28 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-tight">
               Entiende el mundo cripto y decide con{' '}
@@ -26,21 +35,31 @@ export default async function HomePage() {
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Link
-                href="/mercado"
+                href="/aprende"
                 className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground hover:bg-primary/90 transition-colors"
               >
-                <TrendingUp className="h-4 w-4" />
-                Explorar mercado
+                <BookOpen className="h-4 w-4" />
+                Guías prácticas
               </Link>
               <Link
-                href="/aprende"
+                href="/herramientas"
                 className="inline-flex items-center gap-2 rounded-lg border border-border bg-card/50 px-6 py-3 text-sm font-semibold text-foreground hover:bg-muted transition-colors"
               >
-                <BookOpen className="h-4 w-4" />
-                Empieza a aprender
+                <Calculator className="h-4 w-4" />
+                Calculadoras
               </Link>
             </div>
+            <p className="mt-8 text-sm text-muted-foreground">
+              <Link href="/academia" className="hover:text-foreground"><strong className="text-foreground text-base"><CountUp value={stats.lessons} /></strong> lecciones</Link>
+              <span className="mx-2">·</span>
+              <Link href="/aprende" className="hover:text-foreground"><strong className="text-foreground text-base"><CountUp value={stats.guides} /></strong> guías</Link>
+              <span className="mx-2">·</span>
+              <Link href="/herramientas" className="hover:text-foreground"><strong className="text-foreground text-base"><CountUp value={stats.tools} /></strong> herramientas</Link>
+            </p>
           </div>
+        </div>
+        <div className="relative z-10">
+          <PriceTicker items={toTickerItems(market)} fearGreed={fearGreed} />
         </div>
       </section>
 

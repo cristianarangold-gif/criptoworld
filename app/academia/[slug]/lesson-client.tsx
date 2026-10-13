@@ -7,6 +7,7 @@ import { ArrowLeft, ArrowRight, CheckCircle2, Clock, BookOpen, Lightbulb, AlertT
 import { cn } from '@/lib/utils'
 import { Markdown } from '@/components/markdown'
 import { SITE } from '@/lib/site'
+import { ReadingProgress } from '@/components/reading-progress'
 
 type LessonData = {
   slug: string
@@ -72,6 +73,7 @@ export function LessonClient({ lesson, nav, levelLabel, levelColor, levelBg }: {
 
   return (
     <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6">
+      <ReadingProgress />
       {/* Breadcrumb */}
       <div className="flex items-center gap-2 text-sm text-muted-foreground mb-6">
         <Link href="/academia" className="hover:text-primary transition-colors">Academia</Link>

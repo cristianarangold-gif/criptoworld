@@ -180,7 +180,7 @@ export function AreaPersonalClient({ userName }: { userName: string }) {
       </div>
 
       {tab === 'cartera' && (
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+        <div>
           {/* Summary cards */}
           {positions.length > 0 && (
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
@@ -303,11 +303,11 @@ export function AreaPersonalClient({ userName }: { userName: string }) {
               ))}
             </div>
           )}
-        </motion.div>
+        </div>
       )}
 
       {tab === 'simulador' && (
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+        <div>
           <div className="glass-card rounded-xl p-6 max-w-xl">
             <h2 className="font-display text-lg font-bold mb-1">Simulador de inversión</h2>
             <p className="text-sm text-muted-foreground mb-4">
@@ -372,7 +372,7 @@ export function AreaPersonalClient({ userName }: { userName: string }) {
               </div>
             )}
           </div>
-        </motion.div>
+        </div>
       )}
     </div>
   )

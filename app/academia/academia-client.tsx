@@ -115,7 +115,7 @@ export function AcademiaClient({ levels }: { levels: LevelData[] }) {
                     <Link
                       key={lesson.slug}
                       href={`/academia/${lesson.slug}`}
-                      className="glass-card rounded-xl p-5 hover:border-primary/30 transition-all group flex flex-col"
+                      className="glow-card glass-card rounded-xl p-5 hover:border-primary/30 group flex flex-col"
                     >
                       <div className="flex items-center justify-between mb-3">
                         <span className={cn('inline-flex items-center gap-1 rounded-full px-2.5 py-0.5 text-xs font-medium', lvl.bg, lvl.color)}>

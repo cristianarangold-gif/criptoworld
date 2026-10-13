@@ -4,17 +4,16 @@ import { usePathname } from 'next/navigation'
 import { useSession, signOut } from 'next-auth/react'
 import { useState } from 'react'
 import { cn } from '@/lib/utils'
-import { TrendingUp, Newspaper, BookOpen, GraduationCap, Calculator, User, Menu, X, LogOut } from 'lucide-react'
+import { TrendingUp, BookOpen, GraduationCap, Calculator, User, Menu, X, LogOut } from 'lucide-react'
 import { SearchBar } from '@/components/search-bar'
 
+// Menú principal. Empieza aquí y Glosario se añaden junto con sus páginas (PR 2).
+// Noticias está en el pie; «Mi área» es un icono junto al buscador.
 const NAV = [
-  { href: '/', label: 'Inicio', icon: TrendingUp },
-  { href: '/mercado', label: 'Mercado', icon: TrendingUp },
-  { href: '/noticias', label: 'Noticias', icon: Newspaper },
   { href: '/academia', label: 'Academia', icon: GraduationCap },
+  { href: '/aprende', label: 'Guías', icon: BookOpen },
   { href: '/herramientas', label: 'Herramientas', icon: Calculator },
-  { href: '/aprende', label: 'Aprende', icon: BookOpen },
-  { href: '/area-personal', label: 'Mi área', icon: User },
+  { href: '/mercado', label: 'Mercado', icon: TrendingUp },
 ]
 
 export function Header() {
@@ -56,6 +55,17 @@ export function Header() {
 
         <div className="hidden md:flex items-center gap-2">
           <SearchBar />
+          <Link
+            href="/area-personal"
+            aria-label="Mi área"
+            title="Mi área"
+            className={cn(
+              'rounded-lg p-2 transition-colors',
+              pathname?.startsWith('/area-personal') ? 'bg-primary/10 text-primary' : 'text-muted-foreground hover:bg-muted hover:text-foreground'
+            )}
+          >
+            <User className="h-4 w-4" />
+          </Link>
           {session?.user ? (
             <button
               onClick={() => signOut({ redirectTo: '/' })}
@@ -75,7 +85,7 @@ export function Header() {
         </div>
 
         {/* Mobile toggle */}
-        <button onClick={() => setOpen(!open)} className="md:hidden p-2 text-muted-foreground">
+        <button onClick={() => setOpen(!open)} className="md:hidden p-2 text-muted-foreground" aria-label={open ? 'Cerrar menú' : 'Abrir menú'} aria-expanded={open}>
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
       </div>
@@ -101,6 +111,17 @@ export function Header() {
               </Link>
             )
           })}
+          <Link
+            href="/area-personal"
+            onClick={() => setOpen(false)}
+            className={cn(
+              'flex items-center gap-2 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors',
+              pathname?.startsWith('/area-personal') ? 'bg-primary/10 text-primary' : 'text-muted-foreground hover:bg-muted'
+            )}
+          >
+            <User className="h-4 w-4" />
+            Mi área
+          </Link>
           <div className="pt-2 border-t border-border/40">
             {session?.user ? (
               <button
