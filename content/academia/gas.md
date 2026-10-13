@@ -16,6 +16,11 @@ sources:
     url: "https://eips.ethereum.org/EIPS/eip-1559"
   - title: "EIP-4844: transacciones con blobs (Dencun)"
     url: "https://eips.ethereum.org/EIPS/eip-4844"
+quiz:
+  - {"pregunta": "¿Cómo se calcula la comisión en Ethereum?", "opciones": ["Gas consumido × precio por unidad de gas", "Un porcentaje del importe enviado", "Una tarifa fija mensual"], "correcta": 0, "explicacion": "Por eso enviar 10 € o 10.000 € en una transferencia simple cuesta lo mismo."}
+  - {"pregunta": "¿Qué ocurre con la tarifa base desde 2021 (EIP-1559)?", "opciones": ["Va al validador", "Se quema", "Se devuelve al usuario"], "correcta": 1, "explicacion": "La propina va al validador; la tarifa base se destruye."}
+  - {"pregunta": "Si una transacción falla por quedarse sin gas, ¿qué pasa?", "opciones": ["No se cobra nada", "Se cobra el doble", "Se cobra el gas consumido hasta ese momento"], "correcta": 2, "explicacion": "Por eso casi nunca conviene tocar el límite de gas que calcula la wallet."}
+  - {"pregunta": "¿Cuál es la forma más eficaz de pagar menos en operaciones pequeñas?", "opciones": ["Usar una red de capa 2", "Enviar a medianoche siempre", "Subir el límite de gas"], "correcta": 0, "explicacion": "En las redes de capa 2 la misma operación suele costar céntimos."}
 ---
 ## Qué es el gas
 

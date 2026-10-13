@@ -14,6 +14,11 @@ sources:
     url: "https://eips.ethereum.org/EIPS/eip-4844"
   - title: "L2BEAT: análisis de riesgos de las redes de capa 2"
     url: "https://l2beat.com/scaling/summary"
+quiz:
+  - {"pregunta": "¿Qué publica un rollup en Ethereum?", "opciones": ["Nada", "Los datos de sus transacciones y un compromiso con el resultado", "Solo el saldo de cada usuario"], "correcta": 1, "explicacion": "Así cualquiera puede reconstruir su estado y comprobarlo."}
+  - {"pregunta": "¿En qué se basan los optimistic rollups?", "opciones": ["En pruebas de validez con cada lote", "En asumir que el resultado es correcto y dejar un plazo para pruebas de fraude", "En la confianza en un banco"], "correcta": 1, "explicacion": "Por eso las retiradas por el puente oficial tardan alrededor de una semana."}
+  - {"pregunta": "¿Qué abarató mucho las comisiones de los rollups en 2024?", "opciones": ["The Merge", "El halving", "Los blobs de la actualización Dencun (EIP-4844)"], "correcta": 2, "explicacion": "Dieron a los rollups un espacio de datos más barato."}
+  - {"pregunta": "¿Quién ordena las transacciones en la mayoría de rollups hoy?", "opciones": ["Miles de mineros", "El Banco Central Europeo", "Un secuenciador operado por una sola entidad"], "correcta": 2, "explicacion": "Es uno de los aspectos que mide la madurez de cada red."}
 ---
 ## Qué es un rollup
 

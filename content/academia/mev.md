@@ -9,6 +9,11 @@ sources:
     url: "https://ethereum.org/es/developers/docs/mev/"
   - title: "Flashbots: documentación de Flashbots Protect"
     url: "https://docs.flashbots.net/flashbots-protect/overview"
+quiz:
+  - {"pregunta": "¿Qué es el MEV?", "opciones": ["Una criptomoneda", "El beneficio que se obtiene ordenando, incluyendo o excluyendo transacciones en un bloque", "Una comisión de los exchanges"], "correcta": 1, "explicacion": "Lo capturan sobre todo bots que vigilan las transacciones pendientes."}
+  - {"pregunta": "¿Cómo funciona un ataque sándwich?", "opciones": ["Un bot compra justo antes que tú y vende justo después", "Alguien roba tu frase semilla", "Se duplica tu transacción"], "correcta": 0, "explicacion": "Tú obtienes menos tokens de los esperados y el bot se queda la diferencia."}
+  - {"pregunta": "¿Qué ajuste reduce el margen para un ataque sándwich?", "opciones": ["Subir la tolerancia de deslizamiento", "Hacer la operación en un pool pequeño", "Usar una tolerancia de deslizamiento baja y protección contra front-running"], "correcta": 2, "explicacion": "Con un slippage alto das margen al atacante."}
+  - {"pregunta": "¿Qué tipo de MEV ayuda a igualar precios entre mercados?", "opciones": ["El arbitraje", "El ataque sándwich", "El front-running"], "correcta": 0, "explicacion": "El arbitraje compra donde está barato y vende donde está caro."}
 ---
 ## Qué es el MEV
 

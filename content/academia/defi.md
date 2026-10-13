@@ -27,6 +27,11 @@ sources:
     url: "https://ethereum.org/es/developers/docs/smart-contracts/"
   - title: "CNMV: Nueva regulación de criptoactivos, Reglamento MiCA"
     url: "https://www.cnmv.es/portal/mica/regulacion-criptoactivos"
+quiz:
+  - {"pregunta": "¿Qué distingue a DeFi de un servicio financiero tradicional?", "opciones": ["Que no hay un intermediario que custodie el dinero: funciona con contratos inteligentes", "Que lo regula el Banco de España", "Que garantiza los depósitos"], "correcta": 0, "explicacion": "Conectas tu propia wallet y tus fondos pasan a un contrato con reglas públicas, sin nadie a quien reclamar si algo falla."}
+  - {"pregunta": "En un préstamo de DeFi, ¿qué ocurre si cae el valor de tu garantía por debajo del umbral?", "opciones": ["Te llaman para avisarte", "El protocolo la liquida automáticamente", "Se congela el préstamo sin consecuencias"], "correcta": 1, "explicacion": "El contrato vende parte de la garantía para devolver el préstamo, normalmente con penalización."}
+  - {"pregunta": "Ante una rentabilidad muy alta en DeFi, ¿qué pregunta es la más importante?", "opciones": ["¿Cuánto tarda en pagarse?", "¿Cuántos usuarios tiene?", "¿De dónde sale esa rentabilidad?"], "correcta": 2, "explicacion": "Puede venir de intereses, comisiones o incentivos temporales; si no sabes explicarlo, asumes un riesgo que no ves."}
+  - {"pregunta": "¿Qué significa composabilidad en DeFi?", "opciones": ["Que los protocolos se pueden combinar entre sí", "Que el código no se puede leer", "Que las comisiones son fijas"], "correcta": 0, "explicacion": "Es su gran fortaleza y su gran riesgo: un fallo en una pieza se propaga a las que dependen de ella."}
 ---
 ## Qué es DeFi
 

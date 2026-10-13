@@ -11,6 +11,11 @@ sources:
     url: "https://ethereum.org/es/staking/"
   - title: "Cointelegraph: EigenLayer empezará a aplicar slashing a los restakers en abril (2025)"
     url: "https://cointelegraph.com/news/eigenlayer-slashing-restakers-april"
+quiz:
+  - {"pregunta": "¿Qué es el restaking?", "opciones": ["Hacer staking dos veces del mismo token en la misma red", "Usar ETH ya en staking como garantía para asegurar otros servicios", "Retirar del staking"], "correcta": 1, "explicacion": "A cambio de recompensas adicionales, y de más riesgos."}
+  - {"pregunta": "¿Qué ocurre con los riesgos al encadenar staking, staking líquido y restaking líquido?", "opciones": ["Se anulan", "Desaparecen con la auditoría", "Se suman"], "correcta": 2, "explicacion": "Cada capa añade su propio riesgo: slashing, contratos, paridad del token…"}
+  - {"pregunta": "¿Qué es un AVS?", "opciones": ["Una wallet", "Un exchange", "Un servicio que se asegura mediante restaking"], "correcta": 2, "explicacion": "Puentes, oráculos o capas de datos pueden alquilar seguridad así."}
+  - {"pregunta": "Antes de hacer restaking, ¿qué deberías poder explicar?", "opciones": ["A qué servicios te expones y cuándo te pueden penalizar", "Solo la rentabilidad anunciada", "El precio del gas"], "correcta": 0, "explicacion": "Si no puedes explicarlo, no tiene sentido arriesgar fondos importantes."}
 ---
 ## La idea
 

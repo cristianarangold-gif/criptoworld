@@ -5,6 +5,11 @@ sources:
     url: "https://ethereum.org/es/developers/docs/oracles/"
   - title: "ethereum.org: Seguridad de contratos inteligentes"
     url: "https://ethereum.org/es/developers/docs/smart-contracts/security/"
+quiz:
+  - {"pregunta": "¿Para qué sirve un oráculo?", "opciones": ["Para minar bloques", "Para llevar datos del mundo exterior, como precios, a la blockchain", "Para guardar claves"], "correcta": 1, "explicacion": "Un contrato inteligente no puede consultar por sí mismo datos externos."}
+  - {"pregunta": "¿Qué pasa si un contrato recibe un dato falso de un oráculo?", "opciones": ["Toma una decisión equivocada con total fidelidad", "Lo detecta y lo corrige solo", "Se detiene automáticamente"], "correcta": 0, "explicacion": "Un contrato es tan fiable como los datos que recibe."}
+  - {"pregunta": "¿Qué suelen usar los ataques de manipulación de precios en DeFi?", "opciones": ["Contraseñas robadas", "Ataques al hardware", "Préstamos instantáneos para mover el precio de un pool poco líquido"], "correcta": 2, "explicacion": "Todo ocurre en una sola transacción; la defensa es usar oráculos que combinen muchas fuentes."}
+  - {"pregunta": "¿Qué oráculo es más robusto?", "opciones": ["Una sola web de precios", "Una red descentralizada que combina muchas fuentes", "El precio de un pool pequeño"], "correcta": 1, "explicacion": "Combinar fuentes independientes dificulta la manipulación."}
 ---
 ## El problema del oráculo
 

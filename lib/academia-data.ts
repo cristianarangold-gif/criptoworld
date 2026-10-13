@@ -1,6 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
+import type { QuizQuestion } from '@/lib/quiz'
 
 export interface LessonSource {
   title: string
@@ -23,6 +24,7 @@ export interface AcademyLesson {
   // Solo en lecciones revisadas (content/academia/<slug>.md)
   updated?: string
   sources?: LessonSource[]
+  quiz?: QuizQuestion[]
 }
 
 const LESSONS: AcademyLesson[] = [
@@ -1342,6 +1344,7 @@ function lessons(): AcademyLesson[] {
       lesson.detailedExplanation = content.trim()
       lesson.updated = isoDate(data.updated)
       lesson.sources = data.sources ?? []
+      if (data.quiz) lesson.quiz = data.quiz
     }
     const text = [
       lesson.simpleExplanation, lesson.detailedExplanation, ...lesson.practicalExamples,

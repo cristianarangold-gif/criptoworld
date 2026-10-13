@@ -15,6 +15,11 @@ sources:
     url: "https://www.cnmv.es/portal/mica/regulacion-criptoactivos"
   - title: "Reglamento (UE) 2023/1114 (MiCA): requisitos del white paper, EUR-Lex"
     url: "https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=CELEX:32023R1114"
+quiz:
+  - {"pregunta": "¿Qué es una altcoin?", "opciones": ["Cualquier criptomoneda distinta de Bitcoin", "Una stablecoin", "Una moneda de un banco central"], "correcta": 0, "explicacion": "El término engloba desde redes consolidadas como Ethereum hasta tokens sin ningún uso."}
+  - {"pregunta": "Un token cuesta 0,001 € y hay un billón de unidades. ¿Es barato?", "opciones": ["Sí, por su precio bajo", "No necesariamente: su capitalización ya es de 1.000 millones de euros", "Depende del día"], "correcta": 1, "explicacion": "Lo que importa es la capitalización (precio × unidades), no el precio por unidad."}
+  - {"pregunta": "¿Qué suele pasar con las altcoins en las caídas del mercado?", "opciones": ["Suben", "Se mantienen estables", "Suelen caer más que Bitcoin, y muchas no se recuperan"], "correcta": 2, "explicacion": "Su mayor potencial de subida va unido a un riesgo mucho mayor."}
+  - {"pregunta": "Con MiCA, ¿qué documento debe publicar quien ofrece un criptoactivo al público en la UE?", "opciones": ["Un white paper con información y riesgos", "Una auditoría del Banco de España", "Ninguno"], "correcta": 0, "explicacion": "El white paper es un buen punto de partida, aunque ninguna autoridad valore la calidad de la inversión."}
 ---
 ## Todo lo que no es Bitcoin
 

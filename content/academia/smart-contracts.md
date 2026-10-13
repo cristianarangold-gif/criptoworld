@@ -7,6 +7,11 @@ sources:
     url: "https://ethereum.org/es/developers/docs/smart-contracts/"
   - title: "ethereum.org: Seguridad de contratos inteligentes"
     url: "https://ethereum.org/es/developers/docs/smart-contracts/security/"
+quiz:
+  - {"pregunta": "¿Qué es un contrato inteligente?", "opciones": ["Un contrato en papel escaneado", "Un programa guardado en una blockchain que se ejecuta tal como está escrito", "Un acuerdo firmado ante notario"], "correcta": 1, "explicacion": "Nadie puede impedir su ejecución salvo que el propio código lo prevea."}
+  - {"pregunta": "¿Garantiza una auditoría que un contrato no tiene fallos?", "opciones": ["Sí, siempre", "No, reduce el riesgo pero no lo elimina", "Solo si es de una gran empresa"], "correcta": 1, "explicacion": "Los auditores revisan una versión concreta y pueden pasar por alto fallos."}
+  - {"pregunta": "¿Qué deberías preguntar sobre un contrato actualizable?", "opciones": ["Cuánto gas consume", "En qué lenguaje está escrito", "Quién puede actualizarlo y con cuánto aviso"], "correcta": 2, "explicacion": "Si una sola dirección puede cambiarlo, tus fondos dependen de esa persona."}
+  - {"pregunta": "Tu wallet te pide aprobar un permiso ilimitado para mover tus tokens en una web desconocida. ¿Qué haces?", "opciones": ["Lo acepto para ir más rápido", "Lo acepto si la web es bonita", "Lo rechazo"], "correcta": 2, "explicacion": "Muchas estafas consisten precisamente en conseguir que firmes ese permiso."}
 ---
 ## Una máquina expendedora digital
 

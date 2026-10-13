@@ -23,6 +23,11 @@ sources:
     url: "https://eips.ethereum.org/EIPS/eip-7702"
   - title: "Ethereum Foundation: anuncio de Pectra en la red principal"
     url: "https://blog.ethereum.org/2025/04/23/pectra-mainnet"
+quiz:
+  - {"pregunta": "¿Qué busca la abstracción de cuentas?", "opciones": ["Eliminar las wallets", "Que tu cuenta tenga reglas programables, como recuperación o límites de gasto", "Ocultar las transacciones"], "correcta": 1, "explicacion": "Las reglas para autorizar operaciones las decides tú."}
+  - {"pregunta": "¿Qué permitió la actualización Pectra (mayo de 2025) con EIP-7702?", "opciones": ["Que una cuenta normal delegue en el código de un contrato", "Eliminar el gas", "Crear bitcoins en Ethereum"], "correcta": 0, "explicacion": "Tu dirección de siempre puede adquirir funciones de cuenta inteligente."}
+  - {"pregunta": "¿Qué riesgo nuevo trae EIP-7702?", "opciones": ["Que las comisiones suban", "Ninguno", "Que firmes una delegación a un contrato malicioso y le des el control de tus fondos"], "correcta": 2, "explicacion": "Si tu wallet te pide una delegación que no esperabas, recházala."}
+  - {"pregunta": "¿Cuándo funciona la recuperación social?", "opciones": ["Solo si la configuraste antes de perder el acceso", "Siempre, de forma automática", "Nunca"], "correcta": 0, "explicacion": "Los guardianes tienen que estar designados de antemano."}
 ---
 ## Dos tipos de cuenta en Ethereum
 

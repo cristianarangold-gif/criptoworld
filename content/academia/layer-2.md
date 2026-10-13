@@ -28,6 +28,11 @@ sources:
     url: "https://l2beat.com/scaling/summary"
   - title: "EIP-4844: transacciones con blobs (Dencun)"
     url: "https://eips.ethereum.org/EIPS/eip-4844"
+quiz:
+  - {"pregunta": "¿Qué hace una red de capa 2?", "opciones": ["Procesa transacciones fuera de la red principal y publica en ella un resumen", "Sustituye a Ethereum", "Es una wallet"], "correcta": 0, "explicacion": "Ethereum actúa como juez: la información publicada permite demostrar trampas."}
+  - {"pregunta": "¿Cuánto tarda, aproximadamente, retirar a Ethereum por el puente oficial de un optimistic rollup?", "opciones": ["Unos 7 días", "Unos segundos", "Un año"], "correcta": 0, "explicacion": "Es el plazo durante el que se pueden presentar pruebas de fraude."}
+  - {"pregunta": "¿Heredan todas las capas 2 la seguridad de Ethereum por igual?", "opciones": ["Sí, todas", "Ninguna", "No: muchas aún dependen de su propio secuenciador y de mecanismos controlados por su equipo"], "correcta": 2, "explicacion": "L2BEAT las clasifica por etapas según cuánto dependen de sus operadores."}
+  - {"pregunta": "¿En qué se diferencia una sidechain de un rollup bien construido?", "opciones": ["La sidechain tiene sus propios validadores y Ethereum no garantiza tus fondos", "No hay diferencia", "La sidechain es siempre más segura"], "correcta": 0, "explicacion": "En un rollup maduro Ethereum garantiza que puedes recuperar tus fondos."}
 ---
 ## El problema
 

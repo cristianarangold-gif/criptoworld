@@ -15,6 +15,11 @@ sources:
     url: "https://ethereum.org/es/developers/docs/scaling/"
   - title: "Satoshi Nakamoto: Bitcoin, a Peer-to-Peer Electronic Cash System (white paper, 2008)"
     url: "https://bitcoin.org/bitcoin.pdf"
+quiz:
+  - {"pregunta": "¿Qué es una capa 1?", "opciones": ["Una blockchain base con su propia red, consenso y token", "Una red que depende de otra para su seguridad", "Una wallet"], "correcta": 0, "explicacion": "Bitcoin, Ethereum o Solana son capas 1."}
+  - {"pregunta": "¿Qué tres objetivos componen el trilema de la escalabilidad?", "opciones": ["Seguridad, descentralización y escalabilidad", "Precio, volumen y liquidez", "Velocidad, privacidad y anonimato"], "correcta": 0, "explicacion": "Es muy difícil conseguir los tres a la vez."}
+  - {"pregunta": "¿Es la red con más transacciones por segundo siempre la mejor?", "opciones": ["Sí", "Solo si es nueva", "No: importa también cuántos validadores independientes la mantienen y si se usa de verdad"], "correcta": 2, "explicacion": "Una red muy rápida puede estar más centralizada."}
+  - {"pregunta": "¿Qué riesgo tiene enviar un token por una red distinta de la que admite el destino?", "opciones": ["Que tarde un poco más", "Perderlo", "Ninguno"], "correcta": 1, "explicacion": "Un mismo token puede existir en varias redes que no son intercambiables directamente."}
 ---
 ## Qué es una capa 1
 

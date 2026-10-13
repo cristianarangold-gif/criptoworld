@@ -25,6 +25,11 @@ sources:
     url: "https://www.cnbc.com/2024/07/01/eu-mica-law-crypto-firm-circle-gets-french-license-for-stablecoin.html"
   - title: "Reglamento (UE) 2023/1114 (MiCA), EUR-Lex"
     url: "https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=CELEX:32023R1114"
+quiz:
+  - {"pregunta": "¿Quién emite USDC?", "opciones": ["Tether", "El Banco Central Europeo", "Circle"], "correcta": 2, "explicacion": "Circle emite USDC y su versión en euros, EURC."}
+  - {"pregunta": "¿Cumple USDC el reglamento MiCA?", "opciones": ["No", "Solo fuera de la UE", "Sí, gracias a la licencia de entidad de dinero electrónico de Circle en Francia"], "correcta": 2, "explicacion": "Circle obtuvo esa licencia en julio de 2024, y por eso USDC se ofrece en plataformas autorizadas."}
+  - {"pregunta": "¿Qué pasó con USDC en marzo de 2023?", "opciones": ["Desapareció", "Perdió temporalmente su paridad por la quiebra de un banco donde estaban parte de sus reservas", "Subió a 2 dólares"], "correcta": 1, "explicacion": "Llegó a cotizar en torno a 0,88 dólares hasta que se garantizaron los depósitos de Silicon Valley Bank."}
+  - {"pregunta": "Para un ahorrador en euros, ¿qué riesgo tiene USDC?", "opciones": ["El tipo de cambio euro-dólar", "Ninguno", "Que se convierta en bitcoin"], "correcta": 0, "explicacion": "USDC está vinculada al dólar; para estabilidad en euros existe EURC."}
 ---
 ## Datos básicos
 

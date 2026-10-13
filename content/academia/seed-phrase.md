@@ -7,6 +7,11 @@ sources:
     url: "https://ethereum.org/es/security/"
   - title: "Bitcoin.org: Asegura tu monedero"
     url: "https://bitcoin.org/es/asegure-su-monedero"
+quiz:
+  - {"pregunta": "¿Qué permite la frase semilla?", "opciones": ["Solo cambiar la contraseña de la app", "Ver el saldo sin conexión", "Recuperar todas las claves de la wallet en otro dispositivo"], "correcta": 2, "explicacion": "Todas las claves y direcciones se calculan a partir de esas palabras; quien las tiene controla los fondos."}
+  - {"pregunta": "¿Cuál es la forma más segura de guardarla?", "opciones": ["En una foto en el móvil", "Escrita a mano en papel o en metal, fuera de internet", "En un correo enviado a ti mismo"], "correcta": 1, "explicacion": "Cualquier copia digital puede acabar en manos de un malware o de alguien que acceda a tus cuentas."}
+  - {"pregunta": "El soporte de tu exchange te pide la frase semilla para «sincronizar» tu wallet. ¿Qué haces?", "opciones": ["Se la doy si el correo parece oficial", "Le doy solo la mitad de las palabras", "No se la doy: es una estafa"], "correcta": 2, "explicacion": "Nadie legítimo te pedirá nunca tu frase semilla. Quien te la pide quiere vaciar tu wallet."}
+  - {"pregunta": "Si crees que alguien ha visto tu frase semilla, ¿qué debes hacer?", "opciones": ["Crear una wallet nueva y mover allí los fondos", "Cambiar el PIN de la app", "Nada, si la wallet sigue funcionando"], "correcta": 0, "explicacion": "La wallet antigua no se puede arreglar: quien tenga las palabras tendrá acceso para siempre."}
 ---
 ## Qué es exactamente
 

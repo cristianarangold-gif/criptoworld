@@ -11,6 +11,11 @@ sources:
     url: "https://ethereum.org/es/developers/docs/bridges/"
   - title: "L2BEAT: análisis de riesgos de puentes y redes de capa 2"
     url: "https://l2beat.com/scaling/summary"
+quiz:
+  - {"pregunta": "¿Cómo funcionan la mayoría de puentes?", "opciones": ["Envían físicamente las monedas", "Bloquean los tokens en el origen y emiten una versión equivalente en el destino", "Cambian los tokens por euros"], "correcta": 1, "explicacion": "Es el modelo de bloquear y emitir."}
+  - {"pregunta": "¿De qué depende el valor de un token envuelto (wrapped)?", "opciones": ["De nada", "Del precio del gas", "De la garantía que queda en el puente"], "correcta": 2, "explicacion": "Si alguien vacía el depósito del puente, los tokens envueltos pierden su respaldo."}
+  - {"pregunta": "¿Por qué los puentes son objetivo frecuente de ataques?", "opciones": ["Porque concentran grandes cantidades de dinero en un solo contrato", "Porque son lentos", "Porque son nuevos"], "correcta": 0, "explicacion": "Varios de los mayores robos de la historia cripto fueron ataques a puentes."}
+  - {"pregunta": "¿Cuál es la opción más prudente para mover fondos a otra red?", "opciones": ["El puente oficial o retirar directamente a esa red desde una plataforma autorizada", "El puente más barato que encuentres", "Un puente que te recomiende alguien por Telegram"], "correcta": 0, "explicacion": "Prioriza seguridad sobre unos céntimos de ahorro y haz una prueba con poco."}
 ---
 ## Por qué hacen falta
 

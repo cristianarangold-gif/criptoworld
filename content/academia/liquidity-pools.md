@@ -18,6 +18,11 @@ sources:
     url: "https://ethereum.org/es/defi/"
   - title: "Uniswap Docs: cómo funcionan los pools y los creadores de mercado automáticos"
     url: "https://docs.uniswap.org/concepts/overview"
+quiz:
+  - {"pregunta": "¿Cómo fija el precio un pool de liquidez típico?", "opciones": ["Lo decide un operador", "Con una fórmula basada en las cantidades de los dos tokens", "Copiando el precio de un banco"], "correcta": 1, "explicacion": "En la fórmula más conocida, x · y = k, comprar un token del pool lo encarece para el siguiente comprador."}
+  - {"pregunta": "¿Qué es la pérdida impermanente?", "opciones": ["La diferencia frente a haber guardado los dos tokens cuando sus precios se separan", "Una comisión fija", "El robo de un pool"], "correcta": 0, "explicacion": "El pool acaba con más del token que baja y menos del que sube."}
+  - {"pregunta": "Si un token se duplica respecto al otro en un pool 50/50, ¿cuánta pérdida impermanente hay aproximadamente?", "opciones": ["0,6 %", "50 %", "5,7 %"], "correcta": 2, "explicacion": "Con un cambio ×2 la pérdida impermanente ronda el 5,7 %, antes de contar las comisiones cobradas."}
+  - {"pregunta": "¿Qué tipo de pool suele tener menos pérdida impermanente?", "opciones": ["Uno de dos memecoins", "Uno de un token nuevo y ETH", "Uno de dos stablecoins"], "correcta": 2, "explicacion": "Sus precios apenas se separan, así que la pérdida impermanente es pequeña."}
 ---
 ## El problema que resuelven
 

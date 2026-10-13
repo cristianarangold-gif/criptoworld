@@ -21,6 +21,11 @@ sources:
     url: "https://www.cnmv.es/portal/mica/regulacion-criptoactivos"
   - title: "Reglamento (UE) 2023/1114 (MiCA), EUR-Lex"
     url: "https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=CELEX:32023R1114"
+quiz:
+  - {"pregunta": "¿Tiene USDT autorización bajo el reglamento europeo MiCA?", "opciones": ["Sí", "No", "Solo en España"], "correcta": 1, "explicacion": "Tether no la ha obtenido, por eso las plataformas autorizadas en la UE han retirado su negociación."}
+  - {"pregunta": "¿Está prohibido tener USDT en tu propia wallet?", "opciones": ["Sí, desde 2026", "Solo por encima de 1.000 €", "No; la restricción afecta a lo que ofrecen las plataformas reguladas"], "correcta": 2, "explicacion": "Tenerlo o enviarlo no está prohibido, pero fuera de las plataformas reguladas no tienes las protecciones de MiCA."}
+  - {"pregunta": "¿Qué riesgo tiene enviar USDT por una red equivocada?", "opciones": ["Pagar un poco más de comisión", "Perder los fondos", "Ninguno, se corrige solo"], "correcta": 1, "explicacion": "Un USDT en Tron y uno en Ethereum no son intercambiables directamente: comprueba siempre que origen y destino usan la misma red."}
+  - {"pregunta": "¿Por qué fue multado Tether en 2021?", "opciones": ["Por bloquear cuentas", "Por afirmar durante años que USDT estaba respaldado al 100 % en dólares cuando no siempre era así", "Por no pagar impuestos en España"], "correcta": 1, "explicacion": "Las autoridades de EE. UU. consideraron engañosas sus afirmaciones sobre las reservas."}
 ---
 ## Datos básicos
 

@@ -21,6 +21,11 @@ sources:
     url: "https://www.esma.europa.eu/investor-corner"
   - title: "ESMA: medidas de intervención sobre CFD para inversores minoristas (2018)"
     url: "https://www.esma.europa.eu/press-news/esma-news/esma-agrees-prohibit-binary-options-and-restrict-cfds-protect-retail-investors"
+quiz:
+  - {"pregunta": "Con 1.000 € y apalancamiento 10×, ¿qué caída del precio puede liquidar toda tu posición?", "opciones": ["Un 10 %", "Un 50 %", "Un 1 %"], "correcta": 0, "explicacion": "Con 10× una caída del 10 % borra todo el depósito, y la liquidación suele llegar antes."}
+  - {"pregunta": "¿Qué apalancamiento máximo pueden ofrecer a un minorista en la UE en CFD sobre criptomonedas?", "opciones": ["2:1", "100:1", "No hay límite"], "correcta": 0, "explicacion": "Es la medida que aprobó ESMA en 2018 y asumieron los supervisores nacionales."}
+  - {"pregunta": "¿Qué es la tasa de financiación (funding rate) de los perpetuos?", "opciones": ["Un impuesto", "La comisión de apertura", "Un pago periódico entre posiciones largas y cortas que mantiene el precio cerca del real"], "correcta": 2, "explicacion": "Mantener una posición mucho tiempo puede salir caro."}
+  - {"pregunta": "¿Cuál es un uso legítimo de los derivados?", "opciones": ["Multiplicar por 100 tus ahorros", "Cubrirse frente a caídas de una posición", "Evitar impuestos"], "correcta": 1, "explicacion": "Para especular con apalancamiento, la mayoría de minoristas pierde dinero."}
 ---
 ## Qué es un derivado
 
