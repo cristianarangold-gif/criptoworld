@@ -5,6 +5,7 @@ import { ArrowLeft, BookOpen, Clock, AlertTriangle, ExternalLink, UserRound, Cal
 import { getAllGuides, getGuide, formatDate } from '@/lib/guides'
 import { Markdown, headings } from '@/components/markdown'
 import { SITE } from '@/lib/site'
+import { ReadingProgress } from '@/components/reading-progress'
 
 export function generateStaticParams() {
   return getAllGuides().map(g => ({ slug: g.slug }))
@@ -66,6 +67,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
   return (
     <div className="mx-auto max-w-3xl px-4 py-8 sm:px-6 lg:px-8">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <ReadingProgress />
 
       <Link href="/aprende" className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground mb-6">
         <ArrowLeft className="h-4 w-4" />

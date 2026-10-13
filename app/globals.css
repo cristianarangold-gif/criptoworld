@@ -139,3 +139,22 @@
 @media (prefers-reduced-motion: reduce) {
   .hero-line { stroke-dashoffset: 0; animation: none; }
 }
+
+/* Tarjetas con halo que sigue al ratón (solo con puntero fino; ver GlowTracker) */
+.glow-card { position: relative; isolation: isolate; }
+@media (hover: hover) {
+  .glow-card { transition: transform 0.2s ease, border-color 0.2s ease; }
+  .glow-card:hover { transform: translateY(-2px); }
+  .glow-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    background: radial-gradient(260px circle at var(--x, 50%) var(--y, 50%), hsl(33 93% 54% / 0.14), transparent 70%);
+    z-index: -1;
+  }
+  .glow-card:hover::before { opacity: 1; }
+}

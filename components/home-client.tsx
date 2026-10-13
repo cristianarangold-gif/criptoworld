@@ -27,7 +27,7 @@ export function HomeClient({ market, articles }: {
             <div key={coin?.id}>
               <Link
                 href={`/mercado?coin=${coin?.id}`}
-                className="block glass-card rounded-xl p-4 hover:border-primary/30 transition-all hover:glow-orange group"
+                className="glow-card block glass-card rounded-xl p-4 hover:border-primary/30 group"
               >
                 <div className="flex items-center gap-2 mb-3">
                   <Image
@@ -68,7 +68,7 @@ export function HomeClient({ market, articles }: {
               <div key={a?.id}>
                 <Link
                   href={`/aprende/${a?.slug}`}
-                  className="block glass-card rounded-xl p-5 hover:border-primary/30 transition-all group h-full"
+                  className="glow-card block glass-card rounded-xl p-5 hover:border-primary/30 group h-full"
                 >
                   <div className="flex items-center gap-2 mb-3">
                     <BookOpen className="h-4 w-4 text-secondary" />

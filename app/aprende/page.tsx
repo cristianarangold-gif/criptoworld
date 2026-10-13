@@ -41,7 +41,7 @@ export default function AprendePage() {
                   <Link
                     key={g.slug}
                     href={`/aprende/${g.slug}`}
-                    className="glass-card rounded-xl p-5 hover:border-primary/30 transition-all group flex flex-col"
+                    className="glow-card glass-card rounded-xl p-5 hover:border-primary/30 group flex flex-col"
                   >
                     <div className="flex items-center gap-2 mb-3">
                       <BookOpen className="h-4 w-4 text-secondary" />

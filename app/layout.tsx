@@ -8,6 +8,7 @@ import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { GoogleAnalytics } from '@/components/google-analytics'
 import { ConsentDefaults } from '@/components/consent-defaults'
+import { GlowTracker } from '@/components/glow-tracker'
 
 export const dynamic = 'force-dynamic'
 
@@ -45,6 +46,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Footer />
           <Toaster />
           <ChunkLoadErrorHandler />
+          <GlowTracker />
         </Providers>
       </body>
     </html>
