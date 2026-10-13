@@ -1,14 +1,14 @@
 import Link from 'next/link'
 import { getMarketData } from '@/lib/coingecko'
-import { prisma } from '@/lib/db'
+import { getAllGuides } from '@/lib/guides'
 import { HomeClient } from '@/components/home-client'
 import { BookOpen, TrendingUp } from 'lucide-react'
 
 export default async function HomePage() {
-  const [market, articles] = await Promise.all([
-    getMarketData('usd').catch(() => []),
-    prisma.article.findMany({ take: 8, orderBy: { createdAt: 'desc' } }).catch(() => []),
-  ])
+  const market = await getMarketData('usd').catch(() => [])
+  const articles = getAllGuides()
+    .slice(0, 8)
+    .map(g => ({ id: g.slug, slug: g.slug, category: g.category, title: g.title, description: g.description, readTime: g.readTime }))
 
   return (
     <>
