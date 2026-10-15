@@ -92,3 +92,5 @@ Si estás cerca del límite o tienes criptos en varias plataformas, consulta con
 - [¿Qué son los modelos 172 y 173?](/respuestas/modelos-172-173-criptomonedas), que presentan los exchanges españoles
 - [¿Qué cambia con la directiva DAC8?](/respuestas/dac8-que-cambia)
 - [¿Hay que pagar el Impuesto sobre el Patrimonio?](/respuestas/impuesto-patrimonio-criptomonedas)
+
+Puedes añadir el plazo del modelo 721 y la fecha de valoración del 31 de diciembre a tu calendario desde el [calendario cripto y fiscal](/calendario).

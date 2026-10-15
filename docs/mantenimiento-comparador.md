@@ -1,4 +1,4 @@
-# Mantenimiento del comparador de exchanges
+# Mantenimiento del comparador de exchanges y del calendario
 
 El comparador (`/comparador-exchanges`) solo es útil si sus datos están al día. Hay dos fuentes que revisar.
 
@@ -25,3 +25,11 @@ Cada **3 meses** (y siempre que una noticia afecte a una plataforma):
 - si un dato ya no se puede confirmar, usa «No publicada con claridad» o `null`, nunca una estimación.
 
 Si una plataforma deja de estar autorizada en España, se retira del comparador o se marca de forma visible, y se revisan las fichas de criptomonedas que la mencionen.
+
+## 3. Calendario cripto y fiscal (`data/calendario.json`)
+
+- **Cada enero:** añade las fechas fiscales del año siguiente (modelo 721, campaña de la Renta, segundo plazo del 5 de noviembre, valoración a 31 de diciembre, modelos 172/173).
+- **Cuando la AEAT publique el calendario de la Renta** (normalmente en marzo): confirma las fechas marcadas como `aproximada` y cambia `aproximada` a `false`.
+- **Cada revisión trimestral:** recalcula los halvings con la altura de bloque actual (Bitcoin: bloque 1.050.000, 10 min por bloque; Litecoin: bloque 3.360.000, 2,5 min por bloque) y revisa si alguna actualización de Ethereum tiene ya fecha oficial.
+- `npm test` exige al menos una fecha futura en cada categoría: si falla, es que toca añadir fechas.
+- Actualiza `revisado` al terminar.

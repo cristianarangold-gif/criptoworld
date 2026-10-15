@@ -47,7 +47,7 @@ Litecoin funciona como Bitcoin, con **prueba de trabajo**, pero con tres diferen
 - **Un bloque cada 2,5 minutos.**
 - **Suministro máximo de 84 millones**, cuatro veces el de Bitcoin.
 
-Como Bitcoin, tiene **halvings**: la recompensa por bloque se reduce a la mitad cada 840.000 bloques, unos cuatro años. El último fue en agosto de 2023 y la recompensa quedó en 6,25 LTC por bloque. El siguiente se espera hacia mediados de 2027, cuando bajará a 3,125 LTC. Si quieres entender estos conceptos con calma, la [lección sobre Bitcoin](/academia/bitcoin) los explica.
+Como Bitcoin, tiene **halvings**: la recompensa por bloque se reduce a la mitad cada 840.000 bloques, unos cuatro años. El último fue en agosto de 2023 y la recompensa quedó en 6,25 LTC por bloque. El siguiente se espera hacia el verano de 2027, cuando bajará a 3,125 LTC; tienes la fecha estimada en el [calendario cripto y fiscal](/calendario). Si quieres entender estos conceptos con calma, la [lección sobre Bitcoin](/academia/bitcoin) los explica.
 
 ## Riesgos concretos
 
