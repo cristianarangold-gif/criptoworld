@@ -60,3 +60,71 @@ export function upcoming(eventos: Evento[], today: string): Evento[] {
 export function past(eventos: Evento[], today: string): Evento[] {
   return eventos.filter(e => end(e) < today).sort((a, b) => end(b).localeCompare(end(a)) || a.id.localeCompare(b.id))
 }
+
+// ── Exportación a calendarios (iCalendar, RFC 5545) ─────────────────────────────────────────
+const compact = (d: string) => d.replace(/-/g, '')
+const nextDay = (d: string) => new Date(Date.parse(`${d}T00:00:00Z`) + 86_400_000).toISOString().slice(0, 10)
+const escapeText = (s: string) => s.replace(/\\/g, '\\\\').replace(/;/g, '\;').replace(/,/g, '\\,').replace(/\r?\n/g, '\\n')
+
+// Pliega una línea en trozos de 75 octetos como máximo (las de continuación empiezan por un espacio)
+// sin partir caracteres UTF-8.
+function fold(line: string): string {
+  const out: string[] = []
+  let cur = ''
+  let bytes = 0
+  for (const ch of line) {
+    const b = Buffer.byteLength(ch, 'utf8')
+    const limit = out.length === 0 ? 75 : 74
+    if (bytes + b > limit) {
+      out.push(cur)
+      cur = ''
+      bytes = 0
+    }
+    cur += ch
+    bytes += b
+  }
+  out.push(cur)
+  return out.join('\r\n ')
+}
+
+const describe = (e: Evento, pageUrl: string) =>
+  [e.aproximada ? 'Fecha aproximada. ' : '', e.descripcion, `\n\nMás información: ${pageUrl}`, `\nFuente: ${e.fuente.url}`].join('')
+
+export function toIcs(eventos: Evento[], opts: { name: string; url: string; stamp?: Date }): string {
+  const stamp = (opts.stamp ?? new Date()).toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '')
+  const lines = [
+    'BEGIN:VCALENDAR',
+    'VERSION:2.0',
+    'PRODID:-//CriptoMundo//Calendario cripto y fiscal//ES',
+    'CALSCALE:GREGORIAN',
+    'METHOD:PUBLISH',
+    `X-WR-CALNAME:${escapeText(opts.name)}`,
+    'X-WR-TIMEZONE:Europe/Madrid',
+  ]
+  for (const e of eventos) {
+    lines.push(
+      'BEGIN:VEVENT',
+      `UID:${e.id}@criptoworld.org`,
+      `DTSTAMP:${stamp}`,
+      `DTSTART;VALUE=DATE:${compact(e.inicio)}`,
+      `DTEND;VALUE=DATE:${compact(nextDay(e.fin ?? e.inicio))}`,
+      `SUMMARY:${escapeText(e.aproximada ? `${e.titulo} (fecha aproximada)` : e.titulo)}`,
+      `DESCRIPTION:${escapeText(describe(e, opts.url))}`,
+      `URL:${opts.url}`,
+      'TRANSP:TRANSPARENT',
+      'END:VEVENT',
+    )
+  }
+  lines.push('END:VCALENDAR')
+  return lines.map(fold).join('\r\n') + '\r\n'
+}
+
+export function googleCalendarUrl(e: Evento, pageUrl: string): string {
+  const p = new URLSearchParams({
+    action: 'TEMPLATE',
+    text: e.titulo,
+    dates: `${compact(e.inicio)}/${compact(nextDay(e.fin ?? e.inicio))}`,
+    details: describe(e, pageUrl),
+  })
+  return `https://calendar.google.com/calendar/render?${p.toString()}`
+}
