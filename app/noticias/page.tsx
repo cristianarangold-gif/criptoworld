@@ -36,7 +36,8 @@ export default async function NoticiasPage({ searchParams }: Props) {
         regulación, Hacienda, seguridad y los cambios importantes del mercado. Cada noticia cita sus fuentes, explica qué
         significa para ti y la revisa{' '}
         <Link href="/sobre-nosotros" className="text-foreground hover:text-primary">el autor</Link> antes de publicarse.
-        Nada de esto es una recomendación de inversión.
+        Nada de esto es una recomendación de inversión. Cada lunes publicamos además un{' '}
+        <Link href="/resumen-semanal" className="text-primary underline underline-offset-2">resumen semanal</Link>.
       </p>
 
       {items.length === 0 ? (

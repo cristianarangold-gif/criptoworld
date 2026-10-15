@@ -6,6 +6,7 @@ import { SITE } from '@/lib/site'
 import { getAllNews } from '@/lib/news'
 import { getAllAnswers } from '@/lib/answers'
 import { getAllCoins } from '@/lib/coins'
+import { getAllDigests } from '@/lib/digests'
 
 export const dynamic = 'force-dynamic'
 
@@ -21,6 +22,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${baseUrl}/herramientas`, changeFrequency: 'monthly' as const, priority: 0.8 },
     { url: `${baseUrl}/glosario`, changeFrequency: 'monthly' as const, priority: 0.7 },
     { url: `${baseUrl}/noticias`, changeFrequency: 'daily' as const, priority: 0.8 },
+    { url: `${baseUrl}/resumen-semanal`, changeFrequency: 'weekly' as const, priority: 0.7 },
     { url: `${baseUrl}/calendario`, changeFrequency: 'weekly' as const, priority: 0.7 },
     { url: `${baseUrl}/comparador-exchanges`, changeFrequency: 'monthly' as const, priority: 0.8 },
     { url: `${baseUrl}/cripto`, changeFrequency: 'daily' as const, priority: 0.8 },
@@ -74,5 +76,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.8,
   }))
 
-  return [...staticPages, ...newsPages, ...answerPages, ...coinPages, ...articlePages, ...lessonPages, ...toolPages]
+  const digestPages = getAllDigests().map(d => ({
+    url: `${baseUrl}/resumen-semanal/${d.slug}`,
+    lastModified: new Date(`${d.publicado}T12:00:00Z`),
+    changeFrequency: 'monthly' as const,
+    priority: 0.6,
+  }))
+
+  return [...staticPages, ...digestPages, ...newsPages, ...answerPages, ...coinPages, ...articlePages, ...lessonPages, ...toolPages]
 }
