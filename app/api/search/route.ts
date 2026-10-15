@@ -4,6 +4,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { getAllGuides } from '@/lib/guides'
 import { getAllTools } from '@/lib/tools'
 import { getAllNews } from '@/lib/news'
+import { getAllAnswers } from '@/lib/answers'
 import { getGlossary } from '@/lib/glossary'
 import { getAllLessons } from '@/lib/academia-data'
 
@@ -58,6 +59,13 @@ export async function GET(req: NextRequest) {
   getAllNews().forEach(n => {
     if (n.titulo.toLowerCase().includes(q) || n.descripcion.toLowerCase().includes(q)) {
       results.push({ type: 'noticia', title: n.titulo, href: `/noticias/${n.slug}`, desc: n.descripcion.slice(0, 100) })
+    }
+  })
+
+  // Search answers
+  getAllAnswers().forEach(a => {
+    if (a.pregunta.toLowerCase().includes(q) || a.descripcion.toLowerCase().includes(q)) {
+      results.push({ type: 'respuesta', title: a.pregunta, href: `/respuestas/${a.slug}`, desc: a.descripcion.slice(0, 100) })
     }
   })
 

@@ -4,6 +4,7 @@ import { MetadataRoute } from 'next'
 import { getAllLessons } from '@/lib/academia-data'
 import { SITE } from '@/lib/site'
 import { getAllNews } from '@/lib/news'
+import { getAllAnswers } from '@/lib/answers'
 
 export const dynamic = 'force-dynamic'
 
@@ -19,6 +20,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${baseUrl}/herramientas`, changeFrequency: 'monthly' as const, priority: 0.8 },
     { url: `${baseUrl}/glosario`, changeFrequency: 'monthly' as const, priority: 0.7 },
     { url: `${baseUrl}/noticias`, changeFrequency: 'daily' as const, priority: 0.8 },
+    { url: `${baseUrl}/respuestas`, changeFrequency: 'monthly' as const, priority: 0.8 },
     { url: `${baseUrl}/empieza-aqui`, changeFrequency: 'monthly' as const, priority: 0.9 },
     { url: `${baseUrl}/sobre-nosotros`, changeFrequency: 'monthly' as const, priority: 0.5 },
     { url: `${baseUrl}/contacto`, changeFrequency: 'yearly' as const, priority: 0.3 },
@@ -54,5 +56,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.6,
   }))
 
-  return [...staticPages, ...newsPages, ...articlePages, ...lessonPages, ...toolPages]
+  const answerPages = getAllAnswers().map(a => ({
+    url: `${baseUrl}/respuestas/${a.slug}`,
+    lastModified: new Date(`${a.updated}T12:00:00Z`),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }))
+
+  return [...staticPages, ...newsPages, ...answerPages, ...articlePages, ...lessonPages, ...toolPages]
 }
