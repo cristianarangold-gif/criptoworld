@@ -2,7 +2,7 @@ import { test } from 'node:test'
 import assert from 'node:assert/strict'
 import cnmv from '../data/cnmv-psc.json'
 import fixture from './fixtures/exchanges.json'
-import { getExchanges, validateExchanges, type ExchangesFile, type Plataforma } from '../lib/exchanges'
+import { getExchanges, validateExchanges, matchesFilters, type ExchangesFile, type Plataforma } from '../lib/exchanges'
 
 test('la instantánea de la CNMV tiene la lista completa y una fecha válida', () => {
   assert.ok(cnmv.entidades.length >= 150, String(cnmv.entidades.length))
@@ -51,4 +51,15 @@ test('el comparador tiene las 12 plataformas, válidas y en orden alfabético', 
   assert.deepEqual([...file.plataformas.map(p => p.slug)].sort(), ['bit2me', 'bitpanda', 'bitvavo', 'bybit', 'coinbase', 'criptan', 'cryptocom', 'etoro', 'kraken', 'okx', 'revolut', 'trade-republic'])
   const names = file.plataformas.map(p => p.nombre)
   assert.deepEqual(names, [...names].sort((a, b) => a.localeCompare(b, 'es')))
+})
+
+test('matchesFilters exige todos los filtros y trata null como «no cumple»', () => {
+  const p = base.plataformas[0]
+  assert.equal(matchesFilters(p, []), true)
+  assert.equal(matchesFilters(p, ['tarjeta']), true)
+  assert.equal(matchesFilters(p, ['bizum']), false)
+  assert.equal(matchesFilters(p, ['wallet']), true)
+  assert.equal(matchesFilters(p, ['staking']), false)
+  assert.equal(matchesFilters(p, ['espanol', 'wallet']), true)
+  assert.equal(matchesFilters({ ...p, retirada_wallet: false }, ['wallet']), false)
 })

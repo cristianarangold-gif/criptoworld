@@ -61,3 +61,23 @@ export function validateExchanges(file: ExchangesFile, cnmv: string[], today: st
   }
   return errors
 }
+
+export const FILTROS = [
+  { id: 'bizum', label: 'Bizum' },
+  { id: 'tarjeta', label: 'Tarjeta' },
+  { id: 'wallet', label: 'Retirada a wallet propia' },
+  { id: 'staking', label: 'Staking' },
+  { id: 'espanol', label: 'Web y app en español' },
+] as const
+export type Filtro = (typeof FILTROS)[number]['id']
+
+/** Una plataforma cumple los filtros si cumple todos; un dato sin confirmar (null) no cumple. */
+export function matchesFilters(p: Plataforma, filters: string[]): boolean {
+  return filters.every(f => {
+    if (f === 'bizum' || f === 'tarjeta' || f === 'sepa') return p.pagos.includes(f)
+    if (f === 'wallet') return p.retirada_wallet === true
+    if (f === 'staking') return p.staking === true
+    if (f === 'espanol') return p.espanol === true
+    return false
+  })
+}
