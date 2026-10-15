@@ -104,3 +104,8 @@ export function validateCoins(items: Coin[], known: Set<string>, historyIds: str
   }
   return errors
 }
+
+/** id de CoinGecko → slug de la ficha, para enlazar desde /mercado. */
+export function coinPageMap(): Record<string, string> {
+  return Object.fromEntries(getAllCoins().map(c => [c.coingecko, c.slug]))
+}

@@ -38,7 +38,8 @@ function Stat({ label, value, className }: { label: string; value: string; class
 export default async function CriptoPage({ params }: { params: Promise<{ slug: string }> }) {
   const c = getCoin((await params).slug)
   if (!c) notFound()
-  const live = (await getLiveCoins([c.coingecko]))[c.coingecko]
+  // Misma petición (y misma caché) para las 12 fichas y el índice: CoinGecko limita las peticiones por minuto.
+  const live = (await getLiveCoins(getAllCoins().map(x => x.coingecko)))[c.coingecko]
   const history = getHistory(c.historico)
   const drawdown = maxDrawdownOf(history.map(p => p.price))
   const lesson = c.leccion ? getLessonBySlug(c.leccion) : undefined

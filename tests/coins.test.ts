@@ -1,6 +1,6 @@
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
-import { loadCoins, getAllCoins, validateCoins, type Coin } from '../lib/coins'
+import { loadCoins, getAllCoins, validateCoins, coinPageMap, type Coin } from '../lib/coins'
 import { knownPaths } from '../lib/known-paths'
 import { HISTORY } from '../lib/historical'
 import { getAllLessons } from '../lib/academia-data'
@@ -51,4 +51,11 @@ test('hay 12 fichas, en el orden fijo, con histórico de al menos 60 meses', () 
   const all = getAllCoins()
   assert.deepEqual(all.map(c => c.slug), ['bitcoin', 'ethereum', 'xrp', 'bnb', 'solana', 'cardano', 'dogecoin', 'chainlink', 'tron', 'avalanche', 'polkadot', 'litecoin'])
   for (const c of all) assert.ok((HISTORY.monedas[c.historico]?.cierres.length ?? 0) >= 60, c.slug)
+})
+
+test('coinPageMap relaciona el id de CoinGecko con la ficha', () => {
+  const m = coinPageMap()
+  assert.equal(Object.keys(m).length, 12)
+  assert.equal(m['avalanche-2'], 'avalanche')
+  assert.equal(m.ripple, 'xrp')
 })
