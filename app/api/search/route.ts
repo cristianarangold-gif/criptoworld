@@ -15,6 +15,7 @@ const PAGES = [
   { title: 'Noticias cripto', href: '/noticias', desc: 'Las \u00faltimas noticias del mundo de las criptomonedas' },
   { title: 'Aprende', href: '/aprende', desc: 'Art\u00edculos educativos sobre criptomonedas' },
   { title: 'Academia Cripto', href: '/academia', desc: 'Lecciones interactivas en 3 niveles' },
+  { title: 'Resumen semanal', href: '/resumen-semanal', desc: 'Lo más importante de la semana en criptomonedas, cada lunes' },
   { title: 'Calendario cripto y fiscal', href: '/calendario', desc: 'Plazos de la Renta y el modelo 721, normativa y halvings' },
   { title: 'Comparador de exchanges', href: '/comparador-exchanges', desc: 'Comisiones y servicios de 12 plataformas autorizadas en España' },
   { title: 'Herramientas', href: '/herramientas', desc: 'Calculadoras y herramientas para inversores' },

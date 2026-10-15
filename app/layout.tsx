@@ -17,6 +17,7 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-sans', display: 'swa
 
 export const metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://criptoworld.org'),
+  alternates: { types: { 'application/rss+xml': [{ url: '/feed.xml', title: 'CriptoMundo: noticias y resúmenes semanales' }] } },
   title: { default: 'CriptoMundo — Información y educación cripto', template: '%s | CriptoMundo' },
   description: 'Plataforma de información, educación y herramientas sobre criptomonedas. Datos de mercado en vivo, noticias reales y artículos educativos.',
   icons: { icon: '/favicon.svg', shortcut: '/favicon.svg' },

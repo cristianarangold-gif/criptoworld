@@ -4,6 +4,7 @@ import { getAllGuides } from '@/lib/guides'
 import { getAllNews } from '@/lib/news'
 import { NewsCard } from '@/components/news-card'
 import { getAllCoins } from '@/lib/coins'
+import { getAllDigests } from '@/lib/digests'
 import { getSiteStats } from '@/lib/site-stats'
 import { getFearGreed, toTickerItems } from '@/lib/sentiment'
 import { HomeClient } from '@/components/home-client'
@@ -19,6 +20,7 @@ export default async function HomePage() {
   ])
   const stats = getSiteStats()
   const latest = getAllNews().slice(0, 3)
+  const digest = getAllDigests()[0]
   const articles = getAllGuides()
     .slice(0, 8)
     .map(g => ({ id: g.slug, slug: g.slug, category: g.category, title: g.title, description: g.description, readTime: g.readTime }))
@@ -81,6 +83,12 @@ export default async function HomePage() {
           <div className="grid gap-4 md:grid-cols-3">
             {latest.map(n => <NewsCard key={n.slug} item={n} />)}
           </div>
+          {digest && (
+            <p className="mt-4 text-sm text-muted-foreground">
+              Resumen de la semana:{' '}
+              <Link href={`/resumen-semanal/${digest.slug}`} className="text-primary underline underline-offset-2">{digest.titulo}</Link>
+            </p>
+          )}
         </section>
       )}
 
