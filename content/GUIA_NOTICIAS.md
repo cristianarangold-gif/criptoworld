@@ -7,13 +7,20 @@ Se aplica a todas las noticias de `content/noticias/`, también a las que redact
 1. **Regulación y Hacienda**: MiCA, CNMV, ESMA, Agencia Tributaria, DAC8, Banco de España, BCE y euro digital.
 2. **Seguridad**: hackeos de plataformas, estafas que circulan en España, advertencias de la CNMV.
 3. **Cambios relevantes en Bitcoin, Ethereum y las stablecoins**: actualizaciones de red, emisores, cambios de licencia.
-4. **Movimientos grandes del mercado**, solo si tienen una causa clara y explicable.
+4. **Movimientos grandes del mercado** con una causa clara, identificada en fuentes fiables (por ejemplo, Bitcoin cae o sube más de un 5 % en un día por un dato de inflación o una decisión de un banco central). Se explican la causa y el contexto, sin predecir lo que vendrá.
+
+**Si en las últimas 24 horas no hay nada de las prioridades 1–3**, antes de quedarte sin noticia:
+- busca un tema de las prioridades 1–2 de **los últimos 7 días** que todavía no esté publicado (por ejemplo, un cambio legal o una advertencia de la CNMV de hace unos días);
+- o cubre el movimiento de mercado más relevante del día si cumple el punto 4.
+
+El objetivo es **una noticia útil cada día**. Solo se deja el día sin noticia si nada cumple esta guía.
 
 **Se descarta:**
 - noticias de un token concreto que «sube un X %»;
 - contenido patrocinado o notas de prensa de proyectos pequeños;
 - rumores y filtraciones sin confirmar;
-- temas ya publicados en `content/noticias/`.
+- temas ya publicados en `content/noticias/`;
+- dos noticias de mercado seguidas: si ayer se publicó una de precio, hoy se prioriza otro tema.
 
 ## 2. Formato del archivo
 Ruta: `content/noticias/<slug>.md`. El slug va en minúsculas, sin acentos y con guiones, y describe el tema (`esma-directrices-stablecoins`, no `noticia-15-octubre`).
