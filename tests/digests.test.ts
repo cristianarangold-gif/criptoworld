@@ -58,3 +58,11 @@ test('los resúmenes publicados son válidos', () => {
   const items = getAllDigests()
   assert.deepEqual(validateDigests(items, known(items), new Date().toLocaleDateString('sv-SE', { timeZone: 'Europe/Madrid' })), [])
 })
+
+import { previousWeek } from '../lib/digests'
+
+test('previousWeek da la semana anterior completa, también en enero', () => {
+  assert.deepEqual(previousWeek('2026-10-19'), { slug: '2026-semana-42', inicio: '2026-10-12', fin: '2026-10-18' })
+  assert.deepEqual(previousWeek('2026-10-21'), { slug: '2026-semana-42', inicio: '2026-10-12', fin: '2026-10-18' })
+  assert.deepEqual(previousWeek('2027-01-04'), { slug: '2026-semana-53', inicio: '2026-12-28', fin: '2027-01-03' })
+})

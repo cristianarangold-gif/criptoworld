@@ -107,3 +107,10 @@ export function validateDigests(items: Digest[], known: Set<string>, today: stri
   }
   return errors
 }
+
+/** La semana ISO completa anterior a la que contiene `today` (la que resume la rutina de los lunes). */
+export function previousWeek(today: string): { slug: string; inicio: string; fin: string } {
+  const lastWeekDay = fmt(new Date(utc(today).getTime() - 7 * 86_400_000))
+  const { year, week } = isoWeek(lastWeekDay)
+  return { slug: digestSlug(year, week), ...weekRange(year, week) }
+}

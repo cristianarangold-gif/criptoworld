@@ -71,3 +71,13 @@ Párrafo de entrada: qué ha pasado, quién y cuándo, en 2–4 frases.
 - signos de exclamación en el titular.
 
 **Si un dato no se ha podido comprobar en la fuente primaria, no se publica.**
+
+## 4. Resumen semanal
+
+El resumen de cada lunes (`content/resumenes/<AAAA>-semana-<NN>.md`) sigue las mismas reglas que las noticias: nada de predicciones ni recomendaciones, cifras con fuente y sin copiar párrafos. Su estructura y sus pasos están en `docs/rutina-resumen.md`. `npm test` comprueba:
+
+- ✔ El slug `AAAA-semana-NN` (semana ISO), con `inicio` el lunes y `fin` el domingo de esa semana.
+- ✔ `publicado` no futuro, `descripcion` de 160 caracteres como máximo y fuentes `https://`.
+- ✔ Las cinco secciones exactas: «Las noticias de la semana», «Lo que importa si vives en España», «El mercado en siete días», «Próximas fechas» y «Para aprender esta semana».
+- ✔ 400 palabras o más y enlaces internos existentes.
+
