@@ -16,6 +16,7 @@
     "pasos": [
       { "tipo": "leccion", "slug": "exchange" },
       { "tipo": "guia", "slug": "exchange-autorizado-cnmv" },
+      { "tipo": "pagina", "slug": "comparador-exchanges" },
       { "tipo": "leccion", "slug": "wallet" },
       { "tipo": "leccion", "slug": "seed-phrase" },
       { "tipo": "guia", "slug": "seguridad-cripto" },

@@ -1,0 +1,690 @@
+{
+  "revisado": "2026-10-15",
+  "plataformas": [
+    {
+      "slug": "bit2me",
+      "nombre": "Bit2Me",
+      "web": "https://bit2me.com",
+      "entidad": "BITCOINFORME, S.L. (BIT2ME)",
+      "tipo": "espanola",
+      "pais": "España",
+      "desde": "2025-10-31",
+      "servicios": [
+        "Custodia y administración",
+        "Canje criptos por fondos",
+        "Canje criptos por criptos",
+        "Ejecución",
+        "Colocación",
+        "Recepción y transmisión órdenes",
+        "Servicios de transferencia"
+      ],
+      "comisiones": {
+        "compra_rapida": {
+          "valor": "0,95 % en la app; comprar directamente con euros o tarjeta puede sumar hasta un 1,99 %",
+          "fuente": "https://support.bit2me.com/es/support/solutions/articles/35000258262",
+          "comprobado": "2026-10-15"
+        },
+        "mercado_taker": {
+          "valor": "Entre 0 % y 0,60 % en Bit2Me Pro, según volumen, nivel y si eres maker o taker",
+          "fuente": "https://support.bit2me.com/es/support/solutions/articles/35000258262",
+          "comprobado": "2026-10-15"
+        },
+        "deposito_eur": {
+          "valor": "Gratis por transferencia SEPA",
+          "fuente": "https://support.bit2me.com/es/support/solutions/articles/35000258262",
+          "comprobado": "2026-10-15"
+        },
+        "retirada_eur": {
+          "valor": "No publicada con claridad",
+          "fuente": "https://support.bit2me.com/es/support/solutions/articles/35000258262",
+          "comprobado": "2026-10-15"
+        }
+      },
+      "pagos": [
+        "sepa",
+        "tarjeta"
+      ],
+      "retirada_wallet": true,
+      "staking": null,
+      "espanol": true,
+      "informe_fiscal": true,
+      "destaca": "Empresa española con autorización de la CNMV y un informe fiscal descargable pensado para la Renta, calculado con el método FIFO.",
+      "ojo": "La comisión de la app (0,95 %) es de las más altas del comparador si no subes de nivel; para compras grandes o frecuentes conviene Bit2Me Pro.",
+      "fuentes": [
+        {
+          "title": "Bit2Me: comisiones de Bit2Me Wallet",
+          "url": "https://support.bit2me.com/es/support/solutions/articles/35000258262"
+        },
+        {
+          "title": "Bit2Me: cómo obtener el informe fiscal",
+          "url": "https://support.bit2me.com/en/support/solutions/articles/35000219938"
+        }
+      ]
+    },
+    {
+      "slug": "criptan",
+      "nombre": "Criptan",
+      "web": "https://criptan.com",
+      "entidad": "CRIPTAN TRADE, S.L.",
+      "tipo": "espanola",
+      "pais": "España",
+      "desde": "2026-06-26",
+      "servicios": [
+        "Custodia y administración",
+        "Canje criptos por fondos",
+        "Canje criptos por criptos",
+        "Servicios de transferencia"
+      ],
+      "comisiones": {
+        "compra_rapida": {
+          "valor": "0,99 % (mínimo 0,99 €) en el nivel inicial; baja con el saldo y el volumen",
+          "fuente": "https://criptan.com/comisiones/",
+          "comprobado": "2026-10-15"
+        },
+        "mercado_taker": {
+          "valor": "No tiene mercado avanzado",
+          "fuente": "https://criptan.com/comisiones/",
+          "comprobado": "2026-10-15"
+        },
+        "deposito_eur": {
+          "valor": "Gratis por transferencia; tarjeta, Apple Pay o Google Pay: 1,45 %",
+          "fuente": "https://criptan.com/documentos-legales-politica-precios-costes-comisiones/",
+          "comprobado": "2026-10-15"
+        },
+        "retirada_eur": {
+          "valor": "2,40 € en el nivel inicial",
+          "fuente": "https://criptan.com/comisiones/",
+          "comprobado": "2026-10-15"
+        }
+      },
+      "pagos": [
+        "sepa",
+        "tarjeta"
+      ],
+      "retirada_wallet": true,
+      "staking": null,
+      "espanol": true,
+      "informe_fiscal": true,
+      "destaca": "Empresa española, app sencilla e informe fiscal con los movimientos que hay que declarar.",
+      "ojo": "Cobra 2,40 € por retirar euros en el nivel inicial y 5 € por monedero si la cuenta pasa más de 12 meses sin operar.",
+      "fuentes": [
+        {
+          "title": "Criptan: comisiones",
+          "url": "https://criptan.com/comisiones/"
+        },
+        {
+          "title": "Criptan: qué incluye el informe fiscal",
+          "url": "https://support.criptan.com/hc/es/articles/45339532351633--Qu%C3%A9-incluye-el-informe-fiscal-de-Criptan"
+        }
+      ]
+    },
+    {
+      "slug": "coinbase",
+      "nombre": "Coinbase",
+      "web": "https://www.coinbase.com/es",
+      "entidad": "COINBASE LUXEMBOURG S.A.",
+      "tipo": "pasaporte",
+      "pais": "Luxemburgo",
+      "desde": "2025-06-20",
+      "servicios": [
+        "Custodia y administración",
+        "Canje criptos por fondos",
+        "Canje criptos por criptos",
+        "Ejecución",
+        "Recepción y transmisión órdenes",
+        "Colocación"
+      ],
+      "comisiones": {
+        "compra_rapida": {
+          "valor": "Diferencial incluido en el precio más una comisión que depende del método de pago; se ve antes de confirmar",
+          "fuente": "https://help.coinbase.com/es-es/coinbase/trading-and-funding/pricing-and-fees/fees",
+          "comprobado": "2026-10-15"
+        },
+        "mercado_taker": {
+          "valor": "No publicada con claridad: la tabla de Coinbase Advanced solo se ve con la sesión iniciada",
+          "fuente": "https://help.coinbase.com/es-es/coinbase/trading-and-funding/pricing-and-fees/fees",
+          "comprobado": "2026-10-15"
+        },
+        "deposito_eur": {
+          "valor": "Depende del método de pago; se muestra antes de confirmar",
+          "fuente": "https://help.coinbase.com/es-es/coinbase/trading-and-funding/pricing-and-fees/fees",
+          "comprobado": "2026-10-15"
+        },
+        "retirada_eur": {
+          "valor": "No publicada con claridad",
+          "fuente": "https://help.coinbase.com/es-es/coinbase/trading-and-funding/pricing-and-fees/fees",
+          "comprobado": "2026-10-15"
+        }
+      },
+      "pagos": [
+        "sepa",
+        "tarjeta"
+      ],
+      "retirada_wallet": true,
+      "staking": null,
+      "espanol": true,
+      "informe_fiscal": null,
+      "destaca": "Una de las plataformas más grandes del mundo, cotizada en bolsa en Estados Unidos, con una app muy sencilla para empezar.",
+      "ojo": "En la compra sencilla el coste va en parte dentro del precio (diferencial), así que es difícil compararlo; revisa el desglose antes de confirmar.",
+      "fuentes": [
+        {
+          "title": "Coinbase: información sobre precios y comisiones",
+          "url": "https://help.coinbase.com/es-es/coinbase/trading-and-funding/pricing-and-fees/fees"
+        }
+      ]
+    },
+    {
+      "slug": "kraken",
+      "nombre": "Kraken",
+      "web": "https://www.kraken.com/es",
+      "entidad": "PAYWARD EUROPE SOLUTIONS LIMITED",
+      "tipo": "pasaporte",
+      "pais": "Irlanda",
+      "desde": "2025-06-25",
+      "servicios": [
+        "Custodia y administración",
+        "Canje criptos por fondos",
+        "Canje criptos por criptos",
+        "Ejecución",
+        "Colocación",
+        "Recepción y transmisión órdenes",
+        "Gestión de carteras"
+      ],
+      "comisiones": {
+        "compra_rapida": {
+          "valor": "1 % en compras instantáneas y recurrentes, más el diferencial; 1,5 % en órdenes personalizadas",
+          "fuente": "https://www.kraken.com/es/features/fee-schedule",
+          "comprobado": "2026-10-15"
+        },
+        "mercado_taker": {
+          "valor": "0,80 % (maker 0,40 %) en el nivel inicial de Kraken Pro; baja con el volumen",
+          "fuente": "https://www.kraken.com/es/features/fee-schedule",
+          "comprobado": "2026-10-15"
+        },
+        "deposito_eur": {
+          "valor": "No publicada con claridad: depende del método y se muestra en la pantalla de depósito",
+          "fuente": "https://www.kraken.com/es/features/fee-schedule",
+          "comprobado": "2026-10-15"
+        },
+        "retirada_eur": {
+          "valor": "No publicada con claridad",
+          "fuente": "https://www.kraken.com/es/features/fee-schedule",
+          "comprobado": "2026-10-15"
+        }
+      },
+      "pagos": [
+        "sepa",
+        "tarjeta"
+      ],
+      "retirada_wallet": true,
+      "staking": null,
+      "espanol": true,
+      "informe_fiscal": null,
+      "destaca": "Plataforma veterana (desde 2013) con mercado avanzado, muchas criptomonedas y un historial sin grandes hackeos.",
+      "ojo": "La compra instantánea cuesta un 1 % más el diferencial; para pagar menos hay que usar Kraken Pro, que tiene una interfaz más técnica.",
+      "fuentes": [
+        {
+          "title": "Kraken: estructura de tarifas",
+          "url": "https://www.kraken.com/es/features/fee-schedule"
+        }
+      ]
+    },
+    {
+      "slug": "bitvavo",
+      "nombre": "Bitvavo",
+      "web": "https://bitvavo.com/es",
+      "entidad": "BITVAVO B.V.",
+      "tipo": "pasaporte",
+      "pais": "Países Bajos",
+      "desde": "2025-07-14",
+      "servicios": [
+        "Custodia y administración",
+        "Gestión plataforma de negociación",
+        "Servicios de transferencia"
+      ],
+      "comisiones": {
+        "compra_rapida": {
+          "valor": "0,25 % con menos de 100.000 € de volumen mensual (las mismas tarifas que el mercado)",
+          "fuente": "https://bitvavo.com/es/fees",
+          "comprobado": "2026-10-15"
+        },
+        "mercado_taker": {
+          "valor": "0,25 % (maker 0,15 %) con menos de 100.000 € de volumen mensual",
+          "fuente": "https://bitvavo.com/es/fees",
+          "comprobado": "2026-10-15"
+        },
+        "deposito_eur": {
+          "valor": "Gratis por SEPA; tarjeta, Apple Pay, Google Pay o PayPal: 1 %",
+          "fuente": "https://bitvavo.com/es/fees",
+          "comprobado": "2026-10-15"
+        },
+        "retirada_eur": {
+          "valor": "No publicada con claridad",
+          "fuente": "https://bitvavo.com/es/fees",
+          "comprobado": "2026-10-15"
+        }
+      },
+      "pagos": [
+        "sepa",
+        "tarjeta"
+      ],
+      "retirada_wallet": true,
+      "staking": true,
+      "espanol": true,
+      "informe_fiscal": null,
+      "destaca": "De las comisiones más bajas del comparador para compras normales (0,25 %), con más de 400 criptomonedas y staking.",
+      "ojo": "Pagar con tarjeta, Apple Pay, Google Pay o PayPal añade un 1 %; para ahorrar, deposita antes por transferencia SEPA.",
+      "fuentes": [
+        {
+          "title": "Bitvavo: comisiones",
+          "url": "https://bitvavo.com/es/fees"
+        }
+      ]
+    },
+    {
+      "slug": "bitpanda",
+      "nombre": "Bitpanda",
+      "web": "https://www.bitpanda.com/es",
+      "entidad": "BITPANDA GMBH",
+      "tipo": "pasaporte",
+      "pais": "Austria",
+      "desde": "2025-04-14",
+      "servicios": [
+        "Custodia y administración",
+        "Canje criptos por fondos",
+        "Canje criptos por criptos",
+        "Ejecución",
+        "Colocación",
+        "Recepción y transmisión órdenes",
+        "Servicios de transferencia"
+      ],
+      "comisiones": {
+        "compra_rapida": {
+          "valor": "0,99 % en bitcoin; entre 0 % y 2,49 % según el activo, incluido en el precio",
+          "fuente": "https://support.bitpanda.com/hc/es/articles/360000902525",
+          "comprobado": "2026-10-15"
+        },
+        "mercado_taker": {
+          "valor": "No publicada con claridad: Bitpanda Fusion tiene comisiones decrecientes hasta el 0,02 %",
+          "fuente": "https://support.bitpanda.com/hc/es/articles/16259273206044",
+          "comprobado": "2026-10-15"
+        },
+        "deposito_eur": {
+          "valor": "Gratis por SEPA; PayPal: 1,49 %",
+          "fuente": "https://support.bitpanda.com/hc/es/articles/16259273206044",
+          "comprobado": "2026-10-15"
+        },
+        "retirada_eur": {
+          "valor": "Gratis por SEPA",
+          "fuente": "https://support.bitpanda.com/hc/es/articles/16259273206044",
+          "comprobado": "2026-10-15"
+        }
+      },
+      "pagos": [
+        "sepa",
+        "tarjeta"
+      ],
+      "retirada_wallet": true,
+      "staking": null,
+      "espanol": true,
+      "informe_fiscal": null,
+      "destaca": "Además de criptomonedas permite invertir en acciones, ETF y metales desde la misma app, con depósitos y retiradas SEPA gratis.",
+      "ojo": "Las comisiones van incluidas en el precio y varían según el activo (hasta un 2,49 %); revisa el resumen de la operación antes de confirmar.",
+      "fuentes": [
+        {
+          "title": "Bitpanda: qué comisiones y tarifas se aplican",
+          "url": "https://support.bitpanda.com/hc/es/articles/360000902525"
+        },
+        {
+          "title": "Bitpanda: explicación de las comisiones",
+          "url": "https://support.bitpanda.com/hc/es/articles/16259273206044"
+        }
+      ]
+    },
+    {
+      "slug": "okx",
+      "nombre": "OKX",
+      "web": "https://www.okx.com/es-es",
+      "entidad": "OKX EUROPE LIMITED",
+      "tipo": "pasaporte",
+      "pais": "Malta",
+      "desde": "2025-11-27",
+      "servicios": [
+        "Custodia y administración",
+        "Gestión plataforma de negociación",
+        "Canje criptos por fondos",
+        "Canje criptos por criptos",
+        "Ejecución",
+        "Colocación",
+        "Recepción y transmisión órdenes",
+        "Gestión de carteras",
+        "Servicios de transferencia"
+      ],
+      "comisiones": {
+        "compra_rapida": {
+          "valor": "No publicada con claridad",
+          "fuente": "https://www.okx.com/en-eu/help/what-are-the-new-trading-fees-for-eea-users",
+          "comprobado": "2026-10-15"
+        },
+        "mercado_taker": {
+          "valor": "0,35 % (maker 0,20 %) en el nivel inicial con cuenta solo de contado; 0,10 % si además tienes cuenta de derivados",
+          "fuente": "https://www.okx.com/en-eu/help/what-are-the-new-trading-fees-for-eea-users",
+          "comprobado": "2026-10-15"
+        },
+        "deposito_eur": {
+          "valor": "No publicada con claridad",
+          "fuente": "https://www.okx.com/en-eu/help/what-are-the-new-trading-fees-for-eea-users",
+          "comprobado": "2026-10-15"
+        },
+        "retirada_eur": {
+          "valor": "No publicada con claridad",
+          "fuente": "https://www.okx.com/en-eu/help/what-are-the-new-trading-fees-for-eea-users",
+          "comprobado": "2026-10-15"
+        }
+      },
+      "pagos": [
+        "sepa"
+      ],
+      "retirada_wallet": true,
+      "staking": null,
+      "espanol": null,
+      "informe_fiscal": null,
+      "destaca": "Plataforma muy completa para quien opera a menudo: es la que más servicios tiene autorizados en la lista de la CNMV.",
+      "ojo": "La comisión baja si abres una cuenta de derivados, que son productos de alto riesgo; no los contrates solo por pagar menos.",
+      "fuentes": [
+        {
+          "title": "OKX Europe: comisiones de contado y niveles (actualizado el 3 de septiembre de 2026)",
+          "url": "https://www.okx.com/en-eu/help/what-are-the-new-trading-fees-for-eea-users"
+        }
+      ]
+    },
+    {
+      "slug": "bybit",
+      "nombre": "Bybit EU",
+      "web": "https://www.bybit.eu",
+      "entidad": "BYBIT EU GMBH",
+      "tipo": "pasaporte",
+      "pais": "Austria",
+      "desde": "2025-05-28",
+      "servicios": [
+        "Custodia y administración",
+        "Canje criptos por fondos",
+        "Canje criptos por criptos",
+        "Colocación",
+        "Servicios de transferencia"
+      ],
+      "comisiones": {
+        "compra_rapida": {
+          "valor": "Depende del proveedor y del método de pago; se muestra antes de confirmar",
+          "fuente": "https://www.bybit.eu/en-EU/help-center/article/Bybit-Fees-You-Need-to-Know",
+          "comprobado": "2026-10-15"
+        },
+        "mercado_taker": {
+          "valor": "0,25 % (tarifa única, desde el 5 de octubre de 2026) por debajo de 100.000 € de volumen mensual",
+          "fuente": "https://www.bybit.eu/en-EU/help-center/article/Trading-Fee-Structure",
+          "comprobado": "2026-10-15"
+        },
+        "deposito_eur": {
+          "valor": "Sin comisión de Bybit EU por depositar euros",
+          "fuente": "https://www.bybit.eu/en-EU/help-center/article/FAQ-Fiat-Deposit",
+          "comprobado": "2026-10-15"
+        },
+        "retirada_eur": {
+          "valor": "No publicada con claridad",
+          "fuente": "https://www.bybit.eu/en-EU/help-center/article/Trading-Fee-Structure",
+          "comprobado": "2026-10-15"
+        }
+      },
+      "pagos": [
+        "sepa",
+        "tarjeta"
+      ],
+      "retirada_wallet": true,
+      "staking": null,
+      "espanol": null,
+      "informe_fiscal": null,
+      "destaca": "Filial europea de Bybit, autorizada en Austria, con mercado de contado y una tarifa única fácil de entender.",
+      "ojo": "La matriz de Bybit es conocida por los derivados con apalancamiento; en la UE la oferta está limitada por MiCA, pero conviene no confundir productos.",
+      "fuentes": [
+        {
+          "title": "Bybit EU: estructura de comisiones de trading",
+          "url": "https://www.bybit.eu/en-EU/help-center/article/Trading-Fee-Structure"
+        },
+        {
+          "title": "Bybit EU: comisiones que debes conocer",
+          "url": "https://www.bybit.eu/en-EU/help-center/article/Bybit-Fees-You-Need-to-Know"
+        }
+      ]
+    },
+    {
+      "slug": "cryptocom",
+      "nombre": "Crypto.com",
+      "web": "https://crypto.com/es",
+      "entidad": "FORIS DAX MALTA LTD (CRYPTO.COM)",
+      "tipo": "pasaporte",
+      "pais": "Malta",
+      "desde": "2025-02-12",
+      "servicios": [
+        "Custodia y administración",
+        "Canje criptos por fondos",
+        "Canje criptos por criptos",
+        "Ejecución",
+        "Recepción y transmisión órdenes",
+        "Servicios de transferencia"
+      ],
+      "comisiones": {
+        "compra_rapida": {
+          "valor": "0,80 % con saldo en euros; con tarjeta, hasta un 4 %",
+          "fuente": "https://help.crypto.com/en/articles/10981986-fees-limits-eea",
+          "comprobado": "2026-10-15"
+        },
+        "mercado_taker": {
+          "valor": "No publicada con claridad para la UE",
+          "fuente": "https://help.crypto.com/en/articles/10981986-fees-limits-eea",
+          "comprobado": "2026-10-15"
+        },
+        "deposito_eur": {
+          "valor": "Gratis por transferencia bancaria",
+          "fuente": "https://help.crypto.com/en/articles/10981986-fees-limits-eea",
+          "comprobado": "2026-10-15"
+        },
+        "retirada_eur": {
+          "valor": "1 € por SEPA (mínimo 80 €)",
+          "fuente": "https://help.crypto.com/en/articles/10981986-fees-limits-eea",
+          "comprobado": "2026-10-15"
+        }
+      },
+      "pagos": [
+        "sepa",
+        "tarjeta"
+      ],
+      "retirada_wallet": true,
+      "staking": null,
+      "espanol": null,
+      "informe_fiscal": null,
+      "destaca": "App muy completa (tarjeta de débito, Earn, NFT) y una de las primeras autorizadas bajo MiCA en la UE.",
+      "ojo": "Comprar con tarjeta puede costar hasta un 4 %; ingresa antes los euros por transferencia y retira como mínimo 80 €.",
+      "fuentes": [
+        {
+          "title": "Crypto.com: comisiones y límites (EEE), 19 de mayo de 2026",
+          "url": "https://help.crypto.com/en/articles/10981986-fees-limits-eea"
+        }
+      ]
+    },
+    {
+      "slug": "revolut",
+      "nombre": "Revolut",
+      "web": "https://www.revolut.com/es-ES/crypto/",
+      "entidad": "REVOLUT DIGITAL ASSETS EUROPE LTD",
+      "tipo": "pasaporte",
+      "pais": "Chipre",
+      "desde": "2025-10-21",
+      "servicios": [
+        "Custodia y administración",
+        "Gestión plataforma de negociación",
+        "Canje criptos por fondos",
+        "Canje criptos por criptos",
+        "Colocación",
+        "Servicios de transferencia"
+      ],
+      "comisiones": {
+        "compra_rapida": {
+          "valor": "No publicada con claridad: depende del plan y del volumen; se consulta en la app (Crypto > Límites y comisiones)",
+          "fuente": "https://www.revolut.com/es-ES/legal/standard-fees/",
+          "comprobado": "2026-10-15"
+        },
+        "mercado_taker": {
+          "valor": "0,09 % (maker 0 %) en Revolut X, tarifa fija",
+          "fuente": "https://www.revolut.com/es-ES/revolut-x/",
+          "comprobado": "2026-10-15"
+        },
+        "deposito_eur": {
+          "valor": "Se compra con el saldo de tu cuenta Revolut",
+          "fuente": "https://www.revolut.com/es-ES/legal/standard-fees/",
+          "comprobado": "2026-10-15"
+        },
+        "retirada_eur": {
+          "valor": "Las ventas vuelven al saldo de tu cuenta Revolut",
+          "fuente": "https://www.revolut.com/es-ES/legal/standard-fees/",
+          "comprobado": "2026-10-15"
+        }
+      },
+      "pagos": [
+        "sepa",
+        "tarjeta"
+      ],
+      "retirada_wallet": null,
+      "staking": null,
+      "espanol": true,
+      "informe_fiscal": null,
+      "destaca": "Cómoda si ya usas Revolut como cuenta: compras con tu saldo sin transferencias, y Revolut X tiene una de las comisiones más bajas del comparador.",
+      "ojo": "En la app principal la comisión depende del plan y no se publica con claridad; los cambios de divisas y criptos cuentan para el límite mensual del plan Estándar.",
+      "fuentes": [
+        {
+          "title": "Revolut X: comisiones",
+          "url": "https://www.revolut.com/es-ES/revolut-x/"
+        },
+        {
+          "title": "Revolut: comisiones del plan Estándar",
+          "url": "https://www.revolut.com/es-ES/legal/standard-fees/"
+        }
+      ]
+    },
+    {
+      "slug": "trade-republic",
+      "nombre": "Trade Republic",
+      "web": "https://traderepublic.com/es-es",
+      "entidad": "TRADE REPUBLIC BANK GMBH",
+      "tipo": "pasaporte",
+      "pais": "Alemania",
+      "desde": "2025-04-28",
+      "servicios": [
+        "Custodia y administración",
+        "Ejecución",
+        "Recepción y transmisión órdenes",
+        "Servicios de transferencia"
+      ],
+      "comisiones": {
+        "compra_rapida": {
+          "valor": "1 € por operación (costes de terceros); el diferencial no se publica",
+          "fuente": "https://support.traderepublic.com/en-lv/1489-What-are-the-fees-for-trading-crypto",
+          "comprobado": "2026-10-15"
+        },
+        "mercado_taker": {
+          "valor": "No tiene mercado avanzado",
+          "fuente": "https://support.traderepublic.com/en-lv/1489-What-are-the-fees-for-trading-crypto",
+          "comprobado": "2026-10-15"
+        },
+        "deposito_eur": {
+          "valor": "Se compra con el saldo de tu cuenta Trade Republic",
+          "fuente": "https://support.traderepublic.com/en-lv/1489-What-are-the-fees-for-trading-crypto",
+          "comprobado": "2026-10-15"
+        },
+        "retirada_eur": {
+          "valor": "Las ventas vuelven al saldo de tu cuenta Trade Republic",
+          "fuente": "https://support.traderepublic.com/en-lv/1489-What-are-the-fees-for-trading-crypto",
+          "comprobado": "2026-10-15"
+        }
+      },
+      "pagos": [
+        "sepa",
+        "tarjeta"
+      ],
+      "retirada_wallet": null,
+      "staking": null,
+      "espanol": true,
+      "informe_fiscal": null,
+      "destaca": "Banco alemán: un coste fijo de 1 € por operación sale barato en compras medianas y grandes, y permite planes de ahorro periódicos.",
+      "ojo": "Sus páginas de ayuda decían que no se pueden enviar criptos a otras wallets, pero en noviembre de 2025 anunció una wallet que sí lo permite: compruébalo en la app.",
+      "fuentes": [
+        {
+          "title": "Trade Republic: comisiones de las criptomonedas",
+          "url": "https://support.traderepublic.com/en-lv/1489-What-are-the-fees-for-trading-crypto"
+        },
+        {
+          "title": "Trade Republic: nota de prensa de la Crypto Wallet (noviembre de 2025)",
+          "url": "https://assets.traderepublic.com/assets/files/251114_TradeRepublic_Crypto_PressRelease_PT_EN.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "etoro",
+      "nombre": "eToro",
+      "web": "https://www.etoro.com/es/",
+      "entidad": "ETORO (EUROPE) LTD",
+      "tipo": "pasaporte",
+      "pais": "Chipre",
+      "desde": "2025-03-22",
+      "servicios": [
+        "Custodia y administración",
+        "Canje criptos por fondos",
+        "Ejecución",
+        "Recepción y transmisión órdenes",
+        "Asesoramiento",
+        "Gestión de carteras"
+      ],
+      "comisiones": {
+        "compra_rapida": {
+          "valor": "1 % al comprar y 1 % al vender (salvo niveles altos del Club eToro)",
+          "fuente": "https://www.etoro.com/es/trading/fees/",
+          "comprobado": "2026-10-15"
+        },
+        "mercado_taker": {
+          "valor": "No tiene mercado avanzado",
+          "fuente": "https://www.etoro.com/es/trading/fees/",
+          "comprobado": "2026-10-15"
+        },
+        "deposito_eur": {
+          "valor": "No publicada con claridad: puede haber comisión de conversión si no usas cuenta en euros",
+          "fuente": "https://www.etoro.com/es/trading/fees/",
+          "comprobado": "2026-10-15"
+        },
+        "retirada_eur": {
+          "valor": "Gratis desde la cuenta en euros; 5 $ desde la cuenta en dólares",
+          "fuente": "https://www.etoro.com/es/trading/fees/",
+          "comprobado": "2026-10-15"
+        }
+      },
+      "pagos": [
+        "sepa",
+        "tarjeta"
+      ],
+      "retirada_wallet": true,
+      "staking": null,
+      "espanol": true,
+      "informe_fiscal": null,
+      "destaca": "Plataforma de inversión con acciones, ETF y cripto, y funciones sociales como copiar carteras de otros usuarios.",
+      "ojo": "El 1 % se cobra al entrar y al salir; y sacar criptos a una wallet propia pasa por la wallet de eToro, con comisión adicional.",
+      "fuentes": [
+        {
+          "title": "eToro: comisiones",
+          "url": "https://www.etoro.com/es/trading/fees/"
+        },
+        {
+          "title": "eToro: comisiones de la eToro Wallet",
+          "url": "https://www.etoro.com/crypto/wallet/fees/"
+        }
+      ]
+    }
+  ]
+}

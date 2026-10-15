@@ -63,7 +63,7 @@ Si quieres entender la tecnología con calma, la [lección sobre Bitcoin](/acade
 
 ## Cómo comprarla en España con seguridad
 
-Antes de nada, comprueba que la plataforma está **autorizada bajo MiCA**: desde el 1 de julio de 2026 solo pueden ofrecer servicios en España los proveedores autorizados por la CNMV o por el supervisor de otro país de la UE. Te explicamos cómo hacerlo en dos minutos en [¿Qué exchanges pueden operar en España con MiCA?](/respuestas/exchanges-autorizados-mica-espana).
+Antes de nada, comprueba que la plataforma está **autorizada bajo MiCA**: desde el 1 de julio de 2026 solo pueden ofrecer servicios en España los proveedores autorizados por la CNMV o por el supervisor de otro país de la UE. Te explicamos cómo hacerlo en dos minutos en [¿Qué exchanges pueden operar en España con MiCA?](/respuestas/exchanges-autorizados-mica-espana), y comparar comisiones y servicios de doce plataformas autorizadas en nuestro [comparador de exchanges](/comparador-exchanges).
 
 Bitcoin está disponible en prácticamente todas las plataformas autorizadas, así que no tiene sentido arriesgarse con una que no lo esté. Además:
 

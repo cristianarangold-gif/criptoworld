@@ -1,0 +1,29 @@
+{
+  "revisado": "2026-10-15",
+  "plataformas": [
+    {
+      "slug": "ejemplo",
+      "nombre": "Ejemplo",
+      "web": "https://example.com",
+      "entidad": "BITCOINFORME, S.L. (BIT2ME)",
+      "tipo": "espanola",
+      "pais": "España",
+      "desde": "2025-10-31",
+      "servicios": ["Custodia y administración", "Canje criptos por fondos"],
+      "comisiones": {
+        "compra_rapida": { "valor": "1 %", "fuente": "https://example.com/tarifas", "comprobado": "2026-10-15" },
+        "mercado_taker": { "valor": "0,25 %", "fuente": "https://example.com/tarifas", "comprobado": "2026-10-15" },
+        "deposito_eur": { "valor": "Gratis por SEPA", "fuente": "https://example.com/tarifas", "comprobado": "2026-10-15" },
+        "retirada_eur": { "valor": "No publicada con claridad", "fuente": "https://example.com/tarifas", "comprobado": "2026-10-15" }
+      },
+      "pagos": ["sepa", "tarjeta"],
+      "retirada_wallet": true,
+      "staking": null,
+      "espanol": true,
+      "informe_fiscal": false,
+      "destaca": "Plataforma de ejemplo usada solo en las pruebas.",
+      "ojo": "No existe.",
+      "fuentes": [{ "title": "Ejemplo: tarifas", "url": "https://example.com/tarifas" }]
+    }
+  ]
+}
