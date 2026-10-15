@@ -46,3 +46,9 @@ test('validateCoins detecta slugs y coingecko repetidos', () => {
 test('las fichas publicadas son válidas', () => {
   assert.deepEqual(check(getAllCoins()), [])
 })
+
+test('hay 12 fichas, en el orden fijo, con histórico de al menos 60 meses', () => {
+  const all = getAllCoins()
+  assert.deepEqual(all.map(c => c.slug), ['bitcoin', 'ethereum', 'xrp', 'bnb', 'solana', 'cardano', 'dogecoin', 'chainlink', 'tron', 'avalanche', 'polkadot', 'litecoin'])
+  for (const c of all) assert.ok((HISTORY.monedas[c.historico]?.cierres.length ?? 0) >= 60, c.slug)
+})
