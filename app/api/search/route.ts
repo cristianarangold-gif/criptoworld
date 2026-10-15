@@ -66,7 +66,7 @@ export async function GET(req: NextRequest) {
   // Search coin pages
   getAllCoins().forEach(c => {
     if (c.nombre.toLowerCase().includes(q) || c.simbolo.toLowerCase().includes(q)) {
-      results.push({ type: 'ficha', title: `${c.nombre} (${c.simbolo})`, href: `/cripto/${c.slug}`, desc: c.descripcion.slice(0, 100) })
+      results.push({ type: 'ficha', title: c.nombre === c.simbolo ? c.nombre : `${c.nombre} (${c.simbolo})`, href: `/cripto/${c.slug}`, desc: c.descripcion.slice(0, 100) })
     }
   })
 

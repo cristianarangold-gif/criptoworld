@@ -18,7 +18,8 @@ export function generateStaticParams() {
   return getAllCoins().map(c => ({ slug: c.slug }))
 }
 
-const titleOf = (c: { nombre: string; simbolo: string }) => `${c.nombre} (${c.simbolo}): qué es, riesgos y cómo comprarla en España`
+const titleOf = (c: { nombre: string; simbolo: string }) =>
+  `${c.nombre === c.simbolo ? c.nombre : `${c.nombre} (${c.simbolo})`}: qué es, riesgos y cómo comprarla en España`
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const c = getCoin((await params).slug)
