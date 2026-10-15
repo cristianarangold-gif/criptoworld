@@ -5,6 +5,8 @@ import { CalendarDays, Rss, ScrollText } from 'lucide-react'
 import { getAllDigests } from '@/lib/digests'
 import { paginate } from '@/lib/news'
 import { formatDate } from '@/lib/guides'
+import { NewsletterForm } from '@/components/newsletter-form'
+import { newsletterEnabled } from '@/lib/newsletter'
 
 type Props = { searchParams: Promise<{ pagina?: string }> }
 const pageOf = (v?: string) => (v === undefined ? 1 : /^\d+$/.test(v) ? Number(v) : NaN)
@@ -42,6 +44,12 @@ export default async function ResumenesPage({ searchParams }: Props) {
           <Link href="/noticias" className="text-primary underline underline-offset-2">Noticias</Link>.
         </p>
       </div>
+
+      {newsletterEnabled() && (
+        <div className="mt-8">
+          <NewsletterForm />
+        </div>
+      )}
 
       {items.length === 0 ? (
         <p className="mt-10 rounded-xl border border-border/50 p-6 text-muted-foreground">

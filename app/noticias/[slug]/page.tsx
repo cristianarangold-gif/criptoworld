@@ -7,6 +7,8 @@ import { formatDate } from '@/lib/guides'
 import { Markdown } from '@/components/markdown'
 import { ReadingProgress } from '@/components/reading-progress'
 import { SITE } from '@/lib/site'
+import { NewsletterForm } from '@/components/newsletter-form'
+import { newsletterEnabled } from '@/lib/newsletter'
 
 export function generateStaticParams() {
   return getAllNews().map(n => ({ slug: n.slug }))
@@ -111,6 +113,11 @@ export default async function NoticiaPage({ params }: { params: Promise<{ slug: 
           Información general con fines divulgativos; no es asesoramiento financiero ni una recomendación de inversión.
           ¿Has visto un error? Escríbeme a <a href={`mailto:${SITE.email}`} className="text-primary underline">{SITE.email}</a>.
         </p>
+        {newsletterEnabled() && (
+          <div className="mt-8">
+            <NewsletterForm />
+          </div>
+        )}
       </article>
     </div>
   )
