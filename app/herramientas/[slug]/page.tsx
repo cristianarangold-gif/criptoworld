@@ -7,7 +7,7 @@ import { formatDate } from '@/lib/guides'
 import { Markdown } from '@/components/markdown'
 import { Calculator } from '@/components/calculators'
 import { SITE } from '@/lib/site'
-import { HISTORY, getHistory } from '@/lib/historical'
+import { HISTORY, getHistory, pickInitialCoin } from '@/lib/historical'
 
 export function generateStaticParams() {
   return getAllTools().map(t => ({ slug: t.slug }))
@@ -24,14 +24,18 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   }
 }
 
-export default async function ToolPage({ params }: { params: Promise<{ slug: string }> }) {
+export default async function ToolPage({ params, searchParams }: { params: Promise<{ slug: string }>; searchParams: Promise<{ moneda?: string }> }) {
   const { slug } = await params
+  const { moneda } = await searchParams
   const tool = getTool(slug)
   if (!tool) notFound()
   const label = tool.calculator === 'estafa' ? 'Test' : tool.calculator === 'historico' ? 'Simulador' : 'Calculadora'
   const extra =
     tool.calculator === 'historico'
-      ? Object.entries(HISTORY.monedas).map(([id, c]) => ({ id, nombre: c.nombre, points: getHistory(id) }))
+      ? {
+          coins: Object.entries(HISTORY.monedas).map(([id, c]) => ({ id, nombre: c.nombre, points: getHistory(id) })),
+          initial: pickInitialCoin(Object.keys(HISTORY.monedas), moneda),
+        }
       : undefined
   const others = getAllTools().filter(t => t.slug !== slug).slice(0, 4)
 
