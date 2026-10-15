@@ -1,0 +1,12 @@
+# Fuentes de la rutina diaria de noticias: nombre | url del RSS/Atom | oficial o medio
+# Comprobadas el 2026-10-15. La CNMV, la Agencia Tributaria y el Banco de España no tienen RSS
+# accesible: la rutina las consulta buscando en la web (docs/rutina-noticias.md).
+# Cuarta columna opcional: palabras clave; si existe, solo pasan los títulos que contengan alguna.
+ESMA | https://www.esma.europa.eu/rss.xml | oficial | crypto, cripto, mica, bitcoin, stablecoin, digital euro, euro digital, virtual asset, tokeni, blockchain, dlt, anti-money laundering, aml, dac8, payment
+BCE (notas de prensa) | https://www.ecb.europa.eu/rss/press.html | oficial | crypto, cripto, mica, bitcoin, stablecoin, digital euro, euro digital, virtual asset, tokeni, blockchain, dlt, anti-money laundering, aml, dac8, payment
+Comisión Europea (prensa) | https://ec.europa.eu/commission/presscorner/api/rss | oficial | crypto, cripto, mica, bitcoin, stablecoin, digital euro, euro digital, virtual asset, tokeni, blockchain, dlt, anti-money laundering, aml, dac8, payment
+CoinDesk | https://www.coindesk.com/arc/outboundfeeds/rss/ | medio
+Cointelegraph | https://cointelegraph.com/rss | medio
+The Block | https://www.theblock.co/rss.xml | medio
+Decrypt | https://decrypt.co/feed | medio
+CriptoNoticias | https://www.criptonoticias.com/feed/ | medio
