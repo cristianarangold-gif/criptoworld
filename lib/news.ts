@@ -73,3 +73,9 @@ export function validateNews(items: NewsItem[], known: Set<string>, today: strin
   }
   return errors
 }
+
+export function paginate<T>(items: T[], page: number, size = 12): { items: T[]; page: number; pages: number } | null {
+  const pages = Math.max(1, Math.ceil(items.length / size))
+  if (!Number.isInteger(page) || page < 1 || page > pages) return null
+  return { items: items.slice((page - 1) * size, page * size), page, pages }
+}

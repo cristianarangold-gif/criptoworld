@@ -3,6 +3,7 @@ export const dynamic = 'force-dynamic'
 import { NextRequest, NextResponse } from 'next/server'
 import { getAllGuides } from '@/lib/guides'
 import { getAllTools } from '@/lib/tools'
+import { getAllNews } from '@/lib/news'
 import { getGlossary } from '@/lib/glossary'
 import { getAllLessons } from '@/lib/academia-data'
 
@@ -50,6 +51,13 @@ export async function GET(req: NextRequest) {
   getAllTools().forEach(t => {
     if (t.title.toLowerCase().includes(q) || t.short.toLowerCase().includes(q)) {
       results.push({ type: 'herramienta', title: t.title, href: `/herramientas/${t.slug}`, desc: t.short.slice(0, 100) })
+    }
+  })
+
+  // Search news
+  getAllNews().forEach(n => {
+    if (n.titulo.toLowerCase().includes(q) || n.descripcion.toLowerCase().includes(q)) {
+      results.push({ type: 'noticia', title: n.titulo, href: `/noticias/${n.slug}`, desc: n.descripcion.slice(0, 100) })
     }
   })
 
