@@ -47,7 +47,7 @@ Bitcoin es una base de datos pública (la *blockchain*) que guardan miles de ord
 Las reglas más importantes están escritas en el propio protocolo:
 
 - Nunca habrá más de **21 millones** de bitcoins.
-- La recompensa por bloque se reduce a la mitad cada 210.000 bloques, unos cuatro años: es el **halving**. El último fue en abril de 2024 y el siguiente se espera para 2028.
+- La recompensa por bloque se reduce a la mitad cada 210.000 bloques, unos cuatro años: es el **halving**. El último fue en abril de 2024 y el siguiente se espera para 2028; tienes la fecha estimada en el [calendario cripto y fiscal](/calendario).
 - Cambiar estas reglas exige que la mayoría de quienes ejecutan la red acepte el cambio, algo muy difícil en la práctica.
 
 Si quieres entender la tecnología con calma, la [lección sobre Bitcoin](/academia/bitcoin) y la de [blockchain](/academia/blockchain) lo explican paso a paso.

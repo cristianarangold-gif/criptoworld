@@ -48,3 +48,5 @@ No presentarlo, o hacerlo fuera de plazo o con errores, es una infracción. Tras
 ## No sustituye a la Renta
 
 El 721 solo informa de lo que tienes. Si vendes con ganancia, eso se declara en la Renta: lo explicamos en la [guía para declarar criptomonedas](/aprende/declarar-criptomonedas-hacienda) y con más detalle en la [guía del modelo 721](/aprende/modelo-721-criptomonedas).
+
+Tienes esta y otras fechas clave en el [calendario cripto y fiscal](/calendario), con un enlace para añadirlas a tu calendario.

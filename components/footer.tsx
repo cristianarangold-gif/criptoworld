@@ -27,6 +27,7 @@ export function Footer() {
               <Link href="/respuestas" className="text-muted-foreground hover:text-foreground transition-colors">Dudas frecuentes</Link>
               <Link href="/cripto" className="text-muted-foreground hover:text-foreground transition-colors">Fichas de criptomonedas</Link>
               <Link href="/comparador-exchanges" className="text-muted-foreground hover:text-foreground transition-colors">Comparador de exchanges</Link>
+              <Link href="/calendario" className="text-muted-foreground hover:text-foreground transition-colors">Calendario cripto y fiscal</Link>
               <Link href="/noticias" className="text-muted-foreground hover:text-foreground transition-colors">Noticias</Link>
             </nav>
             <nav aria-label="Sobre CriptoMundo" className="flex flex-col gap-2">

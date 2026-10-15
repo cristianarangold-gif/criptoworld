@@ -126,3 +126,5 @@ En general, se aplica la misma lógica: tributan cuando se transmiten. Las opera
 - [¿Qué pasa si no declaro las criptomonedas?](/respuestas/que-pasa-si-no-declaro-criptomonedas)
 
 Todas las respuestas, agrupadas por tema, están en [dudas frecuentes](/respuestas).
+
+Para no perderte ningún plazo (la campaña de la Renta, el segundo pago del 5 de noviembre o el modelo 721), tienes todas las fechas en el [calendario cripto y fiscal](/calendario), que puedes añadir a tu propio calendario.

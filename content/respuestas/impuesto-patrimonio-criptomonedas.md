@@ -47,3 +47,5 @@ Tu patrimonio computable es de 240.000 €, muy por debajo de 700.000 €: **no 
 - Para el Patrimonio cuentan **todas** tus criptomonedas: las de exchanges españoles, las de exchanges extranjeros y las de tu propia wallet.
 
 La gran mayoría de quienes tienen criptomonedas en España no alcanza estos umbrales. Si es tu caso, la clave es valorar bien tus criptos a 31 de diciembre y guardar el dato y su fuente.
+
+Tienes esta y otras fechas clave en el [calendario cripto y fiscal](/calendario), con un enlace para añadirlas a tu calendario.

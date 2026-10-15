@@ -42,3 +42,5 @@ El **6 de octubre de 2026** se publicó en el BOE la disolución de las Cortes G
 ## Ejemplo
 
 Vives en Sevilla y operas en un exchange autorizado en Francia. En 2026 vendes bitcoin con una ganancia de 5.000 €. En 2027, el exchange informará de tus operaciones a la administración francesa, que pasará los datos a la Agencia Tributaria. Si no lo declaraste en tu Renta de 2026, Hacienda lo verá al cruzar los datos.
+
+Tienes esta y otras fechas clave en el [calendario cripto y fiscal](/calendario), con un enlace para añadirlas a tu calendario.
