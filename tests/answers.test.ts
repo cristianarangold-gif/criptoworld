@@ -44,3 +44,10 @@ test('las respuestas publicadas son válidas', () => {
   const items = getAllAnswers()
   assert.deepEqual(validateAnswers(items, known(items)), [])
 })
+
+test('hay 20 respuestas: 15 de Hacienda, 3 de seguridad y herencias y 2 de normativa', () => {
+  const all = getAllAnswers()
+  assert.equal(all.length, 20)
+  const by = (c: string) => all.filter(a => a.categoria === c).length
+  assert.deepEqual([by('hacienda'), by('seguridad-herencias'), by('normativa')], [15, 3, 2])
+})
