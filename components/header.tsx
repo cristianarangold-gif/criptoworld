@@ -4,12 +4,13 @@ import { usePathname } from 'next/navigation'
 import { useSession, signOut } from 'next-auth/react'
 import { useState } from 'react'
 import { cn } from '@/lib/utils'
-import { TrendingUp, BookOpen, BookMarked, Compass, GraduationCap, Calculator, User, Menu, X, LogOut } from 'lucide-react'
+import { TrendingUp, BookOpen, BookMarked, Compass, GraduationCap, Calculator, User, Menu, X, LogOut, Newspaper } from 'lucide-react'
 import { SearchBar } from '@/components/search-bar'
 
 // Menú principal. Noticias está en el pie; «Mi área» es un icono junto al buscador.
 const NAV = [
   { href: '/empieza-aqui', label: 'Empieza aquí', icon: Compass },
+  { href: '/noticias', label: 'Noticias', icon: Newspaper },
   { href: '/academia', label: 'Academia', icon: GraduationCap },
   { href: '/aprende', label: 'Guías', icon: BookOpen },
   { href: '/herramientas', label: 'Herramientas', icon: Calculator },

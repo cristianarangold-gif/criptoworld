@@ -1,13 +1,15 @@
 import Link from 'next/link'
 import { getMarketData } from '@/lib/coingecko'
 import { getAllGuides } from '@/lib/guides'
+import { getAllNews } from '@/lib/news'
+import { NewsCard } from '@/components/news-card'
 import { getSiteStats } from '@/lib/site-stats'
 import { getFearGreed, toTickerItems } from '@/lib/sentiment'
 import { HomeClient } from '@/components/home-client'
 import { HeroChart } from '@/components/hero-chart'
 import { CountUp } from '@/components/count-up'
 import { PriceTicker } from '@/components/price-ticker'
-import { Compass, Calculator } from 'lucide-react'
+import { Compass, Calculator, Newspaper, ArrowRight } from 'lucide-react'
 
 export default async function HomePage() {
   const [market, fearGreed] = await Promise.all([
@@ -15,6 +17,7 @@ export default async function HomePage() {
     getFearGreed(),
   ])
   const stats = getSiteStats()
+  const latest = getAllNews().slice(0, 3)
   const articles = getAllGuides()
     .slice(0, 8)
     .map(g => ({ id: g.slug, slug: g.slug, category: g.category, title: g.title, description: g.description, readTime: g.readTime }))
@@ -62,6 +65,23 @@ export default async function HomePage() {
           <PriceTicker items={toTickerItems(market)} fearGreed={fearGreed} />
         </div>
       </section>
+
+      {latest.length > 0 && (
+        <section className="mx-auto max-w-7xl px-4 pt-14 sm:px-6 lg:px-8" aria-labelledby="ultimas-noticias">
+          <div className="mb-6 flex items-center justify-between gap-4">
+            <h2 id="ultimas-noticias" className="flex items-center gap-2 font-display text-2xl font-bold">
+              <Newspaper className="h-6 w-6 text-primary" />
+              Últimas noticias
+            </h2>
+            <Link href="/noticias" className="inline-flex items-center gap-1 text-sm text-primary hover:underline">
+              Ver todas <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+          <div className="grid gap-4 md:grid-cols-3">
+            {latest.map(n => <NewsCard key={n.slug} item={n} />)}
+          </div>
+        </section>
+      )}
 
       <HomeClient market={market} articles={articles} />
     </>
