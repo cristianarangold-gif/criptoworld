@@ -5,7 +5,7 @@ summary: "Desde el 1 de julio de 2026 solo pueden ofrecer servicios con criptoac
 category: "Fiscalidad y normativa"
 order: 4
 published: 2026-10-13
-updated: 2026-10-13
+updated: 2026-10-15
 related: ["mica-regulacion-cripto-espana", "estafas-cripto"]
 sources:
   - title: "CNMV: Registro de proveedores de servicios de criptoactivos"
@@ -93,3 +93,7 @@ No. La autorización asegura que la entidad cumple unas normas de organización,
 ### ¿Y las wallets como MetaMask o Ledger?
 
 Una wallet en la que tú guardas tus propias claves no es un proveedor de servicios: no custodia tus fondos y no necesita autorización. Eso sí, la seguridad depende por completo de ti; lo explicamos en la [guía de seguridad](/aprende/seguridad-cripto).
+
+## Compara antes de elegir
+
+Una vez sabes que una plataforma está autorizada, lo siguiente es comparar lo que te cuesta y lo que te permite hacer. En el [comparador de exchanges](/comparador-exchanges) tienes doce plataformas autorizadas en España con sus comisiones, métodos de pago, retirada a wallet propia e informe fiscal, cada dato con su fuente y su fecha de revisión.

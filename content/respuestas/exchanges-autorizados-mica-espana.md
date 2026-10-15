@@ -19,7 +19,7 @@ related:
   - title: "MiCA: qué cambia en España con la regulación europea de criptoactivos"
     href: "/aprende/mica-regulacion-cripto-espana"
 ---
-No damos una lista cerrada de exchanges a propósito: las autorizaciones se conceden y se retiran continuamente, y una lista copiada en una web se queda vieja en semanas. Lo útil es saber **comprobarlo tú** en las fuentes oficiales, que se actualizan.
+Las autorizaciones se conceden y se retiran continuamente, así que lo más útil es saber **comprobarlo tú** en las fuentes oficiales, que se actualizan. Si quieres comparar comisiones y servicios de las plataformas más usadas en España, tenemos un [comparador de doce exchanges autorizados](/comparador-exchanges), con la fecha de revisión de cada dato.
 
 ## Cómo comprobar una plataforma en dos minutos
 

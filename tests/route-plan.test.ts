@@ -2,7 +2,7 @@ import { test } from 'node:test'
 import assert from 'node:assert/strict'
 import { validateRoute, getRoute, knownSlugs, resolveStep, type RouteStage } from '../lib/route-plan'
 
-const known = { leccion: ['bitcoin'], guia: ['estafas-cripto'], herramienta: ['simulador-dca'], respuesta: ['declarar-si-no-he-vendido'] }
+const known = { leccion: ['bitcoin'], guia: ['estafas-cripto'], herramienta: ['simulador-dca'], respuesta: ['declarar-si-no-he-vendido'], pagina: ['comparador-exchanges'] }
 
 test('validateRoute acepta pasos existentes', () => {
   const stages: RouteStage[] = [{ titulo: 'A', descripcion: 'd', pasos: [{ tipo: 'leccion', slug: 'bitcoin' }, { tipo: 'guia', slug: 'estafas-cripto' }] }]
@@ -48,4 +48,15 @@ test('la ruta acepta pasos de tipo respuesta y los resuelve a /respuestas', () =
 
 test('la etapa 3 de la ruta incluye la respuesta sobre declarar sin vender', () => {
   assert.ok(getRoute()[2].pasos.some(p => p.tipo === 'respuesta' && p.slug === 'declarar-si-no-he-vendido'))
+})
+
+test('la ruta acepta el paso de tipo página del comparador', () => {
+  const ok: RouteStage[] = [{ titulo: 'A', descripcion: 'd', pasos: [{ tipo: 'pagina', slug: 'comparador-exchanges' }] }]
+  assert.deepEqual(validateRoute(ok, known), [])
+  const bad: RouteStage[] = [{ titulo: 'A', descripcion: 'd', pasos: [{ tipo: 'pagina', slug: 'no-existe' }] }]
+  assert.equal(validateRoute(bad, known).length, 1)
+  const r = resolveStep({ tipo: 'pagina', slug: 'comparador-exchanges' })
+  assert.equal(r.href, '/comparador-exchanges')
+  assert.equal(r.minutes, 5)
+  assert.ok(getRoute()[1].pasos.some(p => p.tipo === 'pagina' && p.slug === 'comparador-exchanges'))
 })
