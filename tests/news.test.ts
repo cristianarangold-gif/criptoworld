@@ -7,7 +7,8 @@ import { loadNews, getAllNews, validateNews, type NewsItem } from '../lib/news'
 import { knownPaths } from '../lib/internal-links'
 
 const FIX = 'tests/fixtures/noticias'
-const today = new Date().toISOString().slice(0, 10)
+// La rutina fecha las noticias con el día de Madrid: comparamos con ese día, no con el de UTC.
+const today = new Date().toLocaleDateString('sv-SE', { timeZone: 'Europe/Madrid' })
 const known = (items: NewsItem[]) => knownPaths(items.map(n => `/noticias/${n.slug}`))
 
 test('loadNews lee, ordena por fecha (más reciente primero) y normaliza fechas', () => {
