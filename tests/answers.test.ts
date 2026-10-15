@@ -1,7 +1,7 @@
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
 import { loadAnswers, getAllAnswers, validateAnswers, type Answer } from '../lib/answers'
-import { knownPaths } from '../lib/internal-links'
+import { knownPaths } from '../lib/known-paths'
 
 const FIX = 'tests/fixtures/respuestas'
 const known = (items: Answer[]) => knownPaths(items.map(a => `/respuestas/${a.slug}`))
