@@ -2,15 +2,15 @@
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { useSession } from 'next-auth/react'
-import { CheckCircle2, Circle, Clock, BookOpen, GraduationCap, Calculator } from 'lucide-react'
+import { CheckCircle2, Circle, Clock, BookOpen, GraduationCap, Calculator, MessageCircleQuestion } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import type { ResolvedStep } from '@/lib/route-plan'
 
 type Stage = { titulo: string; descripcion: string; pasos: ResolvedStep[] }
 
 const KEY = 'cm-ruta'
-const ICON = { leccion: GraduationCap, guia: BookOpen, herramienta: Calculator }
-const LABEL = { leccion: 'Lección', guia: 'Guía', herramienta: 'Herramienta' }
+const ICON = { leccion: GraduationCap, guia: BookOpen, herramienta: Calculator, respuesta: MessageCircleQuestion }
+const LABEL = { leccion: 'Lección', guia: 'Guía', herramienta: 'Herramienta', respuesta: 'Respuesta' }
 
 function load(): string[] {
   try {

@@ -3,14 +3,15 @@ import path from 'path'
 import { getAllLessons, getLessonBySlug } from '@/lib/academia-data'
 import { getAllGuides, getGuide } from '@/lib/guides'
 import { getAllTools, getTool } from '@/lib/tools'
+import { getAllAnswers, getAnswer } from '@/lib/answers'
 
-// Ruta «Empieza aquí»: etapas con pasos que apuntan a lecciones, guías o herramientas existentes.
+// Ruta «Empieza aquí»: etapas con pasos que apuntan a lecciones, guías, herramientas o respuestas existentes.
 
-export type RouteStep = { tipo: 'leccion' | 'guia' | 'herramienta'; slug: string }
+export type RouteStep = { tipo: 'leccion' | 'guia' | 'herramienta' | 'respuesta'; slug: string }
 export type RouteStage = { titulo: string; descripcion: string; pasos: RouteStep[] }
 export type ResolvedStep = RouteStep & { title: string; href: string; minutes: number }
 
-const TIPO_LABEL: Record<RouteStep['tipo'], string> = { leccion: 'lección', guia: 'guía', herramienta: 'herramienta' }
+const TIPO_LABEL: Record<RouteStep['tipo'], string> = { leccion: 'lección', guia: 'guía', herramienta: 'herramienta', respuesta: 'respuesta' }
 
 export function validateRoute(stages: RouteStage[], known: Record<RouteStep['tipo'], string[]>): string[] {
   return stages.flatMap(stage =>
@@ -25,6 +26,7 @@ export function knownSlugs(): Record<RouteStep['tipo'], string[]> {
     leccion: getAllLessons().map(l => l.slug),
     guia: getAllGuides().map(g => g.slug),
     herramienta: getAllTools().map(t => t.slug),
+    respuesta: getAllAnswers().map(a => a.slug),
   }
 }
 
@@ -40,6 +42,10 @@ export function resolveStep(step: RouteStep): ResolvedStep {
   if (step.tipo === 'guia') {
     const g = getGuide(step.slug)!
     return { ...step, title: g.title, href: `/aprende/${g.slug}`, minutes: g.readTime }
+  }
+  if (step.tipo === 'respuesta') {
+    const a = getAnswer(step.slug)!
+    return { ...step, title: a.pregunta, href: `/respuestas/${a.slug}`, minutes: 2 }
   }
   const t = getTool(step.slug)!
   return { ...step, title: t.title, href: `/herramientas/${t.slug}`, minutes: 3 }

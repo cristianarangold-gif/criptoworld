@@ -5,7 +5,7 @@ summary: "El modelo 721 es una declaración informativa, no un impuesto: debes p
 category: "Fiscalidad y normativa"
 order: 2
 published: 2026-10-13
-updated: 2026-10-13
+updated: 2026-10-15
 related: ["declarar-criptomonedas-hacienda", "exchange-autorizado-cnmv"]
 sources:
   - title: "Agencia Tributaria: Modelo 721, plazos de presentación"
@@ -85,3 +85,10 @@ No presentarlo, presentarlo fuera de plazo o con datos falsos puede acarrear **s
 - **¿Wallets propias?** No se declaran en el 721.
 
 Si estás cerca del límite o tienes criptos en varias plataformas, consulta con un asesor fiscal: el coste de una consulta es mucho menor que el de una sanción.
+
+## Dudas relacionadas
+
+- [¿Tengo que declarar las criptomonedas si no he vendido nada?](/respuestas/declarar-si-no-he-vendido)
+- [¿Qué son los modelos 172 y 173?](/respuestas/modelos-172-173-criptomonedas), que presentan los exchanges españoles
+- [¿Qué cambia con la directiva DAC8?](/respuestas/dac8-que-cambia)
+- [¿Hay que pagar el Impuesto sobre el Patrimonio?](/respuestas/impuesto-patrimonio-criptomonedas)
