@@ -1,6 +1,7 @@
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
-import { extractInternalLinks, knownPaths } from '../lib/internal-links'
+import { extractInternalLinks } from '../lib/internal-links'
+import { knownPaths } from '../lib/known-paths'
 
 test('extractInternalLinks devuelve rutas internas sin ancla ni barra final', () => {
   assert.deepEqual(
@@ -18,4 +19,10 @@ test('knownPaths conoce lecciones, guías, herramientas y páginas fijas', () =>
 
 test('knownPaths añade rutas extra', () => {
   assert.ok(knownPaths(['/noticias/x']).has('/noticias/x'))
+})
+
+test('knownPaths incluye las respuestas, las noticias y las fichas', () => {
+  const k = knownPaths()
+  assert.ok(k.has('/respuestas/tributacion-staking'))
+  assert.ok(k.has('/cripto'))
 })

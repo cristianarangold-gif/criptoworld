@@ -5,6 +5,7 @@ import { getAllLessons } from '@/lib/academia-data'
 import { SITE } from '@/lib/site'
 import { getAllNews } from '@/lib/news'
 import { getAllAnswers } from '@/lib/answers'
+import { getAllCoins } from '@/lib/coins'
 
 export const dynamic = 'force-dynamic'
 
@@ -20,6 +21,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${baseUrl}/herramientas`, changeFrequency: 'monthly' as const, priority: 0.8 },
     { url: `${baseUrl}/glosario`, changeFrequency: 'monthly' as const, priority: 0.7 },
     { url: `${baseUrl}/noticias`, changeFrequency: 'daily' as const, priority: 0.8 },
+    { url: `${baseUrl}/cripto`, changeFrequency: 'daily' as const, priority: 0.8 },
     { url: `${baseUrl}/respuestas`, changeFrequency: 'monthly' as const, priority: 0.8 },
     { url: `${baseUrl}/empieza-aqui`, changeFrequency: 'monthly' as const, priority: 0.9 },
     { url: `${baseUrl}/sobre-nosotros`, changeFrequency: 'monthly' as const, priority: 0.5 },
@@ -63,5 +65,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.7,
   }))
 
-  return [...staticPages, ...newsPages, ...answerPages, ...articlePages, ...lessonPages, ...toolPages]
+  const coinPages = getAllCoins().map(c => ({
+    url: `${baseUrl}/cripto/${c.slug}`,
+    lastModified: new Date(`${c.updated}T12:00:00Z`),
+    changeFrequency: 'weekly' as const,
+    priority: 0.8,
+  }))
+
+  return [...staticPages, ...newsPages, ...answerPages, ...coinPages, ...articlePages, ...lessonPages, ...toolPages]
 }

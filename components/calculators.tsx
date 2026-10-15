@@ -462,7 +462,7 @@ function Estafa() {
 }
 
 // ── Simulador histórico ────────────────────────────────────────────────────
-export type HistoryProp = { id: string; nombre: string; points: PricePoint[] }[]
+export type HistoryProp = { coins: { id: string; nombre: string; points: PricePoint[] }[]; initial?: string }
 
 const selectCls = 'w-full rounded-lg bg-muted/50 border border-border/50 px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-primary/50'
 
@@ -480,8 +480,8 @@ function Select({ label, value, onChange, options }: {
 }
 
 function Historico({ extra }: { extra?: unknown }) {
-  const coins = (extra as HistoryProp | undefined) ?? []
-  const [id, setId] = useState('btc')
+  const { coins = [], initial = 'btc' } = (extra as HistoryProp | undefined) ?? {}
+  const [id, setId] = useState(initial)
   const [mode, setMode] = useState<'lump' | 'dca'>('lump')
   const [amount, setAmount] = useState('1000')
   const coin = coins.find(c => c.id === id) ?? coins[0]

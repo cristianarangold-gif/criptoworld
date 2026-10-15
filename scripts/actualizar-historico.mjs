@@ -4,7 +4,7 @@
 import { writeFileSync } from 'node:fs'
 
 const COINS = {
-  btc: 'Bitcoin', eth: 'Ethereum', bnb: 'BNB', sol: 'Solana',
+  btc: 'Bitcoin', eth: 'Ethereum', bnb: 'BNB', sol: 'Solana', trx: 'Tron', avax: 'Avalanche', dot: 'Polkadot', ltc: 'Litecoin',
   xrp: 'XRP', ada: 'Cardano', doge: 'Dogecoin', link: 'Chainlink',
 }
 const ECB = 'https://data-api.ecb.europa.eu/service/data/EXR/D.USD.EUR.SP00.A?format=csvdata&startPeriod=2017-01-01'

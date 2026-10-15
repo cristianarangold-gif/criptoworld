@@ -14,3 +14,8 @@ export const HISTORY = data as unknown as HistoryFile
 export function getHistory(id: string): { month: string; price: number }[] {
   return (HISTORY.monedas[id]?.cierres ?? []).map(([month, price]) => ({ month, price }))
 }
+
+export function pickInitialCoin(ids: string[], requested?: string): string {
+  const r = requested?.toLowerCase()
+  return r && ids.includes(r) ? r : 'btc'
+}

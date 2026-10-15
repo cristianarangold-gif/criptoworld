@@ -1,6 +1,7 @@
 'use client'
 import { useState, useEffect, useCallback } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { SparklineChart } from '@/components/sparkline-chart'
 import { PriceChange } from '@/components/price-change'
 import { formatUsd, formatCompact } from '@/lib/format'
@@ -11,7 +12,7 @@ import dynamic from 'next/dynamic'
 
 const CoinChart = dynamic(() => import('@/components/coin-chart').then(m => m.CoinChart), { ssr: false, loading: () => <div className="h-64 bg-muted/20 rounded-lg animate-pulse" /> })
 
-export function MercadoClient({ initialData, panel }: { initialData: CoinMarket[]; panel?: React.ReactNode }) {
+export function MercadoClient({ initialData, panel, coinPages = {} }: { initialData: CoinMarket[]; panel?: React.ReactNode; coinPages?: Record<string, string> }) {
   const [data, setData] = useState<CoinMarket[]>(initialData ?? [])
   const [search, setSearch] = useState('')
   const [currency, setCurrency] = useState('usd')
@@ -170,7 +171,18 @@ export function MercadoClient({ initialData, panel }: { initialData: CoinMarket[
                   <td className="py-3 px-2">
                     <div className="flex items-center gap-2">
                       <Image src={coin?.image ?? ''} alt={coin?.name ?? ''} width={24} height={24} className="rounded-full" unoptimized />
-                      <span className="font-medium">{coin?.name}</span>
+                      {coinPages[coin?.id] ? (
+                        <Link
+                          href={`/cripto/${coinPages[coin.id]}`}
+                          onClick={e => e.stopPropagation()}
+                          className="font-medium underline decoration-primary/40 underline-offset-4 hover:text-primary"
+                          title={`Ficha de ${coin.name}`}
+                        >
+                          {coin?.name}
+                        </Link>
+                      ) : (
+                        <span className="font-medium">{coin?.name}</span>
+                      )}
                       <span className="text-xs text-muted-foreground uppercase">{coin?.symbol}</span>
                     </div>
                   </td>

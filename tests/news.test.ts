@@ -4,7 +4,7 @@ import fs from 'fs'
 import os from 'os'
 import path from 'path'
 import { loadNews, getAllNews, validateNews, type NewsItem } from '../lib/news'
-import { knownPaths } from '../lib/internal-links'
+import { knownPaths } from '../lib/known-paths'
 
 const FIX = 'tests/fixtures/noticias'
 // La rutina fecha las noticias con el día de Madrid: comparamos con ese día, no con el de UTC.

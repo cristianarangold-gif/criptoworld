@@ -19,3 +19,14 @@ export function formatEur(value: number | null | undefined): string {
   const dec = Math.abs(value) >= 1 ? 2 : 6
   return `${value.toLocaleString('es-ES', { minimumFractionDigits: dec, maximumFractionDigits: dec, useGrouping: 'always' } as unknown as Intl.NumberFormatOptions)} €`
 }
+
+// Cifras grandes en español: un billón son 10^12.
+export function formatBig(value: number, unit = ''): string {
+  const nf = (n: number, d: number) =>
+    n.toLocaleString('es-ES', { minimumFractionDigits: d, maximumFractionDigits: d, useGrouping: 'always' } as unknown as Intl.NumberFormatOptions)
+  const u = unit ? ` ${unit}` : ''
+  if (value >= 1e12) return `${nf(value / 1e12, 2)} billones${u}`
+  if (value >= 1e9) return `${nf(value / 1e9, 1)} mil millones${u}`
+  if (value >= 1e6) return `${nf(value / 1e6, 1)} millones${u}`
+  return `${nf(value, 0)}${u}`
+}

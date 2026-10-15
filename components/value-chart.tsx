@@ -18,9 +18,12 @@ function niceStep(max: number, ticks = 4) {
   return [1, 2, 5, 10].map(f => f * mag).find(s => s >= raw)!
 }
 
-export function ValueChart({ series, label }: { series: Point[]; label: string }) {
+// Con showInvested=false (fichas de criptomonedas) solo dibuja una línea: el precio de cierre mensual.
+export function ValueChart({ series, label, showInvested = true, valueLabel = 'Valor de la inversión' }: {
+  series: Point[]; label: string; showInvested?: boolean; valueLabel?: string
+}) {
   if (series.length < 2) return null
-  const max = Math.max(...series.map(p => Math.max(p.value, p.invested)))
+  const max = Math.max(...series.map(p => (showInvested ? Math.max(p.value, p.invested) : p.value)))
   const step = niceStep(max || 1)
   const top = Math.ceil(max / step) * step || step
   const iw = W - PAD.left - PAD.right
@@ -46,12 +49,12 @@ export function ValueChart({ series, label }: { series: Point[]; label: string }
             {monthLabel(series[i].month)}
           </text>
         ))}
-        <path d={line('invested')} fill="none" className="stroke-muted-foreground" strokeWidth="1.5" strokeDasharray="5 4" />
+        {showInvested && <path d={line('invested')} fill="none" className="stroke-muted-foreground" strokeWidth="1.5" strokeDasharray="5 4" />}
         <path d={line('value')} fill="none" stroke="hsl(33 93% 54%)" strokeWidth="2.5" strokeLinejoin="round" />
       </svg>
       <figcaption className="mt-2 flex flex-wrap gap-4 text-xs text-muted-foreground">
-        <span className="flex items-center gap-1.5"><span className="inline-block h-0.5 w-5 bg-[hsl(33_93%_54%)]" />Valor de la inversión</span>
-        <span className="flex items-center gap-1.5"><span className="inline-block w-5 border-t border-dashed border-muted-foreground" />Dinero aportado</span>
+        <span className="flex items-center gap-1.5"><span className="inline-block h-0.5 w-5 bg-[hsl(33_93%_54%)]" />{valueLabel}</span>
+        {showInvested && <span className="flex items-center gap-1.5"><span className="inline-block w-5 border-t border-dashed border-muted-foreground" />Dinero aportado</span>}
       </figcaption>
     </figure>
   )

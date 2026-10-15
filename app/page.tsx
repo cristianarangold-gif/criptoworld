@@ -3,6 +3,7 @@ import { getMarketData } from '@/lib/coingecko'
 import { getAllGuides } from '@/lib/guides'
 import { getAllNews } from '@/lib/news'
 import { NewsCard } from '@/components/news-card'
+import { getAllCoins } from '@/lib/coins'
 import { getSiteStats } from '@/lib/site-stats'
 import { getFearGreed, toTickerItems } from '@/lib/sentiment'
 import { HomeClient } from '@/components/home-client'
@@ -82,6 +83,25 @@ export default async function HomePage() {
           </div>
         </section>
       )}
+
+      <section className="mx-auto max-w-7xl px-4 pt-14 sm:px-6 lg:px-8" aria-labelledby="fichas-cripto">
+        <div className="mb-4 flex items-center justify-between gap-4">
+          <h2 id="fichas-cripto" className="font-display text-2xl font-bold">Fichas de criptomonedas</h2>
+          <Link href="/cripto" className="inline-flex items-center gap-1 text-sm text-primary hover:underline">
+            Ver todas <ArrowRight className="h-4 w-4" />
+          </Link>
+        </div>
+        <ul className="flex flex-wrap gap-2">
+          {getAllCoins().map(c => (
+            <li key={c.slug}>
+              <Link href={`/cripto/${c.slug}`} className="inline-flex items-center gap-2 rounded-full border border-border/60 bg-card/50 px-4 py-1.5 text-sm hover:border-primary/50 hover:text-primary transition-colors">
+                <span className="font-medium">{c.nombre}</span>
+                <span className="text-xs text-muted-foreground">{c.simbolo}</span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </section>
 
       <HomeClient market={market} articles={articles} />
     </>

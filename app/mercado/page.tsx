@@ -3,10 +3,11 @@ import { getMarketData } from '@/lib/coingecko'
 import { MercadoClient } from '@/components/mercado-client'
 import { MarketPanel } from '@/components/market-panel'
 import { getFearGreed, getGlobalMarket } from '@/lib/sentiment'
+import { coinPageMap } from '@/lib/coins'
 
 export const metadata: Metadata = {
   title: 'Mercado',
-  description: 'Datos en vivo de las principales criptomonedas: precios, variaciones, capitalización y gráficos.',
+  description: 'Datos en vivo de las principales criptomonedas: precios, variaciones, capitalización y gráficos, con enlaces a la ficha de cada una.',
 }
 
 export default async function MercadoPage() {
@@ -15,5 +16,5 @@ export default async function MercadoPage() {
     getFearGreed(),
     getGlobalMarket(),
   ])
-  return <MercadoClient initialData={market} panel={<MarketPanel fearGreed={fearGreed} global={global} />} />
+  return <MercadoClient initialData={market} panel={<MarketPanel fearGreed={fearGreed} global={global} />} coinPages={coinPageMap()} />
 }
