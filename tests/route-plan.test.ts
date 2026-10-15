@@ -2,7 +2,7 @@ import { test } from 'node:test'
 import assert from 'node:assert/strict'
 import { validateRoute, getRoute, knownSlugs, resolveStep, type RouteStage } from '../lib/route-plan'
 
-const known = { leccion: ['bitcoin'], guia: ['estafas-cripto'], herramienta: ['simulador-dca'] }
+const known = { leccion: ['bitcoin'], guia: ['estafas-cripto'], herramienta: ['simulador-dca'], respuesta: ['declarar-si-no-he-vendido'] }
 
 test('validateRoute acepta pasos existentes', () => {
   const stages: RouteStage[] = [{ titulo: 'A', descripcion: 'd', pasos: [{ tipo: 'leccion', slug: 'bitcoin' }, { tipo: 'guia', slug: 'estafas-cripto' }] }]
@@ -33,4 +33,19 @@ test('resolveStep da título, enlace y minutos', () => {
   assert.equal(r.href, '/academia/bitcoin')
   assert.ok(r.title.length > 0)
   assert.ok(r.minutes > 0)
+})
+
+test('la ruta acepta pasos de tipo respuesta y los resuelve a /respuestas', () => {
+  const ok: RouteStage[] = [{ titulo: 'A', descripcion: 'd', pasos: [{ tipo: 'respuesta', slug: 'declarar-si-no-he-vendido' }] }]
+  assert.deepEqual(validateRoute(ok, known), [])
+  const bad: RouteStage[] = [{ titulo: 'A', descripcion: 'd', pasos: [{ tipo: 'respuesta', slug: 'no-existe' }] }]
+  assert.match(validateRoute(bad, known)[0], /respuesta «no-existe»/)
+  const r = resolveStep({ tipo: 'respuesta', slug: 'declarar-si-no-he-vendido' })
+  assert.equal(r.href, '/respuestas/declarar-si-no-he-vendido')
+  assert.equal(r.minutes, 2)
+  assert.match(r.title, /no he vendido/)
+})
+
+test('la etapa 3 de la ruta incluye la respuesta sobre declarar sin vender', () => {
+  assert.ok(getRoute()[2].pasos.some(p => p.tipo === 'respuesta' && p.slug === 'declarar-si-no-he-vendido'))
 })

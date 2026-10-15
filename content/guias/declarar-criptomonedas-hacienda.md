@@ -5,7 +5,7 @@ summary: "En España no tributas por tener criptomonedas, sino cuando las vendes
 category: "Fiscalidad y normativa"
 order: 1
 published: 2026-10-13
-updated: 2026-10-13
+updated: 2026-10-15
 related: ["modelo-721-criptomonedas", "mica-regulacion-cripto-espana"]
 sources:
   - title: "Ley 35/2006 del IRPF, texto consolidado (BOE)"
@@ -93,7 +93,7 @@ La campaña de la Renta se presenta normalmente entre abril y finales de junio d
 - La fecha y el valor de adquisición, con sus gastos.
 - La fecha y el valor de transmisión, con sus gastos.
 
-Los exchanges que operan en España informan a Hacienda de sus clientes y de los saldos (modelos 172 y 173), por lo que la Agencia Tributaria puede cruzar esos datos con tu declaración. Además, la directiva europea **DAC8** obliga a los proveedores de criptoactivos de toda la UE a recopilar información de sus clientes desde el 1 de enero de 2026, con un primer intercambio entre países previsto para 2027. En España, a fecha de esta guía, la adaptación de la ley a la DAC8 todavía está en trámite.
+Los exchanges que operan en España informan a Hacienda de sus clientes y de los saldos (modelos 172 y 173), por lo que la Agencia Tributaria puede cruzar esos datos con tu declaración. Además, la directiva europea **DAC8** obliga a los proveedores de criptoactivos de toda la UE a recopilar información de sus clientes desde el 1 de enero de 2026, con un primer intercambio entre países previsto para 2027. En España, el proyecto de ley que adaptaba la DAC8 decayó con la disolución de las Cortes el 6 de octubre de 2026 y tendrá que volver a tramitarse; lo explicamos en [¿Qué cambia con DAC8?](/respuestas/dac8-que-cambia).
 
 ## Errores frecuentes
 
@@ -116,3 +116,13 @@ Toda ganancia patrimonial debe declararse, aunque sea pequeña. No existe un mí
 ### ¿Qué pasa con los NFT o los tokens de DeFi?
 
 En general, se aplica la misma lógica: tributan cuando se transmiten. Las operaciones de DeFi (préstamos, pools de liquidez, wrapped tokens) tienen criterios menos claros y conviene revisarlas con un asesor.
+
+## Más dudas frecuentes
+
+- [¿Cambiar una cripto por otra tributa?](/respuestas/cambiar-cripto-por-otra-tributa)
+- [¿Cómo se calcula la ganancia con el método FIFO?](/respuestas/calcular-ganancia-fifo)
+- [¿Puedo compensar las pérdidas?](/respuestas/compensar-perdidas-criptomonedas)
+- [¿Cómo tributan las recompensas de staking?](/respuestas/tributacion-staking)
+- [¿Qué pasa si no declaro las criptomonedas?](/respuestas/que-pasa-si-no-declaro-criptomonedas)
+
+Todas las respuestas, agrupadas por tema, están en [dudas frecuentes](/respuestas).

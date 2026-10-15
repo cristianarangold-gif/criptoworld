@@ -4,7 +4,7 @@ short: "Cuánto pagarías a Hacienda por tus ganancias con criptomonedas según 
 description: "Estima cuánto pagarías en el IRPF por las ganancias con criptomonedas en España, con la escala del ahorro vigente desde 2025 (del 19 % al 30 %) y el desglose por tramos."
 calculator: impuestos
 order: 9
-updated: 2026-10-13
+updated: 2026-10-15
 related:
   - title: "Cómo declarar criptomonedas a Hacienda en España"
     href: "/aprende/declarar-criptomonedas-hacienda"
@@ -57,10 +57,12 @@ La escala se aplica a **toda** la base del ahorro del año, no solo a las cripto
 
 ## Qué no incluye
 
-- **Pérdidas de años anteriores.** Si tienes saldos negativos de los cuatro años anteriores, restan de la base antes de aplicar la escala.
+- **Pérdidas de años anteriores.** Si tienes saldos negativos de los cuatro años anteriores, restan de la base antes de aplicar la escala. Te explicamos el orden en [¿Puedo compensar las pérdidas?](/respuestas/compensar-perdidas-criptomonedas).
 - **Compensación con otras rentas.** Las pérdidas patrimoniales pueden compensar hasta el 25 % de los rendimientos del capital mobiliario, y al revés.
 - **El País Vasco y Navarra**, que tienen sus propias normas forales.
 - **Rendimientos como el staking**, que también van a la base del ahorro: súmalos en "otras rentas del ahorro".
 - **Retenciones** ya practicadas, que se descuentan de lo que pagas al presentar la declaración.
+
+Para calcular bien la ganancia que pones en la calculadora, recuerda que Hacienda aplica el método FIFO: lo explicamos en [¿Cómo se calcula la ganancia?](/respuestas/calcular-ganancia-fifo).
 
 Es una estimación para orientarte. Para tu declaración, usa el programa Renta WEB de la Agencia Tributaria y, si tus operaciones son complejas, consulta con un asesor fiscal.

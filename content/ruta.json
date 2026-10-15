@@ -29,6 +29,7 @@
     "pasos": [
       { "tipo": "guia", "slug": "mica-regulacion-cripto-espana" },
       { "tipo": "guia", "slug": "declarar-criptomonedas-hacienda" },
+      { "tipo": "respuesta", "slug": "declarar-si-no-he-vendido" },
       { "tipo": "guia", "slug": "modelo-721-criptomonedas" },
       { "tipo": "herramienta", "slug": "calculadora-impuestos-criptomonedas" }
     ]
