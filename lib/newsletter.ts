@@ -40,8 +40,11 @@ export async function subscribe(
       }),
     })
     if (res.ok) return { ok: true }
-  } catch {
-    // red caída o Brevo no responde: mismo mensaje genérico
+    // Se registra el motivo para poder diagnosticarlo en los logs de Vercel (nunca el email).
+    const body = (await res.json().catch(() => ({}))) as { code?: string; message?: string }
+    console.error(`[boletín] Brevo ${res.status} ${body.code ?? ''}: ${(body.message ?? '').split(email).join('<email>').slice(0, 300)}`)
+  } catch (e) {
+    console.error(`[boletín] Error de red con Brevo: ${(e as Error).message}`)
   }
   return { ok: false, status: 502, error: 'No hemos podido completar la suscripción. Inténtalo de nuevo más tarde.' }
 }
