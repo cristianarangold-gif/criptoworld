@@ -63,3 +63,18 @@ test('el límite permite 5 peticiones por IP cada 10 minutos', () => {
   assert.equal(limit('2.2.2.2', t + 10), true)
   assert.equal(limit('1.1.1.1', t + 10 * 60_000 + 1), true)
 })
+
+test('si Brevo rechaza la petición, se registra su código de error sin el email', async () => {
+  const logged: string[] = []
+  const orig = console.error
+  console.error = (...a: unknown[]) => { logged.push(a.join(' ')) }
+  try {
+    const fail = (async () => new Response(JSON.stringify({ code: 'invalid_parameter', message: 'Template is not a valid double opt-in template' }), { status: 400 })) as unknown as typeof fetch
+    await subscribe('ana@example.com', { fetch: fail, env, now })
+  } finally {
+    console.error = orig
+  }
+  assert.equal(logged.length, 1)
+  assert.match(logged[0], /Brevo 400 invalid_parameter: Template is not a valid double opt-in template/)
+  assert.ok(!logged[0].includes('ana@example.com'))
+})
