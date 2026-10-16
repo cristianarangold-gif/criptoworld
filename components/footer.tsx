@@ -30,7 +30,6 @@ export function Footer() {
               <Link href="/calendario" className="text-muted-foreground hover:text-foreground transition-colors">Calendario cripto y fiscal</Link>
               <Link href="/resumen-semanal" className="text-muted-foreground hover:text-foreground transition-colors">Resumen semanal</Link>
               <Link href="/boletin" className="text-muted-foreground hover:text-foreground transition-colors">Boletín por email</Link>
-              <Link href="/noticias" className="text-muted-foreground hover:text-foreground transition-colors">Noticias</Link>
             </nav>
             <nav aria-label="Sobre CriptoMundo" className="flex flex-col gap-2">
               <span className="font-semibold text-foreground">CriptoMundo</span>

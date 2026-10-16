@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { getMarketData } from '@/lib/coingecko'
 import { getAllGuides } from '@/lib/guides'
 import { getAllNews } from '@/lib/news'
-import { NewsCard } from '@/components/news-card'
+import { HomeNews } from '@/components/home-news'
 import { getAllCoins } from '@/lib/coins'
 import { getAllDigests } from '@/lib/digests'
 import { NewsletterForm } from '@/components/newsletter-form'
@@ -13,7 +13,7 @@ import { HomeClient } from '@/components/home-client'
 import { HeroChart } from '@/components/hero-chart'
 import { CountUp } from '@/components/count-up'
 import { PriceTicker } from '@/components/price-ticker'
-import { Compass, Calculator, Newspaper, ArrowRight } from 'lucide-react'
+import { Compass, Calculator, ArrowRight } from 'lucide-react'
 
 export default async function HomePage() {
   const [market, fearGreed] = await Promise.all([
@@ -21,7 +21,7 @@ export default async function HomePage() {
     getFearGreed(),
   ])
   const stats = getSiteStats()
-  const latest = getAllNews().slice(0, 3)
+  const latest = getAllNews().slice(0, 4)
   const digest = getAllDigests()[0]
   const articles = getAllGuides()
     .slice(0, 8)
@@ -71,28 +71,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {latest.length > 0 && (
-        <section className="mx-auto max-w-7xl px-4 pt-14 sm:px-6 lg:px-8" aria-labelledby="ultimas-noticias">
-          <div className="mb-6 flex items-center justify-between gap-4">
-            <h2 id="ultimas-noticias" className="flex items-center gap-2 font-display text-2xl font-bold">
-              <Newspaper className="h-6 w-6 text-primary" />
-              Últimas noticias
-            </h2>
-            <Link href="/noticias" className="inline-flex items-center gap-1 text-sm text-primary hover:underline">
-              Ver todas <ArrowRight className="h-4 w-4" />
-            </Link>
-          </div>
-          <div className="grid gap-4 md:grid-cols-3">
-            {latest.map(n => <NewsCard key={n.slug} item={n} />)}
-          </div>
-          {digest && (
-            <p className="mt-4 text-sm text-muted-foreground">
-              Resumen de la semana:{' '}
-              <Link href={`/resumen-semanal/${digest.slug}`} className="text-primary underline underline-offset-2">{digest.titulo}</Link>
-            </p>
-          )}
-        </section>
-      )}
+      <HomeNews news={latest} digest={digest} />
 
       <section className="mx-auto max-w-7xl px-4 pt-14 sm:px-6 lg:px-8" aria-labelledby="fichas-cripto">
         <div className="mb-4 flex items-center justify-between gap-4">
