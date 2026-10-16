@@ -5,6 +5,8 @@ import { getAllNews } from '@/lib/news'
 import { NewsCard } from '@/components/news-card'
 import { getAllCoins } from '@/lib/coins'
 import { getAllDigests } from '@/lib/digests'
+import { NewsletterForm } from '@/components/newsletter-form'
+import { newsletterEnabled } from '@/lib/newsletter'
 import { getSiteStats } from '@/lib/site-stats'
 import { getFearGreed, toTickerItems } from '@/lib/sentiment'
 import { HomeClient } from '@/components/home-client'
@@ -110,6 +112,12 @@ export default async function HomePage() {
           ))}
         </ul>
       </section>
+
+      {newsletterEnabled() && (
+        <section className="mx-auto max-w-3xl px-4 pt-14 sm:px-6 lg:px-8">
+          <NewsletterForm />
+        </section>
+      )}
 
       <HomeClient market={market} articles={articles} />
     </>

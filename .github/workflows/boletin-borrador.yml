@@ -1,0 +1,39 @@
+# Cuando se publica un resumen semanal en main, crea el borrador del boletín en Brevo.
+# Solo crea borradores: el envío lo hace siempre el propietario desde Brevo.
+name: Borrador del boletín
+
+on:
+  push:
+    branches: [main]
+    paths: ['content/resumenes/**']
+
+permissions:
+  contents: read
+
+jobs:
+  borrador:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - name: Resúmenes nuevos
+        id: nuevos
+        run: |
+          files=$(git diff --name-only --diff-filter=A HEAD~1 HEAD -- 'content/resumenes/*.md' | tr '\n' ' ')
+          echo "files=$files" >> "$GITHUB_OUTPUT"
+          echo "Resúmenes nuevos: ${files:-ninguno}"
+      - uses: actions/setup-node@v4
+        if: steps.nuevos.outputs.files != ''
+        with:
+          node-version: 22
+          cache: npm
+      - name: Instalar dependencias
+        if: steps.nuevos.outputs.files != ''
+        run: npm ci
+      - name: Crear borrador en Brevo
+        if: steps.nuevos.outputs.files != ''
+        env:
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+          BREVO_LIST_ID: ${{ secrets.BREVO_LIST_ID }}
+        run: npx tsx scripts/boletin-borrador.ts ${{ steps.nuevos.outputs.files }}

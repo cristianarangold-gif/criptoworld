@@ -60,6 +60,11 @@ export default function PrivacidadPage() {
               <td>Guardar tu cartera simulada y tu avance (ejecución del servicio, art. 6.1.b RGPD).</td>
             </tr>
             <tr>
+              <td>Te suscribes al boletín</td>
+              <td>Tu email, la fecha y la página desde la que te suscribiste; si abres los emails o pulsas sus enlaces, Brevo registra esas aperturas y clics</td>
+              <td>Enviarte el resumen semanal por email (consentimiento, art. 6.1.a RGPD). Confirmas la suscripción desde un email antes de recibir nada y puedes darte de baja en cualquier momento con el enlace de cada envío.</td>
+            </tr>
+            <tr>
               <td>Nos escribes un email</td>
               <td>Tu dirección de email y lo que nos cuentes</td>
               <td>Responderte (consentimiento e interés legítimo, art. 6.1.a y 6.1.f RGPD).</td>
@@ -77,6 +82,7 @@ export default function PrivacidadPage() {
         <h2>3. Cuánto tiempo los conservamos</h2>
         <ul>
           <li><strong>Datos de cuenta y área personal:</strong> mientras mantengas la cuenta. Si la borras o nos lo pides, los eliminamos.</li>
+          <li><strong>Boletín:</strong> hasta que te des de baja. Después, Brevo conserva tu email en su lista de bajas solo para no volver a escribirte.</li>
           <li><strong>Emails:</strong> el tiempo necesario para atender tu consulta y, como máximo, un año después.</li>
           <li><strong>Cookies:</strong> el plazo que se indica en la <Link href="/cookies">Política de cookies</Link>.</li>
         </ul>
@@ -88,13 +94,14 @@ export default function PrivacidadPage() {
         <ul>
           <li><strong>Vercel Inc.</strong> (alojamiento de la web, EE. UU.).</li>
           <li><strong>Neon Inc.</strong> (base de datos de cuentas, servidores en Frankfurt, Alemania).</li>
+          <li><strong>Sendinblue SAS (Brevo)</strong> (envío del boletín, Francia; según Brevo, sus servidores están en la Unión Europea).</li>
           <li><strong>Google Ireland Ltd. / Google LLC</strong> (inicio de sesión con Google, Google Analytics y Google AdSense).</li>
         </ul>
         <p className="mt-3">
           Algunos de estos proveedores pueden tratar datos en Estados Unidos. Esas transferencias se amparan en el
           Marco de Privacidad de Datos UE-EE. UU. (Data Privacy Framework) o en las cláusulas contractuales tipo
-          aprobadas por la Comisión Europea. Los precios de mercado se obtienen de CoinGecko y las noticias de
-          fuentes RSS públicas desde nuestro servidor, sin enviarles datos tuyos.
+          aprobadas por la Comisión Europea. Los precios de mercado se obtienen de CoinGecko desde nuestro servidor,
+          sin enviarle datos tuyos.
         </p>
       </section>
 
