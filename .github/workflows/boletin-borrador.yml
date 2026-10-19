@@ -6,6 +6,12 @@ on:
   push:
     branches: [main]
     paths: ['content/resumenes/**']
+  # Para repetir un borrador que falló: Actions → «Borrador del boletín» → Run workflow.
+  workflow_dispatch:
+    inputs:
+      resumen:
+        description: 'Resumen a convertir en borrador (p. ej. content/resumenes/2026-semana-42.md)'
+        required: true
 
 permissions:
   contents: read
@@ -19,8 +25,14 @@ jobs:
           fetch-depth: 2
       - name: Resúmenes nuevos
         id: nuevos
+        env:
+          RESUMEN: ${{ inputs.resumen }}
         run: |
-          files=$(git diff --name-only --diff-filter=A HEAD~1 HEAD -- 'content/resumenes/*.md' | tr '\n' ' ')
+          if [ -n "$RESUMEN" ]; then
+            if [[ "$RESUMEN" =~ ^content/resumenes/[0-9a-z-]+\.md$ ]]; then files="$RESUMEN"; else echo "::error::Ruta no válida: $RESUMEN"; exit 1; fi
+          else
+            files=$(git diff --name-only --diff-filter=A HEAD~1 HEAD -- 'content/resumenes/*.md' | tr '\n' ' ')
+          fi
           echo "files=$files" >> "$GITHUB_OUTPUT"
           echo "Resúmenes nuevos: ${files:-ninguno}"
       - uses: actions/setup-node@v4
