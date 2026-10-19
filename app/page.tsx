@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import { getMarketData } from '@/lib/coingecko'
 import { getAllGuides } from '@/lib/guides'
@@ -14,6 +15,14 @@ import { HeroChart } from '@/components/hero-chart'
 import { CountUp } from '@/components/count-up'
 import { PriceTicker } from '@/components/price-ticker'
 import { Compass, Calculator, ArrowRight } from 'lucide-react'
+
+// La portada repite el enlace al RSS del layout porque `alternates` no se combina entre niveles.
+export const metadata: Metadata = {
+  alternates: {
+    canonical: '/',
+    types: { 'application/rss+xml': [{ url: '/feed.xml', title: 'CriptoMundo: noticias y resúmenes semanales' }] },
+  },
+}
 
 export default async function HomePage() {
   const [market, fearGreed] = await Promise.all([

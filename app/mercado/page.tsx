@@ -8,6 +8,7 @@ import { coinPageMap } from '@/lib/coins'
 export const metadata: Metadata = {
   title: 'Mercado',
   description: 'Datos en vivo de las principales criptomonedas: precios, variaciones, capitalización y gráficos, con enlaces a la ficha de cada una.',
+  alternates: { canonical: '/mercado' },
 }
 
 export default async function MercadoPage() {
