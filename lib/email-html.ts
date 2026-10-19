@@ -80,5 +80,6 @@ export async function createDraft(
   })
   const data = await res.json().catch(() => ({}))
   if (res.ok && typeof data.id === 'number') return { ok: true, id: data.id }
-  return { ok: false, error: `Brevo respondió ${res.status}` }
+  const detail = [data.code, data.message].filter(Boolean).join(': ').slice(0, 300)
+  return { ok: false, error: `Brevo respondió ${res.status}${detail ? ` ${detail}` : ''}` }
 }
