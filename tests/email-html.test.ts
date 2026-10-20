@@ -48,5 +48,18 @@ test('createDraft incluye el código y el mensaje de Brevo cuando rechaza el bor
   const reject = (async () =>
     new Response(JSON.stringify({ code: 'invalid_parameter', message: 'Sender is invalid / inactive' }), { status: 400 })) as unknown as typeof fetch
   const r = await createDraft(digest, { fetch: reject, env: { BREVO_API_KEY: 'k', BREVO_LIST_ID: '7' }, siteUrl: SITE })
-  assert.deepEqual(r, { ok: false, error: 'Brevo respondió 400 invalid_parameter: Sender is invalid / inactive' })
+  assert.deepEqual(r, { ok: false, error: 'Brevo respondió 400 invalid_parameter: Sender is invalid / inactive', emptyList: false })
+})
+
+test('createDraft distingue la lista vacía de los demás errores', async () => {
+  const empty = (async () =>
+    new Response(JSON.stringify({ code: 'invalid_parameter', message: 'There are no contacts associated with the given recipients info' }), { status: 400 })) as unknown as typeof fetch
+  const r = await createDraft(digest, { fetch: empty, env: { BREVO_API_KEY: 'k', BREVO_LIST_ID: '7' }, siteUrl: SITE })
+  assert.equal(r.ok, false)
+  assert.equal(!r.ok && r.emptyList, true)
+
+  const other = (async () =>
+    new Response(JSON.stringify({ code: 'invalid_parameter', message: 'Sender is invalid / inactive' }), { status: 400 })) as unknown as typeof fetch
+  const r2 = await createDraft(digest, { fetch: other, env: { BREVO_API_KEY: 'k', BREVO_LIST_ID: '7' }, siteUrl: SITE })
+  assert.equal(!r2.ok && r2.emptyList, false)
 })

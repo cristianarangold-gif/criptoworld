@@ -22,7 +22,9 @@ async function main() {
     }
     const r = await createDraft(d, { fetch, env, siteUrl: 'https://criptoworld.org' })
     if (r.ok) console.log(`Borrador creado en Brevo (campaña ${r.id}) para ${d.slug}. Revísalo y envíalo desde Brevo.`)
-    else {
+    else if (r.emptyList) {
+      console.log(`::notice::No se crea el borrador de ${d.slug}: la lista del boletín aún no tiene suscriptores.`)
+    } else {
       console.log(`::error::No se pudo crear el borrador de ${d.slug}: ${r.error}`)
       failed = true
     }
