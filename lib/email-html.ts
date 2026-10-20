@@ -63,8 +63,8 @@ type DraftEnv = Partial<Record<'BREVO_API_KEY' | 'BREVO_LIST_ID', string>>
 export async function createDraft(
   d: Digest,
   deps: { fetch: typeof fetch; env: DraftEnv; siteUrl: string }
-): Promise<{ ok: true; id: number } | { ok: false; error: string }> {
-  if (!deps.env.BREVO_API_KEY || !deps.env.BREVO_LIST_ID) return { ok: false, error: 'Brevo no está configurado' }
+): Promise<{ ok: true; id: number } | { ok: false; error: string; emptyList: boolean }> {
+  if (!deps.env.BREVO_API_KEY || !deps.env.BREVO_LIST_ID) return { ok: false, error: 'Brevo no está configurado', emptyList: false }
   const res = await deps.fetch('https://api.brevo.com/v3/emailCampaigns', {
     method: 'POST',
     headers: { 'api-key': deps.env.BREVO_API_KEY, 'content-type': 'application/json', accept: 'application/json' },
@@ -81,5 +81,7 @@ export async function createDraft(
   const data = await res.json().catch(() => ({}))
   if (res.ok && typeof data.id === 'number') return { ok: true, id: data.id }
   const detail = [data.code, data.message].filter(Boolean).join(': ').slice(0, 300)
-  return { ok: false, error: `Brevo respondió ${res.status}${detail ? ` ${detail}` : ''}` }
+  // Brevo no crea campañas para una lista sin contactos: no es un fallo, aún no hay suscriptores.
+  const emptyList = res.status === 400 && /no contacts associated/i.test(String(data.message ?? ''))
+  return { ok: false, error: `Brevo respondió ${res.status}${detail ? ` ${detail}` : ''}`, emptyList }
 }
