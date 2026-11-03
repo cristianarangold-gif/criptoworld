@@ -1,6 +1,6 @@
 ---
-pregunta: "¿Qué cambia con la directiva DAC8 para las criptomonedas?"
-descripcion: "La DAC8 obliga a los exchanges de la UE a informar de sus clientes a Hacienda desde 2026. En España, la ley que la adapta decayó en octubre."
+pregunta: "¿Qué es la DAC8 y qué cambia para las criptomonedas?"
+descripcion: "La DAC8 (o DAC 8) obliga a los exchanges de la UE a informar de sus clientes a Hacienda desde 2026. En España, la ley que la adapta decayó en octubre."
 categoria: hacienda
 corta: "La directiva europea DAC8 obliga a los proveedores de criptoactivos de toda la UE a identificar a sus clientes y a comunicar sus operaciones a la administración tributaria, que las comparte con la del país de residencia de cada cliente. Se aplica desde el 1 de enero de 2026. En España, la ley que la adaptaba decayó al disolverse las Cortes en octubre de 2026."
 updated: 2026-10-15
@@ -14,7 +14,7 @@ sources:
 related:
   - title: "Cómo declarar criptomonedas a Hacienda en España"
     href: "/aprende/declarar-criptomonedas-hacienda"
-  - title: "MiCA: qué cambia en España con la regulación europea de criptoactivos"
+  - title: "Reglamento MiCA de criptoactivos: qué es y qué cambia en España"
     href: "/aprende/mica-regulacion-cripto-espana"
 ---
 **DAC8** es el nombre corto de la Directiva (UE) 2023/2226, la octava modificación de la directiva europea de cooperación administrativa en materia fiscal. Su objetivo es que las criptomonedas dejen de ser un punto ciego para Hacienda, igual que ya ocurre con las cuentas bancarias y los valores.

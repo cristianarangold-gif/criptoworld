@@ -12,7 +12,7 @@ sources:
 related:
   - title: "Cómo declarar criptomonedas a Hacienda en España"
     href: "/aprende/declarar-criptomonedas-hacienda"
-  - title: "Modelo 721: cuándo hay que declarar las criptomonedas en el extranjero"
+  - title: "Modelo 721 de criptomonedas: cuándo declararlas en el extranjero"
     href: "/aprende/modelo-721-criptomonedas"
 ---
 Las ganancias con criptomonedas tributan como cualquier otra ganancia patrimonial. No declararlas es dejar de ingresar un impuesto, y la Ley General Tributaria (Ley 58/2003) prevé dos escenarios muy distintos según quién dé el primer paso.

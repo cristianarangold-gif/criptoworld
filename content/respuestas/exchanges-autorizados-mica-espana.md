@@ -16,7 +16,7 @@ sources:
 related:
   - title: "Cómo comprobar si un exchange está autorizado para operar en España"
     href: "/aprende/exchange-autorizado-cnmv"
-  - title: "MiCA: qué cambia en España con la regulación europea de criptoactivos"
+  - title: "Reglamento MiCA de criptoactivos: qué es y qué cambia en España"
     href: "/aprende/mica-regulacion-cripto-espana"
 ---
 Las autorizaciones se conceden y se retiran continuamente, así que lo más útil es saber **comprobarlo tú** en las fuentes oficiales, que se actualizan. Si quieres comparar comisiones y servicios de las plataformas más usadas en España, tenemos un [comparador de doce exchanges autorizados](/comparador-exchanges), con la fecha de revisión de cada dato.

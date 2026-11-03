@@ -1,6 +1,6 @@
 ---
-pregunta: "¿Cómo tributa la minería de criptomonedas?"
-descripcion: "Hacienda considera la minería de criptomonedas una actividad económica: las monedas obtenidas son ingresos y tienes que darte de alta."
+pregunta: "¿Cómo declarar a Hacienda la minería de criptomonedas?"
+descripcion: "Para Hacienda, minar criptomonedas es una actividad económica: las monedas son ingresos, puedes deducir gastos y tienes que darte de alta en el censo."
 categoria: hacienda
 corta: "La Dirección General de Tributos considera que la minería de criptomonedas es una actividad económica. Las monedas que obtienes por minar son ingresos de esa actividad, valorados en euros al recibirlas, y puedes deducir gastos como la electricidad o la amortización de los equipos. Implica darte de alta en el censo de Hacienda y declarar esos rendimientos en la Renta."
 updated: 2026-10-15

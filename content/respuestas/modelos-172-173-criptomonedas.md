@@ -14,7 +14,7 @@ sources:
 related:
   - title: "Cómo declarar criptomonedas a Hacienda en España"
     href: "/aprende/declarar-criptomonedas-hacienda"
-  - title: "Modelo 721: cuándo hay que declarar las criptomonedas en el extranjero"
+  - title: "Modelo 721 de criptomonedas: cuándo declararlas en el extranjero"
     href: "/aprende/modelo-721-criptomonedas"
 ---
 Desde 2024, Hacienda recibe información directa de las empresas que guardan o intercambian criptomonedas en España. Lo hace a través de dos declaraciones informativas aprobadas en 2023 (Orden HFP/887/2023), que se presentan cada año en enero con los datos del año anterior.

@@ -14,7 +14,7 @@ sources:
 related:
   - title: "Cómo declarar criptomonedas a Hacienda en España"
     href: "/aprende/declarar-criptomonedas-hacienda"
-  - title: "Modelo 721: cuándo hay que declarar las criptomonedas en el extranjero"
+  - title: "Modelo 721 de criptomonedas: cuándo declararlas en el extranjero"
     href: "/aprende/modelo-721-criptomonedas"
 ---
 La Ley del IRPF grava las **ganancias y pérdidas patrimoniales**, que se producen cuando cambia la composición de tu patrimonio (artículo 33 de la Ley 35/2006). Comprar bitcoin con euros no cambia el valor de tu patrimonio: cambias unos euros por algo que vale lo mismo en ese momento. Y mientras lo mantienes, aunque suba, la ganancia es solo «en papel». Por eso **no hay nada que declarar en la Renta** si en todo el año solo has comprado y guardado.

@@ -12,7 +12,7 @@ sources:
 related:
   - title: "Cómo declarar criptomonedas a Hacienda en España"
     href: "/aprende/declarar-criptomonedas-hacienda"
-  - title: "Modelo 721: cuándo hay que declarar las criptomonedas en el extranjero"
+  - title: "Modelo 721 de criptomonedas: cuándo declararlas en el extranjero"
     href: "/aprende/modelo-721-criptomonedas"
 ---
 El **Impuesto sobre el Patrimonio** grava el patrimonio neto que tienes a 31 de diciembre de cada año (Ley 19/1991). No distingue el tipo de bien: tus criptomonedas cuentan igual que tus cuentas, acciones o inmuebles.

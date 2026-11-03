@@ -1,6 +1,6 @@
 ---
-title: "Modelo 721: cuándo hay que declarar las criptomonedas en el extranjero"
-description: "Qué es el modelo 721, quién debe presentarlo, cómo se calcula el límite de 50.000 €, qué criptos cuentan y cuáles no, y cuál es el plazo de presentación."
+title: "Modelo 721 de criptomonedas: cuándo declararlas en el extranjero"
+description: "Declarar criptomonedas en el extranjero: quién debe presentar el modelo 721, cómo se calcula el límite de 50.000 €, qué criptos cuentan y cuál es el plazo."
 summary: "El modelo 721 es una declaración informativa, no un impuesto: debes presentarlo si a 31 de diciembre tienes más de 50.000 € en criptomonedas custodiadas por plataformas situadas fuera de España. Se presenta entre el 1 de enero y el 31 de marzo del año siguiente, y en años posteriores solo si el saldo aumenta más de 20.000 €. Las criptos en tu propia wallet no cuentan."
 category: "Fiscalidad y normativa"
 order: 2
