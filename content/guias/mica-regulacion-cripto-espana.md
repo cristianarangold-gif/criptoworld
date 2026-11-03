@@ -1,6 +1,6 @@
 ---
-title: "MiCA: qué cambia en España con la regulación europea de criptoactivos"
-description: "Qué es el Reglamento MiCA, desde cuándo se aplica, por qué desde el 1 de julio de 2026 solo pueden operar en España las plataformas autorizadas y qué protecciones te da (y cuáles no)."
+title: "Reglamento MiCA de criptoactivos: qué es y qué cambia en España"
+description: "MiCA es la normativa europea de criptoactivos (Reglamento UE 2023/1114). Qué regula, quién puede operar en España desde julio de 2026 y qué protección te da."
 summary: "MiCA es el reglamento europeo que regula a quienes emiten criptoactivos y a las plataformas que prestan servicios con ellos. Se aplica por completo desde el 30 de diciembre de 2024 y, tras un periodo transitorio, desde el 1 de julio de 2026 solo pueden ofrecer servicios en España las entidades autorizadas por la CNMV o por otro supervisor europeo. Te protege frente a plataformas opacas, pero no frente a la volatilidad ni garantiza tu dinero si la plataforma quiebra."
 category: "Fiscalidad y normativa"
 order: 3

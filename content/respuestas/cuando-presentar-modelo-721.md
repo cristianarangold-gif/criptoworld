@@ -10,7 +10,7 @@ sources:
   - title: "Ley 58/2003 General Tributaria, texto consolidado (BOE)"
     url: "https://www.boe.es/buscar/act.php?id=BOE-A-2003-23186"
 related:
-  - title: "Modelo 721: cuándo hay que declarar las criptomonedas en el extranjero"
+  - title: "Modelo 721 de criptomonedas: cuándo declararlas en el extranjero"
     href: "/aprende/modelo-721-criptomonedas"
   - title: "Cómo declarar criptomonedas a Hacienda en España"
     href: "/aprende/declarar-criptomonedas-hacienda"

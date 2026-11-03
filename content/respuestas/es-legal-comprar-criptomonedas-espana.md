@@ -12,7 +12,7 @@ sources:
   - title: "CNMV: Registro de proveedores de servicios de criptoactivos"
     url: "https://www.cnmv.es/portal/Consultas/Proveedores-Servicios-Criptoactivos.aspx"
 related:
-  - title: "MiCA: qué cambia en España con la regulación europea de criptoactivos"
+  - title: "Reglamento MiCA de criptoactivos: qué es y qué cambia en España"
     href: "/aprende/mica-regulacion-cripto-espana"
   - title: "Cómo comprobar si un exchange está autorizado para operar en España"
     href: "/aprende/exchange-autorizado-cnmv"

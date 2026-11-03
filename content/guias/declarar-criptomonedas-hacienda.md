@@ -1,6 +1,6 @@
 ---
 title: "Cómo declarar criptomonedas a Hacienda en España"
-description: "Qué operaciones con criptomonedas tributan en el IRPF, cómo se calcula la ganancia con el método FIFO, en qué tramos del ahorro tributa y qué hacer con las pérdidas."
+description: "Cómo declarar criptomonedas en la Renta en España: qué operaciones tributan, cómo calcular la ganancia con FIFO, tipos del 19 % al 30 % y qué hacer si pierdes."
 summary: "En España no tributas por tener criptomonedas, sino cuando las vendes, las cambias por otra cripto o las usas para pagar. La ganancia se calcula restando lo que te costaron (por el método FIFO) a lo que obtienes y tributa en la base del ahorro del IRPF, del 19 % al 30 % según el importe. Las pérdidas se pueden compensar durante cuatro años."
 category: "Fiscalidad y normativa"
 order: 1
