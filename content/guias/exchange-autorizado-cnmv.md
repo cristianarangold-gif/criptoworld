@@ -5,7 +5,7 @@ summary: "Desde el 1 de julio de 2026 solo pueden ofrecer servicios con criptoac
 category: "Fiscalidad y normativa"
 order: 4
 published: 2026-10-13
-updated: 2026-10-15
+updated: 2026-11-03
 related: ["mica-regulacion-cripto-espana", "estafas-cripto"]
 sources:
   - title: "CNMV: Registro de proveedores de servicios de criptoactivos"
@@ -39,6 +39,8 @@ La CNMV mantiene un registro de proveedores de servicios de criptoactivos autori
 1. Entra en el [registro de proveedores de servicios de criptoactivos de la CNMV](https://www.cnmv.es/portal/Consultas/Proveedores-Servicios-Criptoactivos.aspx).
 2. Busca por el **nombre de la sociedad**, no solo por la marca.
 3. Revisa **qué servicios** tiene autorizados. No es lo mismo custodiar criptos que gestionar una plataforma de negociación o asesorar.
+
+Para una primera búsqueda rápida por nombre, país o servicio, tenemos un [buscador con las empresas de la lista de la CNMV](/empresas-autorizadas-mica). Es una copia nuestra: confirma siempre el resultado en el registro oficial.
 
 ## Paso 3: compruébala en el registro europeo de ESMA
 

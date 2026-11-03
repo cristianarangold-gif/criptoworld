@@ -5,7 +5,7 @@ summary: "MiCA es el reglamento europeo que regula a quienes emiten criptoactivo
 category: "Fiscalidad y normativa"
 order: 3
 published: 2026-10-13
-updated: 2026-10-13
+updated: 2026-11-03
 related: ["exchange-autorizado-cnmv", "estafas-cripto"]
 sources:
   - title: "Reglamento (UE) 2023/1114 relativo a los mercados de criptoactivos (MiCA), EUR-Lex"
@@ -71,6 +71,8 @@ Es importante no confundir regulación con seguridad de la inversión:
 - **No regula DeFi pura.** Los protocolos totalmente descentralizados, sin un intermediario identificable, quedan en gran parte fuera de MiCA.
 
 ## Qué deberías hacer ahora
+
+Para saber qué empresas pueden operar en España, puedes consultar nuestro [buscador de empresas autorizadas por MiCA](/empresas-autorizadas-mica), una copia de la lista de la CNMV que actualizamos cada mes.
 
 1. **Comprueba que tu plataforma está autorizada** en el registro de la CNMV o en el de ESMA. Te explicamos cómo en la [guía para comprobar si un exchange está autorizado](/aprende/exchange-autorizado-cnmv).
 2. **Mira qué entidad concreta te presta el servicio**: aparece en los términos y condiciones de tu cuenta.

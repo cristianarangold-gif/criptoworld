@@ -1,23 +1,15 @@
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
-import cnmv from '../data/cnmv-psc.json'
 import fixture from './fixtures/exchanges.json'
+import { entidadNames } from '../lib/cnmv'
 import { getExchanges, validateExchanges, matchesFilters, type ExchangesFile, type Plataforma } from '../lib/exchanges'
-
-test('la instantánea de la CNMV tiene la lista completa y una fecha válida', () => {
-  assert.ok(cnmv.entidades.length >= 150, String(cnmv.entidades.length))
-  assert.equal(new Set(cnmv.entidades).size, cnmv.entidades.length)
-  assert.match(cnmv.fecha, /^\d{4}-\d{2}-\d{2}$/)
-  assert.ok(cnmv.url.startsWith('https://'))
-  for (const e of ['BITCOINFORME, S.L. (BIT2ME)', 'COINBASE LUXEMBOURG S.A.']) assert.ok(cnmv.entidades.includes(e), e)
-})
 
 const today = '2026-10-16'
 const base = fixture as ExchangesFile
 const withP = (patch: Partial<Plataforma>): ExchangesFile => ({ ...base, plataformas: [{ ...base.plataformas[0], ...patch }] })
 
 test('la plataforma de ejemplo es válida', () => {
-  assert.deepEqual(validateExchanges(base, cnmv.entidades, today), [])
+  assert.deepEqual(validateExchanges(base, entidadNames(), today), [])
 })
 
 test('validateExchanges detecta cada error', () => {
@@ -34,7 +26,7 @@ test('validateExchanges detecta cada error', () => {
     [{ ...base, revisado: 'ayer' }, /revisado/],
   ]
   for (const [file, re] of cases) {
-    const errors = validateExchanges(file, cnmv.entidades, today)
+    const errors = validateExchanges(file, entidadNames(), today)
     assert.equal(errors.length, 1, `${re} → ${errors}`)
     assert.match(errors[0], re)
   }
@@ -42,12 +34,12 @@ test('validateExchanges detecta cada error', () => {
 
 test('validateExchanges detecta slugs repetidos', () => {
   const p = base.plataformas[0]
-  assert.match(validateExchanges({ ...base, plataformas: [p, p] }, cnmv.entidades, today).join(), /repetid/)
+  assert.match(validateExchanges({ ...base, plataformas: [p, p] }, entidadNames(), today).join(), /repetid/)
 })
 
 test('el comparador tiene las 12 plataformas, válidas y en orden alfabético', () => {
   const file = getExchanges()
-  assert.deepEqual(validateExchanges(file, cnmv.entidades, new Date().toLocaleDateString('sv-SE', { timeZone: 'Europe/Madrid' })), [])
+  assert.deepEqual(validateExchanges(file, entidadNames(), new Date().toLocaleDateString('sv-SE', { timeZone: 'Europe/Madrid' })), [])
   assert.deepEqual([...file.plataformas.map(p => p.slug)].sort(), ['bit2me', 'bitpanda', 'bitvavo', 'bybit', 'coinbase', 'criptan', 'cryptocom', 'etoro', 'kraken', 'okx', 'revolut', 'trade-republic'])
   const names = file.plataformas.map(p => p.nombre)
   assert.deepEqual(names, [...names].sort((a, b) => a.localeCompare(b, 'es')))

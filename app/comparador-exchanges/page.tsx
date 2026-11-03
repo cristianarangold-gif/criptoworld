@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { CalendarDays, ExternalLink, Scale, ShieldCheck } from 'lucide-react'
 import { getExchanges, matchesFilters, FILTROS, type Plataforma } from '@/lib/exchanges'
-import cnmv from '@/data/cnmv-psc.json'
+import { getRegistro } from '@/lib/cnmv'
 import { formatDate } from '@/lib/guides'
 import { ExchangeFilter } from '@/components/exchange-filter'
 import { SITE } from '@/lib/site'
@@ -109,7 +109,7 @@ export default function ComparadorPage() {
           <CalendarDays className="mr-1.5 inline h-3.5 w-3.5 align-[-2px]" />
           Datos revisados el <time dateTime={revisado}>{formatDate(revisado)}</time> por{' '}
           <Link href="/sobre-nosotros" className="text-foreground hover:text-primary">{SITE.owner}</Link>. Lista de la CNMV del{' '}
-          {formatDate(cnmv.fecha)}.
+          {formatDate(getRegistro().fecha)}.
         </p>
       </div>
 
@@ -179,7 +179,9 @@ export default function ComparadorPage() {
               de servicios de criptoactivos» de la CNMV. Desde el 1 de julio de 2026 solo pueden ofrecer servicios en España las
               empresas de esa lista: las españolas, autorizadas por la propia CNMV, y las de otros países de la UE que operan
               aquí con el llamado pasaporte europeo. Que una plataforma no esté en este comparador no significa que no esté
-              autorizada; puedes comprobar cualquiera en el registro, como explicamos en la{' '}
+              autorizada; puedes buscar cualquiera en nuestro{' '}
+              <Link href="/empresas-autorizadas-mica" className="text-primary underline underline-offset-2">buscador de empresas autorizadas por MiCA</Link>
+              {' '}y confirmarla en el registro, como explicamos en la{' '}
               <Link href="/aprende/exchange-autorizado-cnmv" className="text-primary underline underline-offset-2">guía para comprobar si un exchange está autorizado</Link>.
             </p>
             <p>
@@ -305,7 +307,7 @@ export default function ComparadorPage() {
               <h3 className="font-semibold text-foreground">¿Por qué no aparece Binance?</h3>
               <p>
                 Porque no figura en la lista de proveedores autorizados de la CNMV que hemos usado, del{' '}
-                {formatDate(cnmv.fecha)}. Según la información publicada, retiró su solicitud de autorización MiCA antes del fin
+                {formatDate(getRegistro().fecha)}. Según la información publicada, retiró su solicitud de autorización MiCA antes del fin
                 del periodo transitorio y, desde julio de 2026, no puede ofrecer nuevas operaciones a clientes en España. Si
                 tienes fondos allí, revisa los avisos de la plataforma sobre cómo retirarlos.
               </p>
