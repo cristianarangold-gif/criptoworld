@@ -2,18 +2,21 @@
 
 El comparador (`/comparador-exchanges`) solo es útil si sus datos están al día. Hay dos fuentes que revisar.
 
-## 1. Lista de la CNMV (`data/cnmv-psc.json`)
+## 1. Lista de la CNMV (`data/cnmv-registro.json`)
 
-Es una copia de la «Relación de proveedores de servicios de criptoactivos» que publica la CNMV en PDF. `npm test` comprueba que la entidad de cada plataforma del comparador aparece en esa copia; si una plataforma pierde su autorización y la copia se actualiza, el despliegue se bloquea hasta corregir el comparador.
+Es una copia de la «Relación de proveedores de servicios de criptoactivos» que publica la CNMV en PDF. Alimenta el buscador `/empresas-autorizadas-mica`, y `npm test` comprueba que la entidad de cada plataforma del comparador aparece en ella: si una plataforma pierde su autorización y la copia se actualiza, el despliegue se bloquea hasta corregir el comparador.
 
-Para refrescarla:
+Se actualiza **cada mes**. Lo hace la tarea programada `criptomundo-lista-cnmv`, que abre un PR. A mano:
 
-1. Descarga el PDF: `https://cnmv.es/Docportal/Proveedores-Servicios-Criptoactivos/Listado_ProveedoresCriptoactivos.pdf`.
-2. Extrae el texto (por ejemplo, con `pypdf`, fuera del repositorio).
-3. Extrae las denominaciones: cada entidad es el texto anterior a su tipo («PSC…», «ENTIDAD DE CRÉDITO…»); las denominaciones largas ocupan dos líneas y hay que unirlas.
-4. Sustituye `entidades` y `fecha` en `data/cnmv-psc.json`, y ejecuta `npm test`.
+```bash
+mkdir -p /tmp/cnmv && cd /tmp/cnmv
+curl -sL -A "Mozilla/5.0" -o lista.pdf https://cnmv.es/Docportal/Proveedores-Servicios-Criptoactivos/Listado_ProveedoresCriptoactivos.pdf
+python3 -m venv venv && venv/bin/pip install pdfplumber
+venv/bin/python -I "$OLDPWD/scripts/cnmv_pdf_a_filas.py" lista.pdf > filas.json
+cd "$OLDPWD" && npx tsx scripts/actualizar-cnmv.ts /tmp/cnmv/filas.json && npm test
+```
 
-La copia del 15 de octubre de 2026 tiene 191 entidades. Algunas denominaciones muy largas pueden haber quedado recortadas; no afecta a las 12 del comparador.
+`actualizar-cnmv.ts` no escribe nada si los datos no pasan la validación (pocas entidades, tipo, país o servicio desconocidos). Un país o servicio nuevo legítimo se añade a las listas de `lib/cnmv.ts`. Las altas y bajas se anotan en `data/cnmv-cambios.json`, y salen en la página: antes de fusionar, revisa que no sean un cambio de nombre o un error del PDF (si lo son, edita la entrada para no publicar como baja lo que no lo es).
 
 ## 2. Comisiones y servicios (`data/exchanges.json`)
 

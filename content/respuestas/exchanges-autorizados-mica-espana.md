@@ -3,7 +3,7 @@ pregunta: "¿Qué exchanges pueden operar en España con MiCA?"
 descripcion: "Solo los proveedores autorizados bajo MiCA por la CNMV o por otro supervisor de la UE. Te explicamos cómo comprobarlo en dos minutos."
 categoria: normativa
 corta: "Desde el 1 de julio de 2026, solo los proveedores de servicios de criptoactivos autorizados bajo MiCA, por la CNMV o por el supervisor de otro país de la UE con pasaporte europeo. La lista cambia cada mes, así que la forma fiable de saberlo es buscar el nombre de la plataforma en el registro de la CNMV y en el de ESMA antes de abrir una cuenta."
-updated: 2026-10-15
+updated: 2026-11-03
 sources:
   - title: "CNMV: Registro de proveedores de servicios de criptoactivos"
     url: "https://www.cnmv.es/portal/Consultas/Proveedores-Servicios-Criptoactivos.aspx"
@@ -20,6 +20,8 @@ related:
     href: "/aprende/mica-regulacion-cripto-espana"
 ---
 Las autorizaciones se conceden y se retiran continuamente, así que lo más útil es saber **comprobarlo tú** en las fuentes oficiales, que se actualizan. Si quieres comparar comisiones y servicios de las plataformas más usadas en España, tenemos un [comparador de doce exchanges autorizados](/comparador-exchanges), con la fecha de revisión de cada dato.
+
+También puedes buscar por nombre, país o servicio en nuestro [listado de empresas autorizadas por MiCA](/empresas-autorizadas-mica), una copia de la lista de la CNMV con las altas y bajas de cada actualización.
 
 ## Cómo comprobar una plataforma en dos minutos
 

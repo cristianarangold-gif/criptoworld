@@ -1,7 +1,7 @@
 // Comprobación de enlaces internos del contenido en Markdown (noticias, respuestas...).
 
 export const STATIC_PATHS = [
-  '/', '/mercado', '/aprende', '/academia', '/herramientas', '/glosario', '/empieza-aqui', '/noticias', '/respuestas', '/cripto', '/comparador-exchanges', '/calendario', '/resumen-semanal', '/boletin',
+  '/', '/mercado', '/aprende', '/academia', '/herramientas', '/glosario', '/empieza-aqui', '/noticias', '/respuestas', '/cripto', '/comparador-exchanges', '/empresas-autorizadas-mica', '/calendario', '/resumen-semanal', '/boletin',
   '/sobre-nosotros', '/contacto', '/aviso-legal', '/privacidad', '/cookies',
 ]
 

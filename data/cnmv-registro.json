@@ -1,0 +1,4460 @@
+{
+  "fecha": "2026-10-20",
+  "comprobado": "2026-11-03",
+  "url": "https://cnmv.es/Docportal/Proveedores-Servicios-Criptoactivos/Listado_ProveedoresCriptoactivos.pdf",
+  "entidades": [
+    {
+      "nombre": "360 TREASURY SYSTEMS AG",
+      "tipo": "pasaporte",
+      "pais": "Alemania",
+      "servicios": [
+        {
+          "servicio": "Gestión plataforma de negociación",
+          "desde": "2025-05-03"
+        }
+      ]
+    },
+    {
+      "nombre": "ACHERON EUROPE B.V.",
+      "tipo": "pasaporte",
+      "pais": "Países Bajos",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2025-07-26"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2025-07-26"
+        },
+        {
+          "servicio": "Asesoramiento",
+          "desde": "2025-07-26"
+        },
+        {
+          "servicio": "Gestión de carteras",
+          "desde": "2025-07-26"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2025-07-26"
+        }
+      ]
+    },
+    {
+      "nombre": "ALTCOIN BG EOOD",
+      "tipo": "pasaporte",
+      "pais": "Bulgaria",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-09-17"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-09-17"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2026-09-17"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-09-17"
+        }
+      ]
+    },
+    {
+      "nombre": "AMDAX B.V.",
+      "tipo": "pasaporte",
+      "pais": "Países Bajos",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2025-09-15"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2025-09-15"
+        },
+        {
+          "servicio": "Gestión de carteras",
+          "desde": "2025-09-15"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2025-09-15"
+        }
+      ]
+    },
+    {
+      "nombre": "AMINA (AUSTRIA) AG",
+      "tipo": "pasaporte",
+      "pais": "Austria",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2025-10-29"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2025-10-29"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2025-10-29"
+        },
+        {
+          "servicio": "Gestión de carteras",
+          "desde": "2025-10-29"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2025-10-29"
+        }
+      ]
+    },
+    {
+      "nombre": "APLO SAS",
+      "tipo": "pasaporte",
+      "pais": "Francia",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-06-30"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-06-30"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2026-06-30"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2026-06-30"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "nombre": "ATRYA TECHNOLOGIES SIA",
+      "tipo": "pasaporte",
+      "pais": "Letonia",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-10-01"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2026-10-01"
+        }
+      ]
+    },
+    {
+      "nombre": "AVIANLABS NETHERLANDS B.V.",
+      "tipo": "pasaporte",
+      "pais": "Países Bajos",
+      "servicios": [
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2025-04-02"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2025-04-02"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2025-04-02"
+        }
+      ]
+    },
+    {
+      "nombre": "B2C2 EUROPE SARL",
+      "tipo": "pasaporte",
+      "pais": "Luxemburgo",
+      "servicios": [
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-05-20"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2026-05-20"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2026-05-20"
+        }
+      ]
+    },
+    {
+      "nombre": "BAADER BANK AKTIENGESELLSCHAFT",
+      "tipo": "pasaporte",
+      "pais": "Alemania",
+      "servicios": [
+        {
+          "servicio": "Ejecución",
+          "desde": "2025-06-24"
+        }
+      ]
+    },
+    {
+      "nombre": "BANCO BILBAO VIZCAYA ARGENTARIA, S.A.",
+      "tipo": "banco",
+      "pais": "España",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2025-03-05"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2025-03-05"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2025-03-05"
+        }
+      ]
+    },
+    {
+      "nombre": "BANK FRICK AG",
+      "tipo": "pasaporte",
+      "pais": "Liechtenstein",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-02-24"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2026-02-24"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-02-24"
+        }
+      ]
+    },
+    {
+      "nombre": "BANKING CIRCLE S.A.",
+      "tipo": "pasaporte",
+      "pais": "Luxemburgo",
+      "servicios": [
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-04-15"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2026-04-15"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-04-15"
+        }
+      ]
+    },
+    {
+      "nombre": "BASQUE PAY, S.L.",
+      "tipo": "espanola",
+      "pais": "España",
+      "servicios": [
+        {
+          "servicio": "Recepción y transmisión órdenes",
+          "desde": "2026-07-31"
+        }
+      ]
+    },
+    {
+      "nombre": "BEQUANT PRO LIMITED",
+      "tipo": "pasaporte",
+      "pais": "Malta",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-07-01"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-07-01"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2026-07-01"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-07-01"
+        }
+      ]
+    },
+    {
+      "nombre": "BITCOIN SUISSE (EUROPE) AG",
+      "tipo": "pasaporte",
+      "pais": "Liechtenstein",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-06-24"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-06-24"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2026-06-24"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2026-06-24"
+        },
+        {
+          "servicio": "Recepción y transmisión órdenes",
+          "desde": "2026-06-24"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-06-24"
+        }
+      ]
+    },
+    {
+      "nombre": "BITCOINFORME, S.L. (BIT2ME)",
+      "tipo": "espanola",
+      "pais": "España",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2025-10-31"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2025-10-31"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2025-10-31"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2025-10-31"
+        },
+        {
+          "servicio": "Colocación",
+          "desde": "2025-10-31"
+        },
+        {
+          "servicio": "Recepción y transmisión órdenes",
+          "desde": "2025-10-31"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2025-10-31"
+        }
+      ]
+    },
+    {
+      "nombre": "BITFLYER EUROPE S.A.",
+      "tipo": "pasaporte",
+      "pais": "Luxemburgo",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-06-26"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-06-26"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2026-06-26"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2026-06-26"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-06-26"
+        }
+      ]
+    },
+    {
+      "nombre": "BITGO EUROPE GMBH",
+      "tipo": "pasaporte",
+      "pais": "Alemania",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2025-05-13"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2025-05-13"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2025-09-21"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2025-09-21"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2025-09-21"
+        },
+        {
+          "servicio": "Recepción y transmisión órdenes",
+          "desde": "2025-09-21"
+        }
+      ]
+    },
+    {
+      "nombre": "BITONIC B.V.",
+      "tipo": "pasaporte",
+      "pais": "Países Bajos",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2025-11-21"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2025-11-21"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2025-11-21"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2025-11-21"
+        }
+      ]
+    },
+    {
+      "nombre": "BITPANDA ASSET MANAGEMENT GMBH",
+      "tipo": "pasaporte",
+      "pais": "Alemania",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2025-02-21"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2025-02-21"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2025-02-21"
+        },
+        {
+          "servicio": "Gestión de carteras",
+          "desde": "2025-02-21"
+        }
+      ]
+    },
+    {
+      "nombre": "BITPANDA GMBH",
+      "tipo": "pasaporte",
+      "pais": "Austria",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2025-04-14"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2025-04-14"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2025-04-14"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2025-04-14"
+        },
+        {
+          "servicio": "Colocación",
+          "desde": "2025-04-14"
+        },
+        {
+          "servicio": "Recepción y transmisión órdenes",
+          "desde": "2025-04-14"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2025-04-14"
+        }
+      ]
+    },
+    {
+      "nombre": "BITPAY B.V.",
+      "tipo": "pasaporte",
+      "pais": "Países Bajos",
+      "servicios": [
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-07-15"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-07-15"
+        }
+      ]
+    },
+    {
+      "nombre": "BITSTACK SAS",
+      "tipo": "pasaporte",
+      "pais": "Francia",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2025-10-01"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2025-10-01"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2025-10-01"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2025-10-01"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2025-10-01"
+        }
+      ]
+    },
+    {
+      "nombre": "BITSTAMP EUROPE S.A.",
+      "tipo": "pasaporte",
+      "pais": "Luxemburgo",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2025-05-15"
+        },
+        {
+          "servicio": "Gestión plataforma de negociación",
+          "desde": "2025-05-15"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2025-05-15"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2025-05-15"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2025-05-15"
+        },
+        {
+          "servicio": "Recepción y transmisión órdenes",
+          "desde": "2025-05-15"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2025-05-15"
+        }
+      ]
+    },
+    {
+      "nombre": "BITVAVO B.V.",
+      "tipo": "pasaporte",
+      "pais": "Países Bajos",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2025-07-14"
+        },
+        {
+          "servicio": "Gestión plataforma de negociación",
+          "desde": "2025-07-14"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2025-07-14"
+        }
+      ]
+    },
+    {
+      "nombre": "BLEAP SIA",
+      "tipo": "pasaporte",
+      "pais": "Letonia",
+      "servicios": [
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2025-06-15"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2025-06-15"
+        }
+      ]
+    },
+    {
+      "nombre": "BLOCKBEN SIA",
+      "tipo": "pasaporte",
+      "pais": "Letonia",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2025-12-19"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2025-12-19"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2025-12-19"
+        },
+        {
+          "servicio": "Colocación",
+          "desde": "2025-12-19"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2025-12-19"
+        }
+      ]
+    },
+    {
+      "nombre": "BLOCKNODES SAS",
+      "tipo": "pasaporte",
+      "pais": "Francia",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-05-01"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2026-05-01"
+        },
+        {
+          "servicio": "Colocación",
+          "desde": "2026-05-01"
+        },
+        {
+          "servicio": "Asesoramiento",
+          "desde": "2026-05-01"
+        },
+        {
+          "servicio": "Gestión de carteras",
+          "desde": "2026-05-01"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-05-01"
+        }
+      ]
+    },
+    {
+      "nombre": "BLOCKRISE B.V.",
+      "tipo": "pasaporte",
+      "pais": "Países Bajos",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2025-11-25"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2025-11-25"
+        },
+        {
+          "servicio": "Gestión de carteras",
+          "desde": "2025-11-25"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2025-11-25"
+        }
+      ]
+    },
+    {
+      "nombre": "BLOX B.V.",
+      "tipo": "pasaporte",
+      "pais": "Países Bajos",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2025-09-30"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2025-09-30"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2025-09-30"
+        }
+      ]
+    },
+    {
+      "nombre": "BLOCKCHAIN.COM OPERATIONS (MALTA) LIMITED",
+      "tipo": "pasaporte",
+      "pais": "Malta",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2025-10-22"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2025-10-22"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2025-10-22"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2025-10-22"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2025-10-22"
+        }
+      ]
+    },
+    {
+      "nombre": "BOERSE STUTTGART DIGITAL CUSTODY GMBH",
+      "tipo": "pasaporte",
+      "pais": "Alemania",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2025-04-01"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2025-04-01"
+        }
+      ]
+    },
+    {
+      "nombre": "BRIDGE BUILDING S.A.",
+      "tipo": "pasaporte",
+      "pais": "Luxemburgo",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-06-29"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-06-29"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2026-06-29"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-06-29"
+        }
+      ]
+    },
+    {
+      "nombre": "BRILLIANTSCOPE TRADING",
+      "tipo": "pasaporte",
+      "pais": "Chipre",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-07-03"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-07-03"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2026-07-03"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2026-07-03"
+        },
+        {
+          "servicio": "Colocación",
+          "desde": "2026-07-03"
+        },
+        {
+          "servicio": "Recepción y transmisión órdenes",
+          "desde": "2026-07-03"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-07-03"
+        }
+      ]
+    },
+    {
+      "nombre": "BTC DIRECT EUROPA B.V.",
+      "tipo": "pasaporte",
+      "pais": "Países Bajos",
+      "servicios": [
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2026-05-01"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2025-06-18"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2025-06-18"
+        }
+      ]
+    },
+    {
+      "nombre": "BULLISH EUROPE GMBH",
+      "tipo": "pasaporte",
+      "pais": "Alemania",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2025-09-04"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2025-09-04"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2025-09-04"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2025-09-04"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2025-09-04"
+        }
+      ]
+    },
+    {
+      "nombre": "BYBIT EU GMBH",
+      "tipo": "pasaporte",
+      "pais": "Austria",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2025-05-28"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2025-05-28"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2025-05-28"
+        },
+        {
+          "servicio": "Colocación",
+          "desde": "2025-05-28"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2025-05-28"
+        }
+      ]
+    },
+    {
+      "nombre": "CACEIS BANK",
+      "tipo": "pasaporte",
+      "pais": "Francia",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2025-09-30"
+        },
+        {
+          "servicio": "Recepción y transmisión órdenes",
+          "desde": "2025-09-30"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2025-09-30"
+        }
+      ]
+    },
+    {
+      "nombre": "CAIXABANK, S.A.",
+      "tipo": "banco",
+      "pais": "España",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-03-27"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2026-03-27"
+        },
+        {
+          "servicio": "Recepción y transmisión órdenes",
+          "desde": "2026-03-27"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-03-27"
+        }
+      ]
+    },
+    {
+      "nombre": "CECABANK, S.A.",
+      "tipo": "banco",
+      "pais": "España",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2025-07-24"
+        },
+        {
+          "servicio": "Recepción y transmisión órdenes",
+          "desde": "2025-07-24"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2025-07-24"
+        }
+      ]
+    },
+    {
+      "nombre": "CELSION BANK AG",
+      "tipo": "pasaporte",
+      "pais": "Liechtenstein",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-04-15"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-04-15"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2026-04-15"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-04-15"
+        }
+      ]
+    },
+    {
+      "nombre": "CF TECHNOLOGIES LIMITED",
+      "tipo": "pasaporte",
+      "pais": "Malta",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-07-02"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-07-02"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2026-07-02"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-07-02"
+        }
+      ]
+    },
+    {
+      "nombre": "CHANGE SECURITIES B.V.",
+      "tipo": "pasaporte",
+      "pais": "Países Bajos",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-05-01"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-05-01"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2026-05-01"
+        }
+      ]
+    },
+    {
+      "nombre": "CIRCLE INTERNET FINANCIAL EUROPE SAS",
+      "tipo": "pasaporte",
+      "pais": "Francia",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-04-23"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-04-23"
+        }
+      ]
+    },
+    {
+      "nombre": "CLEARSTREAM BANKING S.A.",
+      "tipo": "pasaporte",
+      "pais": "Luxemburgo",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2025-04-07"
+        }
+      ]
+    },
+    {
+      "nombre": "CLOVERUM FINANCE (CY) LIMITED",
+      "tipo": "pasaporte",
+      "pais": "Chipre",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-07-31"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-07-31"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2026-07-31"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2026-07-31"
+        },
+        {
+          "servicio": "Recepción y transmisión órdenes",
+          "desde": "2026-07-31"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-07-31"
+        }
+      ]
+    },
+    {
+      "nombre": "COINBASE LUXEMBOURG S.A.",
+      "tipo": "pasaporte",
+      "pais": "Luxemburgo",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2025-06-20"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2025-06-20"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2025-06-20"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2025-06-20"
+        },
+        {
+          "servicio": "Recepción y transmisión órdenes",
+          "desde": "2025-06-20"
+        },
+        {
+          "servicio": "Colocación",
+          "desde": "2026-01-19"
+        }
+      ]
+    },
+    {
+      "nombre": "COINHOUSE SAS",
+      "tipo": "pasaporte",
+      "pais": "Francia",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-05-07"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-05-07"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2026-05-07"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2026-05-07"
+        },
+        {
+          "servicio": "Asesoramiento",
+          "desde": "2026-05-07"
+        },
+        {
+          "servicio": "Gestión de carteras",
+          "desde": "2026-05-07"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-05-07"
+        }
+      ]
+    },
+    {
+      "nombre": "COINIFY APS",
+      "tipo": "pasaporte",
+      "pais": "Dinamarca",
+      "servicios": [
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-05-29"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2026-05-29"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2026-05-29"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-05-29"
+        }
+      ]
+    },
+    {
+      "nombre": "COINJAR EUROPE LIMITED",
+      "tipo": "pasaporte",
+      "pais": "Irlanda",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2025-12-09"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2025-12-09"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2025-12-09"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2025-12-09"
+        }
+      ]
+    },
+    {
+      "nombre": "COINMATE A.S.",
+      "tipo": "pasaporte",
+      "pais": "República Checa",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-06-03"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-06-03"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2026-06-03"
+        },
+        {
+          "servicio": "Gestión plataforma de negociación",
+          "desde": "2026-06-03"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-06-03"
+        }
+      ]
+    },
+    {
+      "nombre": "COINMERCE B.V.",
+      "tipo": "pasaporte",
+      "pais": "Países Bajos",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2025-11-05"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2025-11-05"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2025-11-05"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2025-11-05"
+        }
+      ]
+    },
+    {
+      "nombre": "COLLECT & EXCHANGE CY LTD",
+      "tipo": "pasaporte",
+      "pais": "Chipre",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2025-12-01"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2025-12-01"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2025-12-01"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2025-12-01"
+        }
+      ]
+    },
+    {
+      "nombre": "CONFIRMO LIMITED",
+      "tipo": "pasaporte",
+      "pais": "Irlanda",
+      "servicios": [
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2025-12-16"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2025-12-16"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2025-12-16"
+        }
+      ]
+    },
+    {
+      "nombre": "CRIPTAN TRADE, S.L.",
+      "tipo": "espanola",
+      "pais": "España",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-06-26"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-06-26"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2026-06-26"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-06-26"
+        }
+      ]
+    },
+    {
+      "nombre": "CROSSMINT EUROPE, S.L.",
+      "tipo": "espanola",
+      "pais": "España",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-06-26"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-06-26"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-06-26"
+        }
+      ]
+    },
+    {
+      "nombre": "CRYPTO FINANCE (DEUTSCHLAND) GMBH",
+      "tipo": "pasaporte",
+      "pais": "Alemania",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2025-03-01"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2025-03-01"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2025-03-01"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2025-03-01"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2025-03-01"
+        }
+      ]
+    },
+    {
+      "nombre": "CRYPTONOW GMBH",
+      "tipo": "pasaporte",
+      "pais": "Austria",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2025-10-15"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2025-10-15"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2025-10-15"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2025-10-15"
+        }
+      ]
+    },
+    {
+      "nombre": "DAMEX DIGITAL LTD",
+      "tipo": "pasaporte",
+      "pais": "Malta",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-06-18"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-06-18"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2026-06-18"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2026-06-18"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-06-18"
+        }
+      ]
+    },
+    {
+      "nombre": "DAMOON TECHNOLOGY (EUROPE) AG",
+      "tipo": "pasaporte",
+      "pais": "Liechtenstein",
+      "servicios": [
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-07-13"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-07-13"
+        }
+      ]
+    },
+    {
+      "nombre": "DEBLOCK SAS",
+      "tipo": "pasaporte",
+      "pais": "Francia",
+      "servicios": [
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2025-06-15"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2025-06-15"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2025-06-15"
+        }
+      ]
+    },
+    {
+      "nombre": "DECENTRALIZED, UAB",
+      "tipo": "pasaporte",
+      "pais": "Lituania",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2025-12-16"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2025-12-16"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2025-12-16"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2025-12-16"
+        }
+      ]
+    },
+    {
+      "nombre": "DECUBATE B.V.",
+      "tipo": "pasaporte",
+      "pais": "Países Bajos",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2025-08-04"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2025-08-04"
+        },
+        {
+          "servicio": "Colocación",
+          "desde": "2025-08-04"
+        }
+      ]
+    },
+    {
+      "nombre": "DIGITAL ASSETS LIMITED LIABILITY COMPANY FOR INTERMEDIATION AND SERVICES",
+      "tipo": "pasaporte",
+      "pais": "Croacia",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-07-01"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-07-01"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2026-07-01"
+        },
+        {
+          "servicio": "Colocación",
+          "desde": "2026-07-01"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-07-01"
+        }
+      ]
+    },
+    {
+      "nombre": "DLT SECURITIES GMBH",
+      "tipo": "pasaporte",
+      "pais": "Alemania",
+      "servicios": [
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-07-01"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2026-07-01"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2026-07-01"
+        },
+        {
+          "servicio": "Colocación",
+          "desde": "2026-07-01"
+        },
+        {
+          "servicio": "Recepción y transmisión órdenes",
+          "desde": "2026-07-01"
+        },
+        {
+          "servicio": "Asesoramiento",
+          "desde": "2026-07-01"
+        },
+        {
+          "servicio": "Gestión de carteras",
+          "desde": "2026-07-01"
+        }
+      ]
+    },
+    {
+      "nombre": "DUE NETWORK S.L.",
+      "tipo": "espanola",
+      "pais": "España",
+      "servicios": [
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-06-12"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2026-06-12"
+        }
+      ]
+    },
+    {
+      "nombre": "ELECTROCOIN LTD FOR SERVICES",
+      "tipo": "pasaporte",
+      "pais": "Croacia",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-04-15"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-04-15"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2026-04-15"
+        }
+      ]
+    },
+    {
+      "nombre": "ETORO (EUROPE) LTD",
+      "tipo": "pasaporte",
+      "pais": "Chipre",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2025-03-22"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2025-03-22"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2025-03-22"
+        },
+        {
+          "servicio": "Recepción y transmisión órdenes",
+          "desde": "2025-03-22"
+        },
+        {
+          "servicio": "Asesoramiento",
+          "desde": "2025-03-22"
+        },
+        {
+          "servicio": "Gestión de carteras",
+          "desde": "2025-03-22"
+        }
+      ]
+    },
+    {
+      "nombre": "EU INTERNET VENTURES B.V.",
+      "tipo": "pasaporte",
+      "pais": "Países Bajos",
+      "servicios": [
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2025-10-08"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2025-10-08"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2025-10-08"
+        }
+      ]
+    },
+    {
+      "nombre": "EUWAX AG",
+      "tipo": "pasaporte",
+      "pais": "Alemania",
+      "servicios": [
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2025-05-01"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2025-05-01"
+        }
+      ]
+    },
+    {
+      "nombre": "EVEREST NETWORK LIMITED",
+      "tipo": "pasaporte",
+      "pais": "Malta",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-07-17"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2026-07-17"
+        },
+        {
+          "servicio": "Colocación",
+          "desde": "2026-07-17"
+        },
+        {
+          "servicio": "Recepción y transmisión órdenes",
+          "desde": "2026-07-17"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-07-17"
+        }
+      ]
+    },
+    {
+      "nombre": "FALCONX LIMITED",
+      "tipo": "pasaporte",
+      "pais": "Malta",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-07-01"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-07-01"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2026-07-01"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2026-07-01"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-07-01"
+        }
+      ]
+    },
+    {
+      "nombre": "FIAT REPUBLIC NETHERLANDS B.V.",
+      "tipo": "pasaporte",
+      "pais": "Países Bajos",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2025-08-05"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2025-08-05"
+        }
+      ]
+    },
+    {
+      "nombre": "FINCTEK UE SAS",
+      "tipo": "pasaporte",
+      "pais": "Francia",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2025-09-11"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2025-09-11"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2025-09-11"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2025-09-11"
+        },
+        {
+          "servicio": "Colocación",
+          "desde": "2025-09-11"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2025-09-11"
+        }
+      ]
+    },
+    {
+      "nombre": "FINST B.V.",
+      "tipo": "pasaporte",
+      "pais": "Países Bajos",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2025-07-23"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2025-07-23"
+        },
+        {
+          "servicio": "Recepción y transmisión órdenes",
+          "desde": "2025-07-23"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2025-07-23"
+        }
+      ]
+    },
+    {
+      "nombre": "FINTECH PAYMENTS PSC, S.L.",
+      "tipo": "espanola",
+      "pais": "España",
+      "servicios": [
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-07-31"
+        }
+      ]
+    },
+    {
+      "nombre": "FINTECH SK S.R.O.",
+      "tipo": "pasaporte",
+      "pais": "Eslovaquia",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-01-01"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-01-01"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2026-01-01"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2026-01-01"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-01-01"
+        }
+      ]
+    },
+    {
+      "nombre": "FINTEGENCE, S.R.O.",
+      "tipo": "pasaporte",
+      "pais": "Eslovaquia",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2024-12-19"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2024-12-19"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2024-12-19"
+        }
+      ]
+    },
+    {
+      "nombre": "FIOR DIGITAL GMBH",
+      "tipo": "pasaporte",
+      "pais": "Austria",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2025-11-27"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2025-11-27"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2025-11-27"
+        }
+      ]
+    },
+    {
+      "nombre": "FIPTO PI SAS",
+      "tipo": "pasaporte",
+      "pais": "Francia",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-03-28"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-03-28"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2026-03-28"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2026-03-28"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-03-28"
+        }
+      ]
+    },
+    {
+      "nombre": "FIREFISH EUROPE, S.R.O.",
+      "tipo": "pasaporte",
+      "pais": "Eslovaquia",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-08-01"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-08-01"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2026-08-01"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-08-01"
+        }
+      ]
+    },
+    {
+      "nombre": "FIRI AS",
+      "tipo": "pasaporte",
+      "pais": null,
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-09-10"
+        },
+        {
+          "servicio": "Gestión plataforma de negociación",
+          "desde": "2026-09-10"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-09-10"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2026-09-10"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2026-09-10"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-09-10"
+        }
+      ]
+    },
+    {
+      "nombre": "FLATEXDEGIRO BANK SE",
+      "tipo": "pasaporte",
+      "pais": "Alemania",
+      "servicios": [
+        {
+          "servicio": "Ejecución",
+          "desde": "2025-04-28"
+        }
+      ]
+    },
+    {
+      "nombre": "FLOIN AG",
+      "tipo": "pasaporte",
+      "pais": "Liechtenstein",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-06-10"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-06-10"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2026-06-10"
+        },
+        {
+          "servicio": "Colocación",
+          "desde": "2026-06-10"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-06-10"
+        }
+      ]
+    },
+    {
+      "nombre": "FLOWDESK EUROPE SAS",
+      "tipo": "pasaporte",
+      "pais": "Francia",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2025-06-25"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2025-06-25"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2025-06-25"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2025-06-25"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2025-06-25"
+        }
+      ]
+    },
+    {
+      "nombre": "FORIS DAX MALTA LTD (CRYPTO.COM)",
+      "tipo": "pasaporte",
+      "pais": "Malta",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2025-02-12"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2025-02-12"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2025-02-12"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2025-02-12"
+        },
+        {
+          "servicio": "Recepción y transmisión órdenes",
+          "desde": "2025-02-12"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2025-02-12"
+        }
+      ]
+    },
+    {
+      "nombre": "FUMBI, S.R.O.",
+      "tipo": "pasaporte",
+      "pais": "Eslovaquia",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-01-01"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-01-01"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2026-01-01"
+        },
+        {
+          "servicio": "Asesoramiento",
+          "desde": "2026-01-01"
+        },
+        {
+          "servicio": "Gestión de carteras",
+          "desde": "2026-01-01"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-01-01"
+        }
+      ]
+    },
+    {
+      "nombre": "GATE TECHNOLOGY",
+      "tipo": "pasaporte",
+      "pais": "Malta",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2025-09-30"
+        },
+        {
+          "servicio": "Gestión plataforma de negociación",
+          "desde": "2025-09-30"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2025-09-30"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2025-09-30"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2025-09-30"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2025-09-30"
+        }
+      ]
+    },
+    {
+      "nombre": "GATEHUB EXCHANGE, DRUŽBA ZA IZVAJANJE STORITEV V ZVEZI S KRIPTOSREDSTVI, D.O.O.",
+      "tipo": "pasaporte",
+      "pais": "Eslovenia",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-09-02"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-09-02"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2026-09-02"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-09-02"
+        }
+      ]
+    },
+    {
+      "nombre": "GEMINI INTERGALACTIC EU LTD",
+      "tipo": "pasaporte",
+      "pais": "Malta",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2025-08-21"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2025-08-21"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2025-08-21"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2025-08-21"
+        },
+        {
+          "servicio": "Colocación",
+          "desde": "2025-08-21"
+        },
+        {
+          "servicio": "Recepción y transmisión órdenes",
+          "desde": "2025-08-21"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2025-08-21"
+        }
+      ]
+    },
+    {
+      "nombre": "GOIN SAS",
+      "tipo": "pasaporte",
+      "pais": "Francia",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-01-01"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-01-01"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2026-01-01"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2026-01-01"
+        },
+        {
+          "servicio": "Asesoramiento",
+          "desde": "2026-01-01"
+        },
+        {
+          "servicio": "Gestión de carteras",
+          "desde": "2026-01-01"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-01-01"
+        }
+      ]
+    },
+    {
+      "nombre": "HERCLE S.R.L.",
+      "tipo": "pasaporte",
+      "pais": "Italia",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-07-10"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-07-10"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2026-07-10"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-07-10"
+        }
+      ]
+    },
+    {
+      "nombre": "HIDDEN ROAD PARTNERS CIV NL B.V.",
+      "tipo": "pasaporte",
+      "pais": "Países Bajos",
+      "servicios": [
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2024-12-30"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2024-12-30"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2024-12-30"
+        }
+      ]
+    },
+    {
+      "nombre": "HODLERIS SIA",
+      "tipo": "pasaporte",
+      "pais": "Letonia",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-07-15"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-07-15"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2026-07-15"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-07-15"
+        }
+      ]
+    },
+    {
+      "nombre": "HODLI S.R.L.",
+      "tipo": "pasaporte",
+      "pais": "Italia",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-07-23"
+        },
+        {
+          "servicio": "Gestión de carteras",
+          "desde": "2026-07-23"
+        }
+      ]
+    },
+    {
+      "nombre": "IG EUROPE GMBH, SUCURSAL EN ESPAÑA",
+      "tipo": "sucursal",
+      "pais": "Alemania",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2025-12-10"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2025-12-10"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2025-12-10"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2025-12-10"
+        }
+      ]
+    },
+    {
+      "nombre": "ILIRIKA BORZNO POSREDNIŠKA HIŠA D.D.",
+      "tipo": "pasaporte",
+      "pais": "Eslovenia",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2025-11-01"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2025-11-01"
+        },
+        {
+          "servicio": "Recepción y transmisión órdenes",
+          "desde": "2025-11-01"
+        },
+        {
+          "servicio": "Gestión de carteras",
+          "desde": "2025-11-01"
+        }
+      ]
+    },
+    {
+      "nombre": "INTERACTIVE BROKERS IRELAND LIMITED",
+      "tipo": "pasaporte",
+      "pais": "Irlanda",
+      "servicios": [
+        {
+          "servicio": "Recepción y transmisión órdenes",
+          "desde": "2026-01-22"
+        }
+      ]
+    },
+    {
+      "nombre": "INVITY FINANCE S.R.O.",
+      "tipo": "pasaporte",
+      "pais": "República Checa",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-09-01"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-09-01"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2026-09-01"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2026-09-01"
+        },
+        {
+          "servicio": "Recepción y transmisión órdenes",
+          "desde": "2026-09-01"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-09-01"
+        }
+      ]
+    },
+    {
+      "nombre": "IQANA TECHNOLOGIES, S.L.",
+      "tipo": "espanola",
+      "pais": "España",
+      "servicios": [
+        {
+          "servicio": "Gestión de carteras",
+          "desde": "2026-07-10"
+        }
+      ]
+    },
+    {
+      "nombre": "J2TX LTD",
+      "tipo": "pasaporte",
+      "pais": "Chipre",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-03-16"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-03-16"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2026-03-16"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2026-03-16"
+        },
+        {
+          "servicio": "Recepción y transmisión órdenes",
+          "desde": "2026-03-16"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-03-16"
+        }
+      ]
+    },
+    {
+      "nombre": "JANUAR APS",
+      "tipo": "pasaporte",
+      "pais": "Dinamarca",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-06-29"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2026-06-29"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-06-29"
+        }
+      ]
+    },
+    {
+      "nombre": "KAISER PARTNER PRIVATBANK AG",
+      "tipo": "pasaporte",
+      "pais": "Liechtenstein",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-07-01"
+        },
+        {
+          "servicio": "Recepción y transmisión órdenes",
+          "desde": "2026-07-01"
+        },
+        {
+          "servicio": "Gestión de carteras",
+          "desde": "2026-07-01"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-07-01"
+        }
+      ]
+    },
+    {
+      "nombre": "KEYROCK FR SAS",
+      "tipo": "pasaporte",
+      "pais": "Francia",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-06-12"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-06-12"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2026-06-12"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2026-06-12"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-06-12"
+        }
+      ]
+    },
+    {
+      "nombre": "KRYPTO KNIGHT LTD",
+      "tipo": "pasaporte",
+      "pais": "Chipre",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-07-03"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-07-03"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2026-07-03"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2026-07-03"
+        },
+        {
+          "servicio": "Recepción y transmisión órdenes",
+          "desde": "2026-07-03"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-07-03"
+        }
+      ]
+    },
+    {
+      "nombre": "KUCOIN EU EXCHANGE GMBH",
+      "tipo": "pasaporte",
+      "pais": "Austria",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2025-11-27"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2025-11-27"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2025-11-27"
+        },
+        {
+          "servicio": "Recepción y transmisión órdenes",
+          "desde": "2025-11-27"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2025-11-27"
+        }
+      ]
+    },
+    {
+      "nombre": "KUTXABANK, S.A.",
+      "tipo": "banco",
+      "pais": "España",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-03-27"
+        },
+        {
+          "servicio": "Recepción y transmisión órdenes",
+          "desde": "2026-03-27"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-03-27"
+        }
+      ]
+    },
+    {
+      "nombre": "KVARN CAPITAL OY",
+      "tipo": "pasaporte",
+      "pais": "Finlandia",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2025-12-18"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2025-12-18"
+        },
+        {
+          "servicio": "Recepción y transmisión órdenes",
+          "desde": "2025-12-18"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2025-12-18"
+        }
+      ]
+    },
+    {
+      "nombre": "LEGEND FINANCIAL IRELAND LIMITED",
+      "tipo": "pasaporte",
+      "pais": "Irlanda",
+      "servicios": [
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2025-10-10"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2025-10-10"
+        }
+      ]
+    },
+    {
+      "nombre": "LEONOD SARL",
+      "tipo": "pasaporte",
+      "pais": "Francia",
+      "servicios": [
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-06-22"
+        }
+      ]
+    },
+    {
+      "nombre": "LGT BANK AG",
+      "tipo": "pasaporte",
+      "pais": "Liechtenstein",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-02-01"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2026-02-01"
+        },
+        {
+          "servicio": "Recepción y transmisión órdenes",
+          "desde": "2026-02-01"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-02-01"
+        }
+      ]
+    },
+    {
+      "nombre": "LIGHTSPARK PAYMENTS EUROPE AS",
+      "tipo": "pasaporte",
+      "pais": "Estonia",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-07-01"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-07-01"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2026-07-01"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-07-01"
+        }
+      ]
+    },
+    {
+      "nombre": "MADISON SIX J.S.A.",
+      "tipo": "pasaporte",
+      "pais": "Eslovaquia",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2025-12-19"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2025-12-19"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2025-12-19"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2025-12-19"
+        },
+        {
+          "servicio": "Recepción y transmisión órdenes",
+          "desde": "2025-12-19"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2025-12-19"
+        }
+      ]
+    },
+    {
+      "nombre": "MEREAU FINANCE SAS",
+      "tipo": "pasaporte",
+      "pais": "Francia",
+      "servicios": [
+        {
+          "servicio": "Asesoramiento",
+          "desde": "2026-06-01"
+        },
+        {
+          "servicio": "Gestión de carteras",
+          "desde": "2026-06-01"
+        }
+      ]
+    },
+    {
+      "nombre": "MERIA SAS",
+      "tipo": "pasaporte",
+      "pais": "Francia",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-04-20"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-04-20"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2026-04-20"
+        },
+        {
+          "servicio": "Asesoramiento",
+          "desde": "2026-04-20"
+        },
+        {
+          "servicio": "Gestión de carteras",
+          "desde": "2026-04-20"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-04-20"
+        }
+      ]
+    },
+    {
+      "nombre": "METAL GEAR SAS",
+      "tipo": "pasaporte",
+      "pais": "Francia",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-07-01"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-07-01"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2026-07-01"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-07-01"
+        }
+      ]
+    },
+    {
+      "nombre": "MINOS GLOBAL, S.L.",
+      "tipo": "espanola",
+      "pais": "España",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-06-30"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-06-30"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2026-06-30"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2026-06-30"
+        },
+        {
+          "servicio": "Colocación",
+          "desde": "2026-06-30"
+        },
+        {
+          "servicio": "Recepción y transmisión órdenes",
+          "desde": "2026-06-30"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "nombre": "MIPSOFTWARE S.R.O.",
+      "tipo": "pasaporte",
+      "pais": "República Checa",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-09-26"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2026-09-26"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-09-26"
+        }
+      ]
+    },
+    {
+      "nombre": "MOONPAY EUROPE B.V.",
+      "tipo": "pasaporte",
+      "pais": "Países Bajos",
+      "servicios": [
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2025-01-15"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2025-01-15"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2025-01-15"
+        }
+      ]
+    },
+    {
+      "nombre": "M.P. DEVELOPERS S.R.O.",
+      "tipo": "pasaporte",
+      "pais": "República Checa",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-07-01"
+        },
+        {
+          "servicio": "Gestión plataforma de negociación",
+          "desde": "2026-07-01"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-07-01"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2026-07-01"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2026-07-01"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-07-01"
+        }
+      ]
+    },
+    {
+      "nombre": "N26 BANK SE",
+      "tipo": "pasaporte",
+      "pais": "Alemania",
+      "servicios": [
+        {
+          "servicio": "Recepción y transmisión órdenes",
+          "desde": "2025-07-08"
+        }
+      ]
+    },
+    {
+      "nombre": "NEVERLESS SIA",
+      "tipo": "pasaporte",
+      "pais": "Letonia",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-06-22"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-06-22"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2026-06-22"
+        },
+        {
+          "servicio": "Gestión de carteras",
+          "desde": "2026-06-22"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-06-22"
+        }
+      ]
+    },
+    {
+      "nombre": "NEWRAILS UAB",
+      "tipo": "pasaporte",
+      "pais": "Lituania",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-04-12"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-04-12"
+        }
+      ]
+    },
+    {
+      "nombre": "NEXDESK SIA",
+      "tipo": "pasaporte",
+      "pais": "Letonia",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2025-12-15"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2025-12-15"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2025-12-15"
+        }
+      ]
+    },
+    {
+      "nombre": "NODU DIGITAL SIA",
+      "tipo": "pasaporte",
+      "pais": "Letonia",
+      "servicios": [
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-09-01"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-09-01"
+        }
+      ]
+    },
+    {
+      "nombre": "NOEMON FINANCE LIMITED",
+      "tipo": "pasaporte",
+      "pais": "Chipre",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-04-20"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-04-20"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2026-04-20"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2026-04-20"
+        },
+        {
+          "servicio": "Recepción y transmisión órdenes",
+          "desde": "2026-04-20"
+        },
+        {
+          "servicio": "Asesoramiento",
+          "desde": "2026-04-20"
+        },
+        {
+          "servicio": "Gestión de carteras",
+          "desde": "2026-04-20"
+        }
+      ]
+    },
+    {
+      "nombre": "NOEMON TECH LTD",
+      "tipo": "pasaporte",
+      "pais": "Chipre",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-07-01"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-07-01"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2026-07-01"
+        },
+        {
+          "servicio": "Colocación",
+          "desde": "2026-07-01"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2026-07-01"
+        },
+        {
+          "servicio": "Recepción y transmisión órdenes",
+          "desde": "2026-07-01"
+        },
+        {
+          "servicio": "Gestión de carteras",
+          "desde": "2026-07-01"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-07-01"
+        }
+      ]
+    },
+    {
+      "nombre": "NORTHSTAKE APS",
+      "tipo": "pasaporte",
+      "pais": "Dinamarca",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-04-07"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2026-04-07"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-04-07"
+        }
+      ]
+    },
+    {
+      "nombre": "NORWEGIAN BLOCK EXCHANGE AS",
+      "tipo": "pasaporte",
+      "pais": "Noruega",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-07-02"
+        },
+        {
+          "servicio": "Gestión plataforma de negociación",
+          "desde": "2026-07-02"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-07-02"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2026-07-02"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2026-07-02"
+        },
+        {
+          "servicio": "Recepción y transmisión órdenes",
+          "desde": "2026-07-02"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-07-02"
+        }
+      ]
+    },
+    {
+      "nombre": "NUVEI LIQUIDITY UAB",
+      "tipo": "pasaporte",
+      "pais": "Lituania",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2025-12-16"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2025-12-16"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2025-12-16"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2025-12-16"
+        }
+      ]
+    },
+    {
+      "nombre": "OKAZIO S.R.O.",
+      "tipo": "pasaporte",
+      "pais": "Eslovaquia",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-01-15"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2026-01-15"
+        },
+        {
+          "servicio": "Asesoramiento",
+          "desde": "2026-01-15"
+        },
+        {
+          "servicio": "Gestión de carteras",
+          "desde": "2026-01-15"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-01-15"
+        }
+      ]
+    },
+    {
+      "nombre": "OKX EUROPE LIMITED",
+      "tipo": "pasaporte",
+      "pais": "Malta",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2025-11-27"
+        },
+        {
+          "servicio": "Gestión plataforma de negociación",
+          "desde": "2025-11-27"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2025-11-27"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2025-11-27"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2025-11-27"
+        },
+        {
+          "servicio": "Colocación",
+          "desde": "2025-11-27"
+        },
+        {
+          "servicio": "Recepción y transmisión órdenes",
+          "desde": "2025-11-27"
+        },
+        {
+          "servicio": "Gestión de carteras",
+          "desde": "2025-11-27"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2025-11-27"
+        }
+      ]
+    },
+    {
+      "nombre": "ONE TRADING EXCHANGE B.V.",
+      "tipo": "pasaporte",
+      "pais": "Países Bajos",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2025-06-30"
+        },
+        {
+          "servicio": "Gestión plataforma de negociación",
+          "desde": "2025-06-30"
+        }
+      ]
+    },
+    {
+      "nombre": "OP DIGITAL SERVICES LIMITED",
+      "tipo": "pasaporte",
+      "pais": "Malta",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-06-24"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-06-24"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2026-06-24"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2026-06-24"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-06-24"
+        }
+      ]
+    },
+    {
+      "nombre": "OPEN BANK, S.A.",
+      "tipo": "banco",
+      "pais": "España",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2025-07-24"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2025-07-24"
+        }
+      ]
+    },
+    {
+      "nombre": "PAYHOUND LIMITED",
+      "tipo": "pasaporte",
+      "pais": "Malta",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2025-12-03"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2025-12-03"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2025-12-03"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2025-12-03"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2025-12-03"
+        }
+      ]
+    },
+    {
+      "nombre": "PAYMIUM SAS",
+      "tipo": "pasaporte",
+      "pais": "Francia",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-06-22"
+        },
+        {
+          "servicio": "Gestión plataforma de negociación",
+          "desde": "2026-06-22"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-06-22"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2026-06-22"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2026-06-22"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-06-22"
+        }
+      ]
+    },
+    {
+      "nombre": "PAYSAFE PAYMENT SOLUTIONS LIMITED",
+      "tipo": "pasaporte",
+      "pais": "Irlanda",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2025-12-03"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2025-12-03"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2025-12-03"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2025-12-03"
+        }
+      ]
+    },
+    {
+      "nombre": "PAYTOP SAS",
+      "tipo": "pasaporte",
+      "pais": "Francia",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-05-21"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-05-21"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-05-21"
+        }
+      ]
+    },
+    {
+      "nombre": "PAYWARD EUROPE SOLUTIONS LIMITED",
+      "tipo": "pasaporte",
+      "pais": "Irlanda",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2025-06-25"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2025-06-25"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2025-06-25"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2025-06-25"
+        },
+        {
+          "servicio": "Colocación",
+          "desde": "2025-06-25"
+        },
+        {
+          "servicio": "Recepción y transmisión órdenes",
+          "desde": "2025-06-25"
+        },
+        {
+          "servicio": "Gestión de carteras",
+          "desde": "2025-06-25"
+        }
+      ]
+    },
+    {
+      "nombre": "PELICAN EXCHANGE EUROPE LIMITED",
+      "tipo": "pasaporte",
+      "pais": "Chipre",
+      "servicios": [
+        {
+          "servicio": "Ejecución",
+          "desde": "2025-12-22"
+        },
+        {
+          "servicio": "Recepción y transmisión órdenes",
+          "desde": "2025-12-22"
+        },
+        {
+          "servicio": "Asesoramiento",
+          "desde": "2025-12-22"
+        },
+        {
+          "servicio": "Gestión de carteras",
+          "desde": "2025-12-22"
+        }
+      ]
+    },
+    {
+      "nombre": "PENNING FINANCIAL SERVICES APS",
+      "tipo": "pasaporte",
+      "pais": "Dinamarca",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-03-01"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-03-01"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2026-03-01"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2026-03-01"
+        },
+        {
+          "servicio": "Recepción y transmisión órdenes",
+          "desde": "2026-03-01"
+        },
+        {
+          "servicio": "Gestión de carteras",
+          "desde": "2026-03-01"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-03-01"
+        }
+      ]
+    },
+    {
+      "nombre": "PIONEW IRELAND LIMITED",
+      "tipo": "pasaporte",
+      "pais": "Irlanda",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-05-01"
+        },
+        {
+          "servicio": "Gestión plataforma de negociación",
+          "desde": "2026-05-01"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-05-01"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-05-01"
+        }
+      ]
+    },
+    {
+      "nombre": "PRAKMA MARKETS, S.L.",
+      "tipo": "espanola",
+      "pais": "España",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-10-09"
+        },
+        {
+          "servicio": "Recepción y transmisión órdenes",
+          "desde": "2026-10-09"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-10-09"
+        }
+      ]
+    },
+    {
+      "nombre": "PROSEGUR CUSTODIA DE ACTIVOS DIGITALES, S.L.",
+      "tipo": "espanola",
+      "pais": "España",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-06-30"
+        },
+        {
+          "servicio": "Recepción y transmisión órdenes",
+          "desde": "2026-06-30"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "nombre": "PUSH VIRTUAL ASSETS IRELAND LIMITED",
+      "tipo": "pasaporte",
+      "pais": "Irlanda",
+      "servicios": [
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2025-11-12"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2025-11-12"
+        }
+      ]
+    },
+    {
+      "nombre": "RAMP SWAPS (IRELAND) LIMITED",
+      "tipo": "pasaporte",
+      "pais": "Irlanda",
+      "servicios": [
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2025-12-02"
+        }
+      ]
+    },
+    {
+      "nombre": "RCUBE ASSET MANAGEMENT",
+      "tipo": "pasaporte",
+      "pais": "Francia",
+      "servicios": [
+        {
+          "servicio": "Asesoramiento",
+          "desde": "2026-06-18"
+        },
+        {
+          "servicio": "Gestión de carteras",
+          "desde": "2026-06-18"
+        }
+      ]
+    },
+    {
+      "nombre": "REGULAR FINANCE SAS",
+      "tipo": "pasaporte",
+      "pais": "Francia",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-09-11"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-09-11"
+        },
+        {
+          "servicio": "Asesoramiento",
+          "desde": "2026-09-11"
+        },
+        {
+          "servicio": "Gestión de carteras",
+          "desde": "2026-09-11"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-09-11"
+        }
+      ]
+    },
+    {
+      "nombre": "RELAI EU SASU",
+      "tipo": "pasaporte",
+      "pais": "Francia",
+      "servicios": [
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2025-10-23"
+        }
+      ]
+    },
+    {
+      "nombre": "RENTA 4 BANCO, S.A.",
+      "tipo": "banco",
+      "pais": "España",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2025-11-21"
+        },
+        {
+          "servicio": "Recepción y transmisión órdenes",
+          "desde": "2025-11-21"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2025-11-21"
+        }
+      ]
+    },
+    {
+      "nombre": "REVOLUT DIGITAL ASSETS EUROPE LTD",
+      "tipo": "pasaporte",
+      "pais": "Chipre",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2025-10-21"
+        },
+        {
+          "servicio": "Gestión plataforma de negociación",
+          "desde": "2025-10-21"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2025-10-21"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2025-10-21"
+        },
+        {
+          "servicio": "Colocación",
+          "desde": "2025-10-21"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2025-10-21"
+        }
+      ]
+    },
+    {
+      "nombre": "RIPPLE PAYMENTS EUROPE SA",
+      "tipo": "pasaporte",
+      "pais": "Luxemburgo",
+      "servicios": [
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-06-29"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2026-06-29"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-06-29"
+        }
+      ]
+    },
+    {
+      "nombre": "ROBINHOOD EUROPE, UAB",
+      "tipo": "pasaporte",
+      "pais": "Lituania",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2025-06-16"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2025-06-16"
+        },
+        {
+          "servicio": "Recepción y transmisión órdenes",
+          "desde": "2025-06-16"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2025-06-16"
+        }
+      ]
+    },
+    {
+      "nombre": "RONIM EM LIMITED",
+      "tipo": "pasaporte",
+      "pais": "Chipre",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-07-01"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-07-01"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2026-07-01"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2026-07-01"
+        },
+        {
+          "servicio": "Recepción y transmisión órdenes",
+          "desde": "2026-07-01"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-07-01"
+        }
+      ]
+    },
+    {
+      "nombre": "RONIN EM LIMITED",
+      "tipo": "pasaporte",
+      "pais": "Chipre",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-07-01"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-07-01"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2026-07-01"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2026-07-01"
+        },
+        {
+          "servicio": "Recepción y transmisión órdenes",
+          "desde": "2026-07-01"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-07-01"
+        }
+      ]
+    },
+    {
+      "nombre": "SAFELYNX TECHNOLOGIES APS",
+      "tipo": "pasaporte",
+      "pais": "Dinamarca",
+      "servicios": [
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-07-08"
+        }
+      ]
+    },
+    {
+      "nombre": "SG DIGITAL ASSETS LIMITED",
+      "tipo": "pasaporte",
+      "pais": "Chipre",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-09-01"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-09-01"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2026-09-01"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2026-09-01"
+        },
+        {
+          "servicio": "Recepción y transmisión órdenes",
+          "desde": "2026-09-01"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-09-01"
+        }
+      ]
+    },
+    {
+      "nombre": "SHARES FINANCIAL ASSETS SAS",
+      "tipo": "pasaporte",
+      "pais": "Francia",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-07-28"
+        },
+        {
+          "servicio": "Recepción y transmisión órdenes",
+          "desde": "2026-07-28"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-07-28"
+        }
+      ]
+    },
+    {
+      "nombre": "SIA PAYBIS EUROPE",
+      "tipo": "pasaporte",
+      "pais": "Letonia",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-05-29"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-05-29"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2026-05-29"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2026-05-29"
+        },
+        {
+          "servicio": "Asesoramiento",
+          "desde": "2026-05-29"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-05-29"
+        }
+      ]
+    },
+    {
+      "nombre": "SISTEM PAY SERVICES LIMITED",
+      "tipo": "pasaporte",
+      "pais": "Malta",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-02-24"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-02-24"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2026-02-24"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-02-24"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2026-06-05"
+        }
+      ]
+    },
+    {
+      "nombre": "SMART VALOR AG",
+      "tipo": "pasaporte",
+      "pais": "Liechtenstein",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-07-02"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-07-02"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2026-07-02"
+        },
+        {
+          "servicio": "Gestión plataforma de negociación",
+          "desde": "2026-07-02"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-07-02"
+        }
+      ]
+    },
+    {
+      "nombre": "SOCIETE GENERALE - FORGE",
+      "tipo": "pasaporte",
+      "pais": "Francia",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2025-10-23"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2025-10-23"
+        }
+      ]
+    },
+    {
+      "nombre": "SOCIOS EUROPE SERVICES LIMITED",
+      "tipo": "pasaporte",
+      "pais": "Malta",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2025-10-01"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2025-10-01"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2025-10-01"
+        },
+        {
+          "servicio": "Colocación",
+          "desde": "2025-10-01"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2025-10-01"
+        }
+      ]
+    },
+    {
+      "nombre": "STABLE MINT LTD",
+      "tipo": "pasaporte",
+      "pais": "Malta",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-06-22"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-06-22"
+        }
+      ]
+    },
+    {
+      "nombre": "STANDARD CHARTERED LUXEMBOURG, S.A.",
+      "tipo": "pasaporte",
+      "pais": "Luxemburgo",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-07-29"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-07-29"
+        }
+      ]
+    },
+    {
+      "nombre": "STOKR S.A.",
+      "tipo": "pasaporte",
+      "pais": "Luxemburgo",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-06-22"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-06-22"
+        }
+      ]
+    },
+    {
+      "nombre": "STONEX DIGITAL INTERNATIONAL LIMITED",
+      "tipo": "pasaporte",
+      "pais": "Irlanda",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2025-12-19"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2025-12-19"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2025-12-19"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2025-12-19"
+        },
+        {
+          "servicio": "Recepción y transmisión órdenes",
+          "desde": "2025-12-19"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2025-12-19"
+        }
+      ]
+    },
+    {
+      "nombre": "SWISSQUOTE BANK EUROPE SA",
+      "tipo": "pasaporte",
+      "pais": "Luxemburgo",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-06-05"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2026-06-05"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-06-05"
+        }
+      ]
+    },
+    {
+      "nombre": "SYGNUM EUROPE AG",
+      "tipo": "pasaporte",
+      "pais": "Liechtenstein",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": null
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": null
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": null
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": null
+        }
+      ]
+    },
+    {
+      "nombre": "TANGANY GMBH",
+      "tipo": "pasaporte",
+      "pais": "Alemania",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2025-08-12"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2025-08-12"
+        }
+      ]
+    },
+    {
+      "nombre": "TEROXX DIGITAL ASSET LTD",
+      "tipo": "pasaporte",
+      "pais": "Chipre",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2025-11-25"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2025-11-25"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2025-11-25"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2025-11-25"
+        },
+        {
+          "servicio": "Colocación",
+          "desde": "2025-11-25"
+        },
+        {
+          "servicio": "Asesoramiento",
+          "desde": "2025-11-25"
+        },
+        {
+          "servicio": "Gestión de carteras",
+          "desde": "2025-11-25"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2025-11-25"
+        }
+      ]
+    },
+    {
+      "nombre": "TESSERACT INVESTMENT OY",
+      "tipo": "pasaporte",
+      "pais": "Finlandia",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2025-10-23"
+        },
+        {
+          "servicio": "Recepción y transmisión órdenes",
+          "desde": "2025-10-23"
+        },
+        {
+          "servicio": "Asesoramiento",
+          "desde": "2025-10-23"
+        },
+        {
+          "servicio": "Gestión de carteras",
+          "desde": "2025-10-23"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2025-10-23"
+        }
+      ]
+    },
+    {
+      "nombre": "TRADE REPUBLIC BANK GMBH",
+      "tipo": "pasaporte",
+      "pais": "Alemania",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2025-04-28"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2025-04-28"
+        },
+        {
+          "servicio": "Recepción y transmisión órdenes",
+          "desde": "2025-04-28"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2025-04-28"
+        }
+      ]
+    },
+    {
+      "nombre": "TRADING.COM MARKETS EU LIMITED",
+      "tipo": "pasaporte",
+      "pais": "Chipre",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-06-11"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-06-11"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2026-06-11"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2026-06-11"
+        },
+        {
+          "servicio": "Recepción y transmisión órdenes",
+          "desde": "2026-06-11"
+        },
+        {
+          "servicio": "Gestión de carteras",
+          "desde": "2026-06-11"
+        }
+      ]
+    },
+    {
+      "nombre": "TREK TECHNOLOGIES SIA",
+      "tipo": "pasaporte",
+      "pais": "Letonia",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-07-01"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-07-01"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2026-07-01"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2026-07-01"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-07-01"
+        }
+      ]
+    },
+    {
+      "nombre": "TRIA BRIDGE LIMITED",
+      "tipo": "pasaporte",
+      "pais": "Chipre",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-08-01"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-08-01"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2026-08-01"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2026-08-01"
+        },
+        {
+          "servicio": "Recepción y transmisión órdenes",
+          "desde": "2026-08-01"
+        },
+        {
+          "servicio": "Asesoramiento",
+          "desde": "2026-08-01"
+        },
+        {
+          "servicio": "Gestión de carteras",
+          "desde": "2026-08-01"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-08-01"
+        }
+      ]
+    },
+    {
+      "nombre": "UAB MICAR ASSETS",
+      "tipo": "pasaporte",
+      "pais": "Lituania",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-07-08"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-07-08"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2026-07-08"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2026-07-08"
+        },
+        {
+          "servicio": "Recepción y transmisión órdenes",
+          "desde": "2026-07-08"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-07-08"
+        }
+      ]
+    },
+    {
+      "nombre": "VALIDVENT TECHNOLOGY GMBH",
+      "tipo": "pasaporte",
+      "pais": "Austria",
+      "servicios": [
+        {
+          "servicio": "Asesoramiento",
+          "desde": "2026-04-14"
+        }
+      ]
+    },
+    {
+      "nombre": "VIRTU FINANCIAL IRELAND LIMITED",
+      "tipo": "pasaporte",
+      "pais": "Irlanda",
+      "servicios": [
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-05-13"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2026-05-13"
+        }
+      ]
+    },
+    {
+      "nombre": "VIVID MONEY B.V.",
+      "tipo": "pasaporte",
+      "pais": "Países Bajos",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2025-06-01"
+        },
+        {
+          "servicio": "Recepción y transmisión órdenes",
+          "desde": "2025-06-01"
+        }
+      ]
+    },
+    {
+      "nombre": "WB - SHIELD INNOVATIONS GMBH",
+      "tipo": "pasaporte",
+      "pais": "Austria",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-06-18"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-06-18"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2026-06-18"
+        },
+        {
+          "servicio": "Colocación",
+          "desde": "2026-06-18"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-06-18"
+        }
+      ]
+    },
+    {
+      "nombre": "WEB3 TECHNOLOGY B.V.",
+      "tipo": "pasaporte",
+      "pais": "Países Bajos",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-03-30"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-03-30"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2026-03-30"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-03-30"
+        }
+      ]
+    },
+    {
+      "nombre": "WOORTON SAS",
+      "tipo": "pasaporte",
+      "pais": "Francia",
+      "servicios": [
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-07-23"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2026-07-23"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2026-07-23"
+        }
+      ]
+    },
+    {
+      "nombre": "XTB LIMITED",
+      "tipo": "pasaporte",
+      "pais": "Chipre",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-03-02"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2026-03-02"
+        },
+        {
+          "servicio": "Recepción y transmisión órdenes",
+          "desde": "2026-03-02"
+        }
+      ]
+    },
+    {
+      "nombre": "ZAP (STRIKE) EUROPE LIMITED",
+      "tipo": "pasaporte",
+      "pais": "Malta",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-06-25"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-06-25"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2026-06-25"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-06-25"
+        }
+      ]
+    },
+    {
+      "nombre": "ZEBEDEE EUROPE B.V.",
+      "tipo": "pasaporte",
+      "pais": "Países Bajos",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2025-03-01"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2025-03-01"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2025-03-01"
+        }
+      ]
+    },
+    {
+      "nombre": "ZEROHASH EUROPE B.V.",
+      "tipo": "pasaporte",
+      "pais": "Países Bajos",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2026-01-01"
+        },
+        {
+          "servicio": "Gestión plataforma de negociación",
+          "desde": "2026-01-01"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2026-01-01"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2026-01-01"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2026-01-01"
+        }
+      ]
+    },
+    {
+      "nombre": "ZILLION BITS LIMITED",
+      "tipo": "pasaporte",
+      "pais": "Malta",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2025-03-17"
+        },
+        {
+          "servicio": "Gestión plataforma de negociación",
+          "desde": "2025-03-17"
+        },
+        {
+          "servicio": "Canje criptos por fondos",
+          "desde": "2025-03-17"
+        },
+        {
+          "servicio": "Canje criptos por criptos",
+          "desde": "2025-03-17"
+        },
+        {
+          "servicio": "Ejecución",
+          "desde": "2025-03-17"
+        },
+        {
+          "servicio": "Colocación",
+          "desde": "2025-03-17"
+        },
+        {
+          "servicio": "Recepción y transmisión órdenes",
+          "desde": "2025-03-17"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2025-03-17"
+        }
+      ]
+    },
+    {
+      "nombre": "ZODIA CUSTODY (EUROPE) S.A.",
+      "tipo": "pasaporte",
+      "pais": "Luxemburgo",
+      "servicios": [
+        {
+          "servicio": "Custodia y administración",
+          "desde": "2025-12-16"
+        },
+        {
+          "servicio": "Servicios de transferencia",
+          "desde": "2025-12-16"
+        }
+      ]
+    }
+  ]
+}
