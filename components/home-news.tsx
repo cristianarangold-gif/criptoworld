@@ -1,16 +1,17 @@
 import Link from 'next/link'
 import { ArrowRight, CalendarDays, Newspaper, CalendarRange } from 'lucide-react'
 import { formatDate } from '@/lib/guides'
-import type { NewsItem } from '@/lib/news'
+import { newsExcerpt, type NewsItem } from '@/lib/news'
 import type { Digest } from '@/lib/digests'
 
-type Item = Pick<NewsItem, 'slug' | 'titulo' | 'descripcion' | 'fecha'>
+type Item = Pick<NewsItem, 'slug' | 'titulo' | 'descripcion' | 'fecha' | 'body'>
 
-// Apartado de noticias de la portada: la última noticia en grande y, al lado,
-// las siguientes y el último resumen semanal.
+// Apartado de noticias de la portada: la última noticia en grande, con lo que significa para el lector,
+// las siguientes al lado y el último resumen semanal debajo.
 export function HomeNews({ news, digest }: { news: Item[]; digest?: Pick<Digest, 'slug' | 'titulo' | 'descripcion'> }) {
   const [featured, ...rest] = news
   if (!featured) return null
+  const extracto = newsExcerpt(featured.body)
 
   return (
     <section className="mx-auto max-w-7xl px-4 pt-14 sm:px-6 lg:px-8" aria-labelledby="noticias-portada">
@@ -33,48 +34,55 @@ export function HomeNews({ news, digest }: { news: Item[]; digest?: Pick<Digest,
       <div className="grid gap-6 lg:grid-cols-3">
         <Link
           href={`/noticias/${featured.slug}`}
-          className="glow-card glass-card group flex flex-col justify-between rounded-2xl border-primary/30 p-6 sm:p-8 hover:border-primary/60 transition-colors lg:col-span-2"
+          className="glow-card glass-card group block rounded-2xl border-primary/30 p-6 sm:p-8 hover:border-primary/60 transition-colors lg:col-span-2"
         >
-          <div>
-            <p className="flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
-              <span className="rounded-full bg-primary/15 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-primary">Última noticia</span>
-              <span className="inline-flex items-center gap-1.5">
-                <CalendarDays className="h-4 w-4" />
-                <time dateTime={featured.fecha}>{formatDate(featured.fecha)}</time>
-              </span>
-            </p>
-            <h3 className="mt-5 font-display text-2xl font-bold leading-tight text-foreground group-hover:text-primary transition-colors sm:text-3xl lg:text-4xl">
-              {featured.titulo}
-            </h3>
-            <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">{featured.descripcion}</p>
-          </div>
+          <p className="flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
+            <span className="rounded-full bg-primary/15 px-3 py-1 text-xs font-semibold text-primary">Última noticia</span>
+            <span className="inline-flex items-center gap-1.5">
+              <CalendarDays className="h-4 w-4" />
+              <time dateTime={featured.fecha}>{formatDate(featured.fecha)}</time>
+            </span>
+          </p>
+          <h3 className="mt-5 font-display text-2xl font-bold leading-tight text-foreground group-hover:text-primary transition-colors sm:text-3xl lg:text-4xl">
+            {featured.titulo}
+          </h3>
+          <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">{featured.descripcion}</p>
+          {extracto && (
+            <div className="mt-5 border-l-2 border-primary/60 pl-4">
+              <p className="text-sm font-semibold text-foreground">Qué significa para ti</p>
+              <p className="mt-1 text-sm leading-relaxed text-muted-foreground sm:text-base">{extracto}</p>
+            </div>
+          )}
           <span className="mt-6 inline-flex items-center gap-1 font-semibold text-primary">
             Leer la noticia <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
           </span>
         </Link>
 
-        <div className="flex flex-col gap-4">
-          {rest.map(n => (
-            <Link key={n.slug} href={`/noticias/${n.slug}`} className="glow-card glass-card group block rounded-xl p-5 hover:border-primary/40 transition-colors">
-              <p className="flex items-center gap-1.5 text-xs text-muted-foreground">
-                <CalendarDays className="h-3.5 w-3.5" />
-                <time dateTime={n.fecha}>{formatDate(n.fecha)}</time>
-              </p>
-              <h3 className="mt-2 font-display font-bold leading-snug text-foreground group-hover:text-primary transition-colors">{n.titulo}</h3>
-            </Link>
-          ))}
-          {digest && (
-            <Link href={`/resumen-semanal/${digest.slug}`} className="glow-card glass-card group block rounded-xl p-5 hover:border-primary/40 transition-colors">
-              <p className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wide text-primary">
-                <CalendarRange className="h-3.5 w-3.5" />
-                Resumen de la semana
-              </p>
-              <h3 className="mt-2 font-display font-bold leading-snug text-foreground group-hover:text-primary transition-colors">{digest.titulo}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{digest.descripcion}</p>
-            </Link>
-          )}
-        </div>
+        {rest.length > 0 && (
+          <div className="grid gap-4 lg:auto-rows-fr">
+            {rest.map(n => (
+              <Link key={n.slug} href={`/noticias/${n.slug}`} className="glow-card glass-card group block rounded-xl p-5 hover:border-primary/40 transition-colors">
+                <p className="flex items-center gap-1.5 text-xs text-muted-foreground">
+                  <CalendarDays className="h-3.5 w-3.5" />
+                  <time dateTime={n.fecha}>{formatDate(n.fecha)}</time>
+                </p>
+                <h3 className="mt-2 font-display font-bold leading-snug text-foreground group-hover:text-primary transition-colors">{n.titulo}</h3>
+              </Link>
+            ))}
+          </div>
+        )}
       </div>
+
+      {digest && (
+        <Link href={`/resumen-semanal/${digest.slug}`} className="glow-card glass-card group mt-6 block rounded-xl p-5 hover:border-primary/40 transition-colors">
+          <p className="flex items-center gap-1.5 text-xs font-semibold text-primary">
+            <CalendarRange className="h-3.5 w-3.5" />
+            Resumen de la semana
+          </p>
+          <h3 className="mt-2 font-display font-bold leading-snug text-foreground group-hover:text-primary transition-colors">{digest.titulo}</h3>
+          <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{digest.descripcion}</p>
+        </Link>
+      )}
     </section>
   )
 }

@@ -40,14 +40,13 @@ export default async function HomePage() {
     <>
       {/* Hero */}
       <section className="relative overflow-hidden">
-        <HeroChart />
-        <div className="relative z-10 mx-auto max-w-7xl px-4 py-20 sm:py-28 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-tight">
+        <div className="relative z-10 mx-auto grid max-w-7xl gap-12 px-4 py-14 sm:px-6 sm:py-20 lg:grid-cols-[minmax(0,5fr)_minmax(0,6fr)] lg:items-center lg:px-8">
+          <div>
+            <h1 className="font-display text-4xl sm:text-5xl font-bold tracking-tight leading-tight">
               Entiende el mundo cripto y decide con{' '}
               <span className="text-primary">información</span>
             </h1>
-            <p className="mt-6 text-lg sm:text-xl text-muted-foreground max-w-2xl leading-relaxed">
+            <p className="mt-6 text-lg text-muted-foreground max-w-2xl leading-relaxed">
               Guías en español para entender Bitcoin, Ethereum, las stablecoins o DeFi, conocer sus riesgos y saber qué dice la normativa, con datos de mercado en tiempo real.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
@@ -74,6 +73,7 @@ export default async function HomePage() {
               <Link href="/herramientas" className="hover:text-foreground"><strong className="text-foreground text-base"><CountUp value={stats.tools} /></strong> herramientas</Link>
             </p>
           </div>
+          <HeroChart />
         </div>
         <div className="relative z-10">
           <PriceTicker items={toTickerItems(market)} fearGreed={fearGreed} />

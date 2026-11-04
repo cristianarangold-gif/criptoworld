@@ -45,6 +45,19 @@ export function loadNews(dir = DIR): NewsItem[] {
 }
 
 let cache: NewsItem[] | null = null
+// Primer párrafo de «Qué significa para ti», en texto plano, para la portada. Corta en una frase completa si cabe.
+export function newsExcerpt(body: string, max = 300): string {
+  const m = body.match(new RegExp(`^## ${NEWS_SECTIONS[1]}\\s*\\n+([^\\n]+)`, 'm'))
+  if (!m) return ''
+  const text = m[1].replace(/\[([^\]]+)\]\([^)]*\)/g, '$1').replace(/\*+/g, '').trim()
+  if (text.length <= max) return text
+  const corte = text.slice(0, max)
+  const frase = corte.lastIndexOf('. ')
+  if (frase > 0) return corte.slice(0, frase + 1)
+  const palabra = corte.lastIndexOf(' ')
+  return `${corte.slice(0, palabra > 0 ? palabra : max)}…`
+}
+
 export function getAllNews(): NewsItem[] {
   return (cache ??= loadNews())
 }
