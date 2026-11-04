@@ -5,6 +5,7 @@ import { getExchanges, matchesFilters, FILTROS, type Plataforma } from '@/lib/ex
 import { getRegistro } from '@/lib/cnmv'
 import { formatDate } from '@/lib/guides'
 import { ExchangeFilter } from '@/components/exchange-filter'
+import { CosteCompra } from '@/components/coste-compra'
 import { SITE } from '@/lib/site'
 
 export const metadata: Metadata = {
@@ -171,6 +172,30 @@ export default function ComparadorPage() {
       </ul>
 
       <div className="mt-12 max-w-3xl space-y-10 leading-relaxed">
+        <section>
+          <h2 className="font-display text-2xl font-bold mb-3">Cuánto cuesta comprar 100 € de bitcoin: comisión publicada</h2>
+          <div className="space-y-3 text-muted-foreground">
+            <p>
+              Calculamos la comisión de una compra de bitcoin en la opción sencilla de cada app, pagando con euros que ya tienes en la
+              plataforma. Cambia el importe para ver cómo pesan los mínimos y las comisiones fijas. El orden es alfabético: no es una clasificación.
+            </p>
+            <p>
+              <strong className="text-foreground">Es la comisión publicada, no el coste total.</strong> No incluye el diferencial que algunas plataformas
+              añaden al precio, y por eso una comisión más baja no significa siempre una compra más barata. No hemos hecho estas compras: confirma el importe en la pantalla de pago.
+            </p>
+          </div>
+          <CosteCompra
+            filas={plataformas.map(p => ({
+              slug: p.slug,
+              nombre: p.nombre,
+              formula: p.coste_compra.formula,
+              nota: p.coste_compra.nota,
+              fuente: p.comisiones.compra_rapida.fuente,
+              comprobado: formatDate(p.comisiones.compra_rapida.comprobado),
+            }))}
+          />
+        </section>
+
         <section>
           <h2 className="font-display text-2xl font-bold mb-3">Cómo hemos elegido y comparado</h2>
           <div className="space-y-3 text-muted-foreground">

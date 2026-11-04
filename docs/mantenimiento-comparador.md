@@ -26,6 +26,7 @@ Cada **3 meses** (y siempre que una noticia afecte a una plataforma):
 - revisa métodos de pago, retirada a wallet propia, staking, español e informe fiscal;
 - actualiza `comprobado` en cada comisión revisada y `revisado` en la raíz del archivo;
 - si un dato ya no se puede confirmar, usa «No publicada con claridad» o `null`, nunca una estimación.
+- actualiza `coste_compra` si cambia la compra rápida: `formula` guarda porcentaje, mínimo y parte fija (`null` si la plataforma no publica lo necesario) y `nota` explica lo que no incluye. `npm test` falla si la fórmula no coincide con el texto de `compra_rapida`.
 
 Si una plataforma deja de estar autorizada en España, se retira del comparador o se marca de forma visible, y se revisan las fichas de criptomonedas que la mencionen.
 

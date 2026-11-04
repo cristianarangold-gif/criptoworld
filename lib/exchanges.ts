@@ -1,4 +1,6 @@
 import data from '../data/exchanges.json'
+import type { CosteCompra } from './coste-compra'
+export { comisionPublicada, porcentajeEfectivo } from './coste-compra'
 
 // Comparador de exchanges: datos de la CNMV y de las webs oficiales, cada comisión con su fuente y fecha.
 // Sin afiliados ni clasificación: el orden es alfabético. Mantenimiento en docs/mantenimiento-comparador.md.
@@ -26,6 +28,7 @@ export interface Plataforma {
   destaca: string
   ojo: string
   fuentes: { title: string; url: string }[]
+  coste_compra: CosteCompra
 }
 
 export interface ExchangesFile {
@@ -39,6 +42,9 @@ export function getExchanges(): ExchangesFile {
   const file = data as unknown as ExchangesFile
   return { ...file, plataformas: [...file.plataformas].sort((a, b) => a.nombre.localeCompare(b.nombre, 'es')) }
 }
+
+const mencionaImporte = (valor: string, n: number, unidad: string) =>
+  [String(n), n.toFixed(2)].some(x => valor.includes(`${x.replace('.', ',')} ${unidad}`))
 
 export function validateExchanges(file: ExchangesFile, cnmv: string[], today: string): string[] {
   const errors: string[] = []
@@ -56,6 +62,18 @@ export function validateExchanges(file: ExchangesFile, cnmv: string[], today: st
     }
     const unknown = p.pagos.filter(x => !(PAGOS as readonly string[]).includes(x))
     if (unknown.length) e(`método de pago desconocido: ${unknown.join(', ')}`)
+    const coste = p.coste_compra
+    if (!coste?.nota?.trim()) e('coste_compra: falta nota')
+    const f = coste?.formula
+    if (f) {
+      if (!(f.porcentaje >= 0 && f.porcentaje <= 10)) e('coste_compra: porcentaje fuera de rango')
+      if (!(f.porcentaje > 0 || f.fijo > 0)) e('coste_compra: fórmula sin coste')
+      // Si cambia la comisión en la revisión trimestral, esto obliga a actualizar también el cálculo.
+      const valor = p.comisiones?.compra_rapida?.valor ?? ''
+      if (f.porcentaje > 0 && !mencionaImporte(valor, f.porcentaje, '%')) e(`coste_compra: compra_rapida no menciona ${f.porcentaje} %`)
+      if (f.minimo > 0 && !mencionaImporte(valor, f.minimo, '€')) e(`coste_compra: compra_rapida no menciona ${f.minimo} €`)
+      if (f.fijo > 0 && !mencionaImporte(valor, f.fijo, '€')) e(`coste_compra: compra_rapida no menciona ${f.fijo} €`)
+    }
     if (!p.destaca?.trim()) e('falta destaca')
     if (!p.ojo?.trim()) e('falta ojo')
   }
