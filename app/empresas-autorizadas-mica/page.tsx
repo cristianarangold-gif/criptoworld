@@ -63,17 +63,6 @@ export default function EmpresasAutorizadasMicaPage() {
   const jsonLd = [
     {
       '@context': 'https://schema.org',
-      '@type': 'Dataset',
-      name: 'Empresas autorizadas por MiCA en España',
-      description: 'Proveedores de servicios de criptoactivos de la relación que publica la CNMV, con país, tipo de entidad, servicios y fechas.',
-      url: `${SITE.url}/empresas-autorizadas-mica`,
-      dateModified: comprobado,
-      isBasedOn: url,
-      inLanguage: 'es',
-      creator: { '@type': 'Organization', name: SITE.name, url: SITE.url },
-    },
-    {
-      '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Inicio', item: SITE.url },
