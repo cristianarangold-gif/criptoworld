@@ -9,21 +9,56 @@
       "tipo": "espanola",
       "pais": "España",
       "desde": "2025-10-31",
-      "servicios": ["Custodia y administración", "Canje criptos por fondos"],
+      "servicios": [
+        "Custodia y administración",
+        "Canje criptos por fondos"
+      ],
       "comisiones": {
-        "compra_rapida": { "valor": "1 %", "fuente": "https://example.com/tarifas", "comprobado": "2026-10-15" },
-        "mercado_taker": { "valor": "0,25 %", "fuente": "https://example.com/tarifas", "comprobado": "2026-10-15" },
-        "deposito_eur": { "valor": "Gratis por SEPA", "fuente": "https://example.com/tarifas", "comprobado": "2026-10-15" },
-        "retirada_eur": { "valor": "No publicada con claridad", "fuente": "https://example.com/tarifas", "comprobado": "2026-10-15" }
+        "compra_rapida": {
+          "valor": "1 %",
+          "fuente": "https://example.com/tarifas",
+          "comprobado": "2026-10-15"
+        },
+        "mercado_taker": {
+          "valor": "0,25 %",
+          "fuente": "https://example.com/tarifas",
+          "comprobado": "2026-10-15"
+        },
+        "deposito_eur": {
+          "valor": "Gratis por SEPA",
+          "fuente": "https://example.com/tarifas",
+          "comprobado": "2026-10-15"
+        },
+        "retirada_eur": {
+          "valor": "No publicada con claridad",
+          "fuente": "https://example.com/tarifas",
+          "comprobado": "2026-10-15"
+        }
       },
-      "pagos": ["sepa", "tarjeta"],
+      "pagos": [
+        "sepa",
+        "tarjeta"
+      ],
       "retirada_wallet": true,
       "staking": null,
       "espanol": true,
       "informe_fiscal": false,
       "destaca": "Plataforma de ejemplo usada solo en las pruebas.",
       "ojo": "No existe.",
-      "fuentes": [{ "title": "Ejemplo: tarifas", "url": "https://example.com/tarifas" }]
+      "fuentes": [
+        {
+          "title": "Ejemplo: tarifas",
+          "url": "https://example.com/tarifas"
+        }
+      ],
+      "coste_compra": {
+        "formula": {
+          "porcentaje": 1,
+          "minimo": 0,
+          "fijo": 0
+        },
+        "nota": "Nota de ejemplo"
+      }
     }
   ]
 }

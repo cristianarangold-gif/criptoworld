@@ -2,7 +2,7 @@ import { test } from 'node:test'
 import assert from 'node:assert/strict'
 import fixture from './fixtures/exchanges.json'
 import { entidadNames } from '../lib/cnmv'
-import { getExchanges, validateExchanges, matchesFilters, type ExchangesFile, type Plataforma } from '../lib/exchanges'
+import { comisionPublicada, porcentajeEfectivo, getExchanges, validateExchanges, matchesFilters, type ExchangesFile, type Plataforma } from '../lib/exchanges'
 
 const today = '2026-10-16'
 const base = fixture as ExchangesFile
@@ -54,4 +54,41 @@ test('matchesFilters exige todos los filtros y trata null como «no cumple»', (
   assert.equal(matchesFilters(p, ['staking']), false)
   assert.equal(matchesFilters(p, ['espanol', 'wallet']), true)
   assert.equal(matchesFilters({ ...p, retirada_wallet: false }, ['wallet']), false)
+})
+
+test('comisionPublicada aplica el porcentaje, el mínimo y la parte fija, y redondea a céntimos', () => {
+  assert.equal(comisionPublicada({ porcentaje: 0.25, minimo: 0, fijo: 0 }, 100), 0.25)
+  assert.equal(comisionPublicada({ porcentaje: 0.99, minimo: 0.99, fijo: 0 }, 50), 0.99)
+  assert.equal(comisionPublicada({ porcentaje: 0.99, minimo: 0.99, fijo: 0 }, 200), 1.98)
+  assert.equal(comisionPublicada({ porcentaje: 0, minimo: 0, fijo: 1 }, 10), 1)
+  assert.equal(comisionPublicada({ porcentaje: 1, minimo: 0, fijo: 1 }, 33.33), 1.33)
+  assert.equal(comisionPublicada(null, 100), null)
+})
+
+test('validateExchanges exige coste_compra coherente con la comisión publicada', () => {
+  const c = base.plataformas[0].comisiones
+  const conValor = (valor: string) => ({ ...c, compra_rapida: { ...c.compra_rapida, valor } })
+  const cases: [ExchangesFile, RegExp][] = [
+    [withP({ coste_compra: { formula: null, nota: ' ' } }), /nota/],
+    [withP({ coste_compra: { formula: { porcentaje: 1, minimo: 0, fijo: 0 }, nota: '' } }), /nota/],
+    [withP({ coste_compra: { formula: { porcentaje: 11, minimo: 0, fijo: 0 }, nota: 'x' }, comisiones: conValor('11 %') }), /porcentaje/],
+    [withP({ coste_compra: { formula: { porcentaje: 0, minimo: 0, fijo: 0 }, nota: 'x' } }), /sin coste/],
+    [withP({ comisiones: conValor('2 %') }), /1 %/],
+    [withP({ coste_compra: { formula: { porcentaje: 0, minimo: 0, fijo: 1 }, nota: 'x' } }), /1 €/],
+  ]
+  for (const [file, re] of cases) assert.match(validateExchanges(file, entidadNames(), today).join(), re)
+})
+
+test('la comisión publicada de 100 € coincide con las tarifas revisadas', () => {
+  const coste = Object.fromEntries(getExchanges().plataformas.map(p => [p.slug, comisionPublicada(p.coste_compra.formula, 100)]))
+  assert.deepEqual(coste, {
+    bit2me: 0.95, bitpanda: 0.99, bitvavo: 0.25, bybit: null, coinbase: null, criptan: 0.99,
+    cryptocom: 0.8, etoro: 1, kraken: 1, okx: null, revolut: null, 'trade-republic': 1,
+  })
+})
+
+test('porcentajeEfectivo no arrastra el redondeo de los céntimos', () => {
+  assert.equal(porcentajeEfectivo({ porcentaje: 0.25, minimo: 0, fijo: 0 }, 50), 0.25)
+  assert.equal(porcentajeEfectivo({ porcentaje: 0.99, minimo: 0.99, fijo: 0 }, 50), 1.98)
+  assert.equal(porcentajeEfectivo({ porcentaje: 0, minimo: 0, fijo: 1 }, 10), 10)
 })
