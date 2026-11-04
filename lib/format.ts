@@ -30,3 +30,10 @@ export function formatBig(value: number, unit = ''): string {
   if (value >= 1e6) return `${nf(value / 1e6, 1)} millones${u}`
   return `${nf(value, 0)}${u}`
 }
+
+// Valor del contador animado tras `elapsed` ms. El primer fotograma puede llevar una marca de tiempo
+// anterior al inicio, así que el progreso se limita a 0–1 para no mostrar nunca un negativo.
+export function countUpValue(value: number, elapsed: number, duration: number): number {
+  const t = Math.min(1, Math.max(0, elapsed / duration))
+  return Math.round(value * (1 - Math.pow(1 - t, 3)))
+}
